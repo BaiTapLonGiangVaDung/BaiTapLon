@@ -99,7 +99,7 @@
 			</div>
 		</div>
 	</div>
-	<div id="product">
+	<div id="product-list">
 		<div class="container">
 			<span class="f-40">DANH MỤC</span>
 			<div class="row">
@@ -145,6 +145,15 @@
 			</div>
 		</div>
 	</div>
+	<div id="product">
+		<div class="container">
+			<span class="f-40">SẢN PHẨM CỦA CHÚNG TÔI</span>
+			<div class="row">
+				
+			</div>
+		</div>
+	</div>
+
 	<div class="info-bottom">
 		<div class="container-fluid">
 			<div class="row">
