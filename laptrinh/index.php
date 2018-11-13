@@ -38,7 +38,7 @@
 			<div class="col-12">
 				<div class="padding-sly">
 					<h1 class="site-title">
-						<a href="#">Slytherin</a>
+						<a href="">Slytherin</a>
 					</h1>
 					<p class="site-tiny">Thời trang và phong cách</p>
 				</div>
@@ -54,7 +54,7 @@
 					    <a class="nav-link active" href="#">Trang chủ</a>
 					  </li>
 					  <li class="nav-item">
-					    <a class="nav-link" href="#">Cửa hàng</a>
+					    <a class="nav-link" href="shop.php">Cửa hàng</a>
 					  </li>
 					  <li class="nav-item">
 					    <a class="nav-link" href="#">Sản phẩm hot</a>
@@ -103,7 +103,7 @@
 		<div class="container">
 			<span class="f-40">DANH MỤC</span>
 			<div class="row">
-				<div class="col-lg-4 col-md-12 col-sm-12 m-l-r-auto">
+				<div class="col-lg-4 col-md-6 col-sm-12 m-l-r-auto">
 					<div class="m-t-b pos-relative">
 						<img class="image-banner-top" src="image/banner-02.jpg" alt="">
 						<div class="w-size block-btn">
@@ -117,7 +117,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-4 col-md-12 col-sm-12 pos-relative">
+				<div class="col-lg-4 col-md-6 col-sm-12 pos-relative">
 					<div class="m-t-b">
 						<img class="image-banner-bottom" src="image/banner-03.jpg" alt="">
 						<div class="w-size block-btn" style="bottom: 560px;">
@@ -131,7 +131,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-4 col-md-12 col-sm-12 pos-relative">
+				<div class="col-lg-4 col-md-6 col-sm-12 pos-relative">
 					<div class="m-t-b">
 						<img class="image-banner-top" src="image/banner-04.jpg" alt="">
 						<div class="w-size block-btn" style="bottom: 421px;">
@@ -149,7 +149,34 @@
 		<div class="container">
 			<span class="f-40">SẢN PHẨM CỦA CHÚNG TÔI</span>
 			<div class="row">
-				
+				<div class="col-lg-3 col-md-6">
+					<div class="info-product-home">
+						<img class="image-product-home" src="image/item-02.jpg" alt=""><br>
+						<a href="" class="text-product-home">Balo Gucci</a><br>
+						<span>1.000.000 VNĐ</span>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="info-product-home">
+						<img class="image-product-home" src="image/item-03.jpg" alt=""><br>
+						<a href="" class="text-product-home">Áo bò Jack nữ</a><br>
+						<span>1.000.000 VNĐ</span>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="info-product-home">
+						<img class="image-product-home" src="image/item-07.jpg" alt=""><br>
+						<a href="" class="text-product-home">Quần bò xước Jack nữ</a><br>
+						<span>1.000.000 VNĐ</span>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="info-product-home">
+						<img class="image-product-home" src="image/banner-05.jpg" alt=""><br>
+						<a href="" class="text-product-home">Kính râm hawaii</a><br>
+						<span>1.000.000 VNĐ</span>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
