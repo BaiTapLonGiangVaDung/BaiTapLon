@@ -40,7 +40,7 @@
 					<h1 class="site-title">
 						<a href="">Slytherin</a>
 					</h1>
-					<p class="site-tiny">Thời trang và phong cách</p>
+					<p class="site-tiny">Khám phá thế giới muôn màu</p>
 				</div>
 			</div>
 		</div>
@@ -54,10 +54,10 @@
 					    <a class="nav-link active" href="#">Trang chủ</a>
 					  </li>
 					  <li class="nav-item">
-					    <a class="nav-link" href="shop.php">Cửa hàng</a>
+					    <a class="nav-link" href="shop.php">Bộ sưu tập</a>
 					  </li>
 					  <li class="nav-item">
-					    <a class="nav-link" href="#">Sản phẩm hot</a>
+					    <a class="nav-link" href="#">Blog</a>
 					  </li>
 					  <li class="nav-item">
 					    <a class="nav-link" href="#">Thông tin</a>
@@ -73,114 +73,62 @@
 	
 	<div class="new-arrivals">
 		<div id="new-arrivals-text">
-			<span style="font-size: 25px">Bộ sưu tập cho phái nữ 2018</span><br>
-			<span style="font-size:80px ;font-weight: 500">XU THẾ MỚI</span><br>
-			<button>Tham gia ngay</button>
-		</div>
-	</div>
-	<div class="boder">
-		<div class="container" id="info">
-			<div class="row">
-				<div class="col-sm-4 col-md-4 ">
-					<img class="icon-info" alt="huychuong" src="image/ribbon-badge-award.png"/><br>
-					<span class="f-40" >CHẤT LƯỢNG</span><br>
-					<span>Chúng tôi cam kết mang đến cho bạn chất lượng sản phẩm đạt chuẩn nhất</span>
-				</div>
-				<div class="col-sm-4 col-md-4 ">
-					<img class="icon-info" alt="tien" src="image/different-currencies.png"/><br>
-					<span class="f-40">TIẾT KIỆM CHI PHÍ</span><br>
-					<span>Cam kết giá rẻ nhất cả nước giúp các bạn tiết kiệm hơn 90% cho từng sản phẩm</span>
-				</div>
-				<div class="col-sm-4 col-md-4 ">
-					<img class="icon-info" alt="Giaodich" src="image/handshake.png"/><br>
-					<span class="f-40">GIAO HÀNG</span><br>
-					<span>Cam kết giao hàng tận nơi trong ngày. Để mang sản phẩm đến cho khách hàng nhanh nhất</span>
-				</div>
-			</div>
+			<span style="font-size:80px ;font-weight: 500">Khám phá thế giới thông <br>qua đôi mắt của nhiếp ảnh gia</span><br>
 		</div>
 	</div>
 	<div id="product-list">
-		<div class="container">
-			<span class="f-40">DANH MỤC</span>
+		<div class="container-fluid">
+			<span class="f-40">BỘ SƯU TẬP NỔI BẬT</span>
 			<div class="row">
 				<div class="col-lg-4 col-md-6 col-sm-12 m-l-r-auto">
 					<div class="m-t-b pos-relative">
-						<img class="image-banner-top" src="image/banner-02.jpg" alt="">
-						<div class="w-size block-btn">
-							<a class="align-item" href="" title="">ĐẦM</a>
+						<div class="box-list-home">
+							<img class="image-banner-top" src="image/dog.jpg" alt="">
+							<div class="w-size block-btn">
+								<a class="align-item" href="" title="">ĐỘNG VẬT</a>
+							</div>
 						</div>
 					</div>
 					<div class="m-t-b pos-relative">
-						<img class="image-banner-bottom" src="image/banner-05.jpg" alt="">
+						<img class="image-banner-top" src="image/nature.jpg" alt="">
 						<div class="w-size block-btn">
-							<a class="align-item" href="" title="">KÍNH RÂM</a>
+							<a class="align-item" href="" title="">THIÊN NHIÊN</a>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6 col-sm-12 pos-relative">
-					<div class="m-t-b">
-						<img class="image-banner-bottom" src="image/banner-03.jpg" alt="">
-						<div class="w-size block-btn" style="bottom: 560px;">
-							<a class="align-item" href="" title="">ĐỒNG HỒ</a>
+					<div class="m-t-b pos-relative">
+						<img class="image-banner-top" src="image/food.jpg" alt="">
+						<div class="w-size block-btn">
+							<a class="align-item" href="" title="">ĐỒ ĂN</a>
 						</div>
 					</div>
 					<div class="m-t-b pos-relative">
-						<img class="image-banner-top" src="image/banner-07.jpg" alt="">
+						<img class="image-banner-top" src="image/tech.jpg" alt="">
 						<div class="w-size block-btn">
-							<a class="align-item" href="" title="">GIÀY</a>
+							<a class="align-item" href="" title="">CÔNG NGHỆ</a>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6 col-sm-12 pos-relative">
-					<div class="m-t-b">
-						<img class="image-banner-top" src="image/banner-04.jpg" alt="">
-						<div class="w-size block-btn" style="bottom: 421px;">
-							<a class="align-item" href="" title="">BALO</a>
+					<div class="m-t-b pos-relative">
+						<img class="image-banner-top" src="image/holiday.jpg" alt="">
+						<div class="w-size block-btn">
+							<a class="align-item" href="" title="">LỄ HỘI</a>
 						</div>
 					</div>
 					<div class="image-banner-bottom" id="sale-banner">
-
+						<div class="m-t-b pos-relative">
+							<img class="image-banner-top" src="image/game.jpg" alt="">
+							<div class="w-size block-btn">
+								<a class="align-item" href="" title="">TRÒ CHƠI</a>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div id="product">
-		<div class="container">
-			<span class="f-40">SẢN PHẨM CỦA CHÚNG TÔI</span>
-			<div class="row">
-				<div class="col-lg-3 col-md-6">
-					<div class="info-product-home">
-						<img class="image-product-home" src="image/item-02.jpg" alt=""><br>
-						<a href="" class="text-product-home">Balo Gucci</a><br>
-						<span>1.000.000 VNĐ</span>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6">
-					<div class="info-product-home">
-						<img class="image-product-home" src="image/item-03.jpg" alt=""><br>
-						<a href="" class="text-product-home">Áo bò Jack nữ</a><br>
-						<span>1.000.000 VNĐ</span>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6">
-					<div class="info-product-home">
-						<img class="image-product-home" src="image/item-07.jpg" alt=""><br>
-						<a href="" class="text-product-home">Quần bò xước Jack nữ</a><br>
-						<span>1.000.000 VNĐ</span>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6">
-					<div class="info-product-home">
-						<img class="image-product-home" src="image/banner-05.jpg" alt=""><br>
-						<a href="" class="text-product-home">Kính râm hawaii</a><br>
-						<span>1.000.000 VNĐ</span>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
 	<div class="info-bottom">
 		<div class="container-fluid">
 			<div class="row">
@@ -189,7 +137,7 @@
 						<h1 class="site-title">
 							<a href="#">Slytherin</a>
 						</h1>
-						<p class="site-tiny">Thời trang và phong cách</p>
+						<p class="site-tiny">Khám phá thế giới muôn màu</p>
 					</div>
 				</div>
 				<div class="col-lg-8">
@@ -219,13 +167,14 @@
 							</div>
 						</div>
 						<div class="col-lg-2 col-md-4 col-sm-4">
-							<span class="font-bold-bottom">Danh mục</span><br><br>
+							<span class="font-bold-bottom">Bộ sưu tập</span><br><br>
 							<div >
 								<ul >
-									<li class="p-b-li"><a href="#" class="font-info-bottom ">Đầm</a></li>
-									<li class="p-b-li"><a href="#" class="font-info-bottom">Kính râm</a></li>
-									<li class="p-b-li"><a href="#" class="font-info-bottom">Đồng hồ</a></li>
-									<li class="p-b-li"><a href="#" class="font-info-bottom">Giày</a></li>
+									<li class="p-b-li"><a href="#" class="font-info-bottom ">Động vật</a></li>
+									<li class="p-b-li"><a href="#" class="font-info-bottom">Thiên nhiên</a></li>
+									<li class="p-b-li"><a href="#" class="font-info-bottom">Công nghệ</a></li>
+									<li class="p-b-li"><a href="#" class="font-info-bottom">Trò chơi</a></li>
+									<li class="p-b-li"><a href="#" class="font-info-bottom">Đồ ăn</a></li>
 								</ul>
 
 							</div>

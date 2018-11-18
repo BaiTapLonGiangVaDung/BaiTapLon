@@ -48,10 +48,10 @@
 						    	<a class="nav-link active" href="index.php">Trang chủ</a>
 						  	</li>
 						  	<li class="nav-item">
-						    	<a class="nav-link" href="">Cửa hàng</a>
+						    	<a class="nav-link" href="">Bộ sưu tập</a>
 						  	</li>
 						  	<li class="nav-item">
-						    	<a class="nav-link" href="#">Sản phẩm hot</a>
+						    	<a class="nav-link" href="#">Blog</a>
 						  	</li>
 						  	<li class="nav-item">
 						    	<a class="nav-link" href="#">Thông tin</a>
@@ -66,42 +66,40 @@
 		</div>
 	</div>
 	<div id="form-right-shop">
-		<div class="container">
+		<div class="container-fluid">
 			<div class="row">
 				<div class="col-lg-2">
 					<div id="list-shop">
-						<span class="text-bold-shop">DANH MỤC</span><br><br>
+						<span class="text-bold-shop">Bộ sưu tập</span><br><br>
 						<ul >
-							<li class="p-b-li"><a href="#" class="font-info-bottom ">Đầm</a></li>
-							<li class="p-b-li"><a href="#" class="font-info-bottom">Kính râm</a></li>
-							<li class="p-b-li"><a href="#" class="font-info-bottom">Đồng hồ</a></li>
-							<li class="p-b-li"><a href="#" class="font-info-bottom">Áo phông</a></li>
-							<li class="p-b-li"><a href="#" class="font-info-bottom">Quần</a></li>
-							<li class="p-b-li"><a href="#" class="font-info-bottom">Khăn</a></li>
-							<li class="p-b-li"><a href="#" class="font-info-bottom">Balo</a></li>
-						</ul>
-					</div>
-					<div>
-						<span class="text-bold-shop">size</span><br><br>
-						<ul >
-							<li class="p-b-li"><a href="#" class="font-info-bottom">Nhỏ</a></li>
-							<li class="p-b-li"><a href="#" class="font-info-bottom">Vừa</a></li>
-							<li class="p-b-li"><a href="#" class="font-info-bottom">Lớn</a></li>
-						</ul>
-					</div>
-					<div>
-						<span class="text-bold-shop">Màu sản phẩm</span><br><br>
-						<ul >
-							<li class="p-b-li"><a href="#" class="font-info-bottom ">Xanh</a></li>
-							<li class="p-b-li"><a href="#" class="font-info-bottom">Đỏ</a></li>
-							<li class="p-b-li"><a href="#" class="font-info-bottom">Trắng</a></li>
-							<li class="p-b-li"><a href="#" class="font-info-bottom">Đen</a></li>
+							<li class="p-b-li"><a href="#" class="font-info-bottom ">Động vật</a></li>
+							<li class="p-b-li"><a href="#" class="font-info-bottom">Thiên nhiên</a></li>
+							<li class="p-b-li"><a href="#" class="font-info-bottom">Đồ ăn</a></li>
+							<li class="p-b-li"><a href="#" class="font-info-bottom">Công nghệ</a></li>
+							<li class="p-b-li"><a href="#" class="font-info-bottom">Game</a></li>
+							<li class="p-b-li"><a href="#" class="font-info-bottom">Lễ Hội</a></li>
 						</ul>
 					</div>
 				</div>
-			</div>	
-			<div class="col-lg-10">
-				
+				<div class="col-lg-10">
+					<div>
+						<div class="left-image w-33">
+							<img class="image-background" src="image/background/1.jpg" alt="">
+							<img class="image-background" src="image/background/3.jpg" alt="">
+							<img class="image-background" src="image/background/4.jpg" alt="">
+						</div>
+						<div class="left-image w-33">
+							<img class="image-background" src="image/background/2.jpg" alt="">
+							<img class="image-background" src="image/background/5.jpg" alt="">
+							<img class="image-background" src="image/background/6.jpg" alt="">
+						</div>
+						<div class="left-image w-33">
+							<img class="image-background" src="image/background/9.jpg" alt="">
+							<img class="image-background" src="image/background/7.jpg" alt="">
+							<img class="image-background" src="image/background/8.jpg" alt="">
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
