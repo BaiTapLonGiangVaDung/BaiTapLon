@@ -260,6 +260,14 @@ ul,li{
 .image-background{
 	width: 100%;
 	height: auto;
+	padding-right: 10px;
+	padding-bottom: 10px;
+}
+.image-background1{
+	width: 395.95px;
+	height: 100%;
+	padding-right: 4px;
+	padding-bottom: 20px;
 }
 .image-li{
 	width: 380px;
@@ -269,14 +277,14 @@ ul,li{
 	padding-right: 25px;
 	padding-top: 18px;
 }
-.ul-li-none li{
-	float: left;
-}
 .w-33{
 	width: calc(33.33% - 16px);
 }
 .left-image{
 	float: left;
+}
+.box-list{
+	padding-right: 30px;
 }
 /*end css shop.php*/
 @media(min-width: 992px).col-lg-4{

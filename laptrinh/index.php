@@ -54,7 +54,7 @@
 					    <a class="nav-link active" href="#">Trang chủ</a>
 					  </li>
 					  <li class="nav-item">
-					    <a class="nav-link" href="shop.php">Bộ sưu tập</a>
+					    <a class="nav-link" href="list.php">Bộ sưu tập</a>
 					  </li>
 					  <li class="nav-item">
 					    <a class="nav-link" href="#">Blog</a>

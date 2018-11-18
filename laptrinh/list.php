@@ -82,6 +82,37 @@
 					</div>
 				</div>
 				<div class="col-lg-10">
+					<div class="box-list">
+						<div class="row">
+							<div class="col-lg-4">
+								<img class="image-background1" src="image/background/1.jpg" alt="">
+							</div>
+							<div class="col-lg-4">
+								<img class="image-background1" src="image/background/2.jpg" alt="">
+							</div>
+							<div class="col-lg-4">
+								<img class="image-background1" src="image/background/3.jpg" alt="">
+							</div>
+							<div class="col-lg-4">
+								<img class="image-background1" src="image/background/4.jpg" alt="">
+							</div>
+							<div class="col-lg-4">
+								<img class="image-background1" src="image/background/5.jpg" alt="">
+							</div>
+							<div class="col-lg-4">
+								<img class="image-background1" src="image/background/6.jpg" alt="">
+							</div>
+							<div class="col-lg-4">
+								<img class="image-background1" src="image/background/7.jpg" alt="">
+							</div>
+							<div class="col-lg-4">
+								<img class="image-background1" src="image/background/8.jpg" alt="">
+							</div>
+							<div class="col-lg-4">
+								<img class="image-background1" src="image/background/9.jpg" alt="">
+							</div>
+						</div>
+					</div>
 					<div>
 						<div class="left-image w-33">
 							<img class="image-background" src="image/background/1.jpg" alt="">
