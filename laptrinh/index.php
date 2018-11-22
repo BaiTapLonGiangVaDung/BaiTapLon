@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Home</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body >
@@ -54,7 +54,7 @@
 					    <a class="nav-link active" href="#">Trang chủ</a>
 					  </li>
 					  <li class="nav-item">
-					    <a class="nav-link" href="list.php">Bộ sưu tập</a>
+					    <a class="nav-link" href="collection.php">Bộ sưu tập</a>
 					  </li>
 					  <li class="nav-item">
 					    <a class="nav-link" href="#">Blog</a>
@@ -70,10 +70,65 @@
 			</div>
 		</div>
 	</div>
-	
-	<div class="new-arrivals">
-		<div id="new-arrivals-text">
-			<span style="font-size:80px ;font-weight: 500">Khám phá thế giới thông <br>qua đôi mắt của nhiếp ảnh gia</span><br>
+	<div class="container-fluid" style="padding-right: 0px;padding-left: 0px;">
+		<div id="demo" class="carousel slide" data-ride="carousel">
+
+		  <!-- Indicators -->
+		  <ul class="carousel-indicators">
+		    <li data-target="#demo" data-slide-to="0" class="active"></li>
+		    <li data-target="#demo" data-slide-to="1"></li>
+		    <li data-target="#demo" data-slide-to="2"></li>
+		    <li data-target="#demo" data-slide-to="3"></li>
+		  </ul>
+
+		  <!-- The slideshow -->
+		  <div class="carousel-inner">
+		    <div class="carousel-item active">
+		    	<div class="new-arrivals">
+		    		<div id="new-arrivals-text">
+						<div id="new-arrivals-box">
+							<span>Khám phá thế giới thông qua đôi mắt của nhiếp ảnh gia</span><br>
+						</div>
+					</div>
+		    	</div>
+		    </div>
+		    <div class="carousel-item">
+				<div class="new-arrivals1">
+		    		<div id="new-arrivals-text">
+						<div id="new-arrivals-box">
+							<span>Khám phá thế giới thông qua đôi mắt của nhiếp ảnh gia</span><br>
+						</div>
+					</div>
+		    	</div>
+		    </div>
+		    <div class="carousel-item">
+				<div class="new-arrivals2">
+		    		<div id="new-arrivals-text">
+						<div id="new-arrivals-box">
+							<span>Khám phá thế giới thông qua đôi mắt của nhiếp ảnh gia</span><br>
+						</div>
+					</div>
+		    	</div>
+		    </div>
+		    <div class="carousel-item">
+				<div class="new-arrivals3">
+		    		<div id="new-arrivals-text">
+						<div id="new-arrivals-box">
+							<span>Khám phá thế giới thông qua đôi mắt của nhiếp ảnh gia</span><br>
+						</div>
+					</div>
+		    	</div>
+		    </div>
+		  </div>
+
+		  <!-- Left and right controls -->
+		  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+		    <span class="carousel-control-prev-icon"></span>
+		  </a>
+		  <a class="carousel-control-next" href="#demo" data-slide="next">
+		    <span class="carousel-control-next-icon"></span>
+		  </a>
+
 		</div>
 	</div>
 	<div id="product-list">
@@ -83,14 +138,14 @@
 				<div class="col-lg-4 col-md-6 col-sm-12 m-l-r-auto">
 					<div class="m-t-b pos-relative">
 						<div class="box-list-home">
-							<img class="image-banner-top" src="image/dog.jpg" alt="">
+							<img class="image-banner-top" src="image/dog-min.jpg" alt="">
 							<div class="w-size block-btn">
 								<a class="align-item" href="" title="">ĐỘNG VẬT</a>
 							</div>
 						</div>
 					</div>
 					<div class="m-t-b pos-relative">
-						<img class="image-banner-top" src="image/nature.jpg" alt="">
+						<img class="image-banner-top" src="image/nature-min.jpg" alt="">
 						<div class="w-size block-btn">
 							<a class="align-item" href="" title="">THIÊN NHIÊN</a>
 						</div>
@@ -98,13 +153,13 @@
 				</div>
 				<div class="col-lg-4 col-md-6 col-sm-12 pos-relative">
 					<div class="m-t-b pos-relative">
-						<img class="image-banner-top" src="image/food.jpg" alt="">
+						<img class="image-banner-top" src="image/food-min.jpg" alt="">
 						<div class="w-size block-btn">
 							<a class="align-item" href="" title="">ĐỒ ĂN</a>
 						</div>
 					</div>
 					<div class="m-t-b pos-relative">
-						<img class="image-banner-top" src="image/tech.jpg" alt="">
+						<img class="image-banner-top" src="image/tech-min.jpg" alt="">
 						<div class="w-size block-btn">
 							<a class="align-item" href="" title="">CÔNG NGHỆ</a>
 						</div>
@@ -112,14 +167,14 @@
 				</div>
 				<div class="col-lg-4 col-md-6 col-sm-12 pos-relative">
 					<div class="m-t-b pos-relative">
-						<img class="image-banner-top" src="image/holiday.jpg" alt="">
+						<img class="image-banner-top" src="image/holiday-min.jpg" alt="">
 						<div class="w-size block-btn">
 							<a class="align-item" href="" title="">LỄ HỘI</a>
 						</div>
 					</div>
 					<div class="image-banner-bottom" id="sale-banner">
 						<div class="m-t-b pos-relative">
-							<img class="image-banner-top" src="image/game.jpg" alt="">
+							<img class="image-banner-top" src="image/game-min.jpg" alt="">
 							<div class="w-size block-btn">
 								<a class="align-item" href="" title="">TRÒ CHƠI</a>
 							</div>
@@ -142,7 +197,7 @@
 				</div>
 				<div class="col-lg-8">
 					<div class="row">
-						<div class="col-lg-6">
+						<div class="col-lg-6" style="margin-bottom: 30px;">
 							<span class="font-bold-bottom">Liên hệ với chúng tôi</span><br><br>
 							<div class="font-info-bottom">
 								<span>Bạn có câu hỏi gì không?</span><br>
@@ -196,9 +251,9 @@
 							<div >
 								<ul >
 									<li class="p-b-li"><a href="#" class="font-info-bottom">Kiểm tra</a></li>
-									<li class="p-b-li"><a href="#" class="font-info-bottom">Giỏ hàng</a></li>
-									<li class="p-b-li"><a href="#" class="font-info-bottom">Sản phẩm</a></li>
-									<li class="p-b-li"><a href="#" class="font-info-bottom">Giao dịch</a></li>
+									<li class="p-b-li"><a href="#" class="font-info-bottom">Bộ sưu tập</a></li>
+									<li class="p-b-li"><a href="#" class="font-info-bottom">Hình ảnh</a></li>
+									<li class="p-b-li"><a href="#" class="font-info-bottom">Download</a></li>
 								</ul>
 
 							</div>
@@ -220,7 +275,8 @@
 	</div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 	<script src="JS/customs.js"></script>
 </body>
 </html>

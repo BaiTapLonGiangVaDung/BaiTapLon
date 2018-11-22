@@ -57,28 +57,64 @@
   width: 100%;
 }
 .new-arrivals{
-	background: url("../image/background4.jpg") no-repeat center center fixed; 
+	background: url("../image/background1.jpg") no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 	height:570px;
 }
+.new-arrivals1{
+	background: url("../image/background3.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	height:570px;
+}
+.new-arrivals2{
+	background: url("../image/background5.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	height:570px;
+}
+.new-arrivals3{
+	background: url("../image/background2.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	height:570px;
+}
+.box-slide{
+	width: 100%;
+	height: auto;
+}
+
 #new-arrivals-text{
 	text-align: center;
-	padding-top: 150px;
+	padding-top: 100px;
 }
 #new-arrivals-text span{
 	color: white;
+	font-size:80px ;
+	font-weight: 500;
+	font-family: serif;
 }
-#new-arrivals-text button{
-	font-size: 17px;
-	padding: 8px 30px;
-	border-radius: 23px;
-	border: none;
-	background-color: white;
-	color: #000000d6;
+#new-arrivals-box{
+	padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border: 2px solid #ffffffe3;
+    background-color: #0000001f;
+    border-radius: 10px;
 }
+
 .m-l-r-auto{
 	margin-left: auto;
 	margin-right: auto;
@@ -285,6 +321,29 @@ ul,li{
 }
 .box-list{
 	padding-right: 30px;
+}
+#image-form{
+	padding-top: 40px;
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-bottom: 40px;
+}
+.picture-info{
+	width: 100%;
+	height: auto;
+}
+.image-header ul li{
+	display: inline;
+}
+.image-header{
+	padding-bottom: 15px;
+	background-color: 
+}
+.image-header a{
+	text-decoration: none;
+	font-size: 18px;
+	color: #555555;
+
 }
 /*end css shop.php*/
 @media(min-width: 992px).col-lg-4{
