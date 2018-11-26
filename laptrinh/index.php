@@ -134,51 +134,71 @@
 	<div id="product-list">
 		<div class="container-fluid">
 			<span class="f-40">BỘ SƯU TẬP NỔI BẬT</span>
-			<div class="row">
-				<div class="col-lg-4 col-md-6 col-sm-12 m-l-r-auto">
-					<div class="m-t-b pos-relative">
-						<div class="box-list-home">
-							<img class="image-banner-top" src="image/dog-min.jpg" alt="">
-							<div class="w-size block-btn">
-								<a class="align-item" href="" title="">ĐỘNG VẬT</a>
-							</div>
-						</div>
-					</div>
-					<div class="m-t-b pos-relative">
-						<img class="image-banner-top" src="image/nature-min.jpg" alt="">
-						<div class="w-size block-btn">
-							<a class="align-item" href="" title="">THIÊN NHIÊN</a>
-						</div>
+			<div class="row" style="margin-top: 30px;">
+				<div class="col-lg-4 col-md-6 col-sm-12 p-l-r-bst">
+					<div class="grid">
+						<figure class="effect-marley">
+	                        <img src="image/dog-min.jpg" alt="img12"/>
+	                        <figcaption>
+	                            <h2>Động <span>Vật</span></h2>
+	                            <p>Khám phá động vật qua những hình ảnh và những khoảng khắc của chúng.</p>
+	                        </figcaption>
+	                    </figure>
 					</div>
 				</div>
-				<div class="col-lg-4 col-md-6 col-sm-12 pos-relative">
-					<div class="m-t-b pos-relative">
-						<img class="image-banner-top" src="image/food-min.jpg" alt="">
-						<div class="w-size block-btn">
-							<a class="align-item" href="" title="">ĐỒ ĂN</a>
-						</div>
-					</div>
-					<div class="m-t-b pos-relative">
-						<img class="image-banner-top" src="image/tech-min.jpg" alt="">
-						<div class="w-size block-btn">
-							<a class="align-item" href="" title="">CÔNG NGHỆ</a>
-						</div>
+				<div class="col-lg-4 col-md-6 col-sm-12 p-l-r-bst">
+					<div class="grid">
+						<figure class="effect-marley">
+	                        <img src="image/nature-min.jpg" alt="img12"/>
+	                        <figcaption>
+	                            <h2>Thiên <span>Nhiên</span></h2>
+	                            <p>Khám phá vẻ đẹp hùng vĩ của thiên nhiên qua hình ảnh.</p>
+	                        </figcaption>
+	                    </figure>
 					</div>
 				</div>
-				<div class="col-lg-4 col-md-6 col-sm-12 pos-relative">
-					<div class="m-t-b pos-relative">
-						<img class="image-banner-top" src="image/holiday-min.jpg" alt="">
-						<div class="w-size block-btn">
-							<a class="align-item" href="" title="">LỄ HỘI</a>
-						</div>
+				<div class="col-lg-4 col-md-6 col-sm-12 p-l-r-bst">
+					<div class="grid">
+						<figure class="effect-marley">
+	                        <img src="image/food-min.jpg" alt="img12"/>
+	                        <figcaption>
+	                            <h2>Đồ <span>Ăn</span></h2>
+	                            <p>Đắm chìm vào thế giới của đồ ăn qua những hình ảnh của chúng tôi.</p>
+	                        </figcaption>
+	                    </figure>
 					</div>
-					<div class="image-banner-bottom" id="sale-banner">
-						<div class="m-t-b pos-relative">
-							<img class="image-banner-top" src="image/game-min.jpg" alt="">
-							<div class="w-size block-btn">
-								<a class="align-item" href="" title="">TRÒ CHƠI</a>
-							</div>
-						</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-12 p-l-r-bst">
+					<div class="grid">
+						<figure class="effect-marley">
+	                        <img src="image/tech-min.jpg" alt="img12"/>
+	                        <figcaption>
+	                            <h2>Công <span>Nghệ</span></h2>
+	                            <p>Cùng nhau học hỏi và khám phá công nghệ .</p>
+	                        </figcaption>
+	                    </figure>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-12 p-l-r-bst">
+					<div class="grid">
+						<figure class="effect-marley">
+	                        <img src="image/holiday-min.jpg" alt="img12"/>
+	                        <figcaption>
+	                            <h2>Lễ <span>Hội</span></h2>
+	                            <p>Tìm hiểu về những lễ hội ,tập tục văn hóa nổi bật.</p>
+	                        </figcaption>
+	                    </figure>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-12 p-l-r-bst">
+					<div class="grid">
+						<figure class="effect-marley">
+	                        <img src="image/game-min.jpg" alt="img12"/>
+	                        <figcaption>
+	                            <h2>Trò <span>Chơi</span></h2>
+	                            <p>Lạc vào thế giới game đầy màu sắc.</p>
+	                        </figcaption>
+	                    </figure>
 					</div>
 				</div>
 			</div>

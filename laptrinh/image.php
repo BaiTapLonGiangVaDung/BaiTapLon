@@ -83,7 +83,7 @@
 					
 				</div>
 				<div class="col-lg-8">
-					<img class="picture-info" src="image/background/1.jpg" alt="">
+					<img class="picture-info" src="image/background/image1.jpg" alt="">
 				</div>
 				<div class="col-lg-4">
 					
