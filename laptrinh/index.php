@@ -96,7 +96,7 @@
 				<div class="new-arrivals1">
 		    		<div id="new-arrivals-text">
 						<div id="new-arrivals-box">
-							<span>Khám phá thế giới thông qua đôi mắt của nhiếp ảnh gia</span><br>
+							<span>Cùng tìm kiếm những bức ảnh tuyệt vời cho bạn</span><br>
 						</div>
 					</div>
 		    	</div>

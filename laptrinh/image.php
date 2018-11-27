@@ -68,25 +68,86 @@
 	<div id="image-form">
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col-lg-12">
-					<div class="image-header">
-						<ul>
-							<li>
-								<a href="" title="">Sách /</a>
-							</li>
-							<li>
-								<a href="" title="">7 cuốn sách cạnh cái đèn nằm trên cái bàn gần cửa sổ</a>
-							</li>
-
-						</ul>
-					</div>
-					
-				</div>
-				<div class="col-lg-8">
+				<div class="col-lg-8 p-r-30">
 					<img class="picture-info" src="image/background/image1.jpg" alt="">
+					<div class="image-related">
+						<div class="row">
+							<div class="col-lg-12">
+								<div class="image-related-text">
+									<span>Hình ảnh liên quan</span>
+								</div>
+							</div>
+							<div class="col-lg-3 col-md-3 col-sm-3 pd-l-r-15">
+								<img class="picture-info" src="image/background/image17.jpg" alt="">
+							</div>
+							<div class="col-lg-3 col-md-3 col-sm-3 pd-l-r-15">
+								<img class="picture-info" src="image/background/image18.jpg" alt="">
+							</div>
+							<div class="col-lg-3 col-md-3 col-sm-3 pd-l-r-15">
+								<img class="picture-info" src="image/background/image19.jpg" alt="">
+							</div>
+							<div class="col-lg-3 col-md-3 col-sm-3 pd-l-r-15">
+								<img class="picture-info" src="image/background/image16.jpg" alt="">
+							</div>
+							<div class="col-lg-3 col-md-3 col-sm-3 pd-l-r-15">
+								<img class="picture-info" src="image/background/image20.jpg" alt="">
+							</div>
+							<div class="col-lg-3 col-md-3 col-sm-3 pd-l-r-15">
+								<img class="picture-info" src="image/background/image21.jpg" alt="">
+							</div>
+							<div class="col-lg-3 col-md-3 col-sm-3 pd-l-r-15">
+								<img class="picture-info" src="image/background/image22.jpg" alt="">
+							</div>
+							<div class="col-lg-3 col-md-3 col-sm-3 pd-l-r-15">
+								<img class="picture-info" src="image/background/image23.jpg" alt="">
+							</div>
+						</div>
+					</div>
 				</div>
 				<div class="col-lg-4">
-					
+					<div class="image-sponsored">
+						<div class="row">
+							<div class="col-lg-12">
+								<div class="image-info-header-text">
+									<span>Thông tin hình ảnh</span><br>
+								</div>
+								<div class="image-info-text">
+									<span class="fw-image-info-text">Bảy cuốn sách trên cái bàn cạnh cái đèn gần cửa sổ</span><br>
+									<span>Thể loại: Linh tinh</span><br>
+									<span>Kích cỡ file: 1MB</span><br>
+									<span>Độ phân giải: 1426*1080</span><br>
+									<span class="fw-image-info-text">Cam kết: </span><br>
+									<div style="padding-left: 15px;">
+										<span>✓ Miễn phí cho mục đích sử dụng cá nhân và thương mại</span><br>
+										<span>✓ Không yêu cầu ghi nhận</span>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-12">
+								<div class="image-sponsored-text">
+									<span>Hình ảnh được tài trợ</span>
+								</div>
+							</div>
+							<div class="col-lg-6 col-md-2 col-sm-2 pd-l-r-15">
+								<img class="picture-info" src="image/background/image10.jpg" alt="">
+							</div>
+							<div class="col-lg-6 col-md-2 col-sm-2 pd-l-r-15">
+								<img class="picture-info" src="image/background/image11.jpg" alt="">
+							</div>
+							<div class="col-lg-6 col-md-2 col-sm-2 pd-l-r-15">
+								<img class="picture-info" src="image/background/image12.jpg" alt="">
+							</div>
+							<div class="col-lg-6 col-md-2 col-sm-2 pd-l-r-15">
+								<img class="picture-info" src="image/background/image13.jpg" alt="">
+							</div>
+							<div class="col-lg-6 col-md-2 col-sm-2 pd-l-r-15">
+								<img class="picture-info" src="image/background/image14.jpg" alt="">
+							</div>
+							<div class="col-lg-6 col-md-2 col-sm-2 pd-l-r-15">
+								<img class="picture-info" src="image/background/image20.jpg" alt="">
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

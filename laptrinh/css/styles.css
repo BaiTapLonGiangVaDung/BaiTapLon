@@ -43,7 +43,7 @@
 }
 #nav-sticky{
 	background-color: white;
-	box-shadow: 1px 3px 12px -5px rgba(0,0,0,0.2);
+	border-bottom: 0.8px solid #55555538;
 	z-index: 1;
 	padding-top: 10px;
 	padding-bottom: 10px;
@@ -55,6 +55,7 @@
   position: fixed;
   top: 0;
   width: 100%;
+  box-shadow: 1px 3px 12px -5px rgba(0,0,0,0.2);
 }
 .new-arrivals{
 	background: url("../image/background1.jpg") no-repeat center center;
@@ -198,15 +199,19 @@
 	padding-bottom: 30px;	
 }
 .font-info-bottom{
-	font-size: 14px;
+	font-size: 16px;
 	color: #555555;
 	line-height: 1.8;
 }
 .font-bold-bottom{
 	font-weight: bold;
+	font-size: 22px;
 }
 .p-b-li{
 	padding-bottom: 9px;
+}
+.p-b-li a{
+	text-decoration: none;
 }
 .p-l-r-bt{
 	padding-left: 80px;
@@ -314,16 +319,7 @@ ul,li{
 .box-list{
 	padding-right: 30px;
 }
-#image-form{
-	padding-top: 40px;
-	padding-left: 50px;
-	padding-right: 50px;
-	padding-bottom: 40px;
-}
-.picture-info{
-	width: 100%;
-	height: auto;
-}
+
 .image-header ul li{
 	display: inline;
 }
@@ -437,7 +433,7 @@ figure.effect-marley h2::after {
     top: 100%;
     left: 0;
     width: 100%;
-    height: 1px;
+    height: 1.5px;
     background: #fff;
     content: '';
     -webkit-transform: translate3d(0,40px,0);
@@ -458,6 +454,54 @@ figure.effect-marley:hover p {
     transform: translate3d(0,0,0);
 }
 /*end css shop.php*/
+/*css image.php*/
+#image-form{
+	padding-top: 40px;
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-bottom: 40px;
+}
+.p-r-30{
+	padding-right: 30px;
+}
+.picture-info{
+	width: 100%;
+	height: auto;
+}
+.image-info-header-text{
+	font-size: 25px;
+	padding-bottom: 15px;
+	font-weight: 500;
+}
+.image-info-text{
+	font-size: 15px;
+	padding-bottom: 30px;
+}
+.image-related-text{
+	font-size: 25px;
+	padding-bottom: 20px;
+	padding-top: 20px;
+	font-weight: 500;
+}
+.image-related{
+	padding-right: 15px;
+	padding-top: 30px;
+}
+.pd-l-r-15{
+	padding-left: 15px;
+	padding-right: 0px;
+	padding-bottom: 15px;
+}
+.image-sponsored-text{
+	font-size: 25px;
+	padding-bottom: 20px;
+	font-weight: 500;
+}
+.fw-image-info-text{
+	font-weight: 500;
+	font-size: 16px;
+}
+/*end css image.php*/
 @media(min-width: 992px).col-lg-4{
 	max-width:33.333333%;
 }

@@ -90,28 +90,28 @@
 								</a>
 							</div>
 							<div class="col-lg-4">
-								<img class="image-background1" src="image/background/image2.jpg" alt="">
+								<img class="image-background1" src="image/background/image22.jpg" alt="">
 							</div>
 							<div class="col-lg-4">
-								<img class="image-background1" src="image/background/image3.jpg" alt="">
+								<img class="image-background1" src="image/background/image23.jpg" alt="">
 							</div>
 							<div class="col-lg-4">
-								<img class="image-background1" src="image/background/image4.jpg" alt="">
+								<img class="image-background1" src="image/background/image24.jpg" alt="">
 							</div>
 							<div class="col-lg-4">
-								<img class="image-background1" src="image/background/image5.jpg" alt="">
+								<img class="image-background1" src="image/background/image25.jpg" alt="">
 							</div>
 							<div class="col-lg-4">
-								<img class="image-background1" src="image/background/image6-min.jpg" alt="">
+								<img class="image-background1" src="image/background/image26.jpg" alt="">
 							</div>
 							<div class="col-lg-4">
-								<img class="image-background1" src="image/background/image7-min.jpg" alt="">
+								<img class="image-background1" src="image/background/image27.jpg" alt="">
 							</div>
 							<div class="col-lg-4">
-								<img class="image-background1" src="image/background/image8.jpg" alt="">
+								<img class="image-background1" src="image/background/image28.jpg" alt="">
 							</div>
 							<div class="col-lg-4">
-								<img class="image-background1" src="image/background/image9-min.jpg" alt="">
+								<img class="image-background1" src="image/background/image29.jpg" alt="">
 							</div>
 						</div>
 					</div>
@@ -119,7 +119,7 @@
 						<div class="left-image w-33">
 							<img class="image-background" src="image/background/image1.jpg" alt="">
 							<img class="image-background" src="image/background/image3.jpg" alt="">
-							<img class="image-background" src="image/background/image4.jpg" alt="">
+							<img class="image-background" src="image/background/image4-min.jpg" alt="">
 						</div>
 						<div class="left-image w-33">
 							<img class="image-background" src="image/background/image2.jpg" alt="">
