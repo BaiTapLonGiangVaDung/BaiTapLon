@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Hình ảnh</title>
+	<title>Thông tin về chúng tôi</title>
 	<link rel="shortcut icon" type="image/x-icon" href="https://unsplash.com/favicon.ico">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
@@ -66,88 +66,38 @@
 			</div>
 		</div>
 	</div>
-	<div id="image-form">
-		<div class="container-fluid">
+	<div id="about-form">
+		<div class="container">
 			<div class="row">
-				<div class="col-lg-8 p-r-30">
-					<img class="picture-info" src="image/background/image1.jpg" alt="">
-					<div class="image-related">
-						<div class="row">
-							<div class="col-lg-12">
-								<div class="image-related-text">
-									<span>Hình ảnh liên quan</span>
-								</div>
-							</div>
-							<div class="col-lg-3 col-md-3 col-sm-3 pd-l-r-15">
-								<img class="picture-info" src="image/background/image17.jpg" alt="">
-							</div>
-							<div class="col-lg-3 col-md-3 col-sm-3 pd-l-r-15">
-								<img class="picture-info" src="image/background/image18.jpg" alt="">
-							</div>
-							<div class="col-lg-3 col-md-3 col-sm-3 pd-l-r-15">
-								<img class="picture-info" src="image/background/image19.jpg" alt="">
-							</div>
-							<div class="col-lg-3 col-md-3 col-sm-3 pd-l-r-15">
-								<img class="picture-info" src="image/background/image16.jpg" alt="">
-							</div>
-							<div class="col-lg-3 col-md-3 col-sm-3 pd-l-r-15">
-								<img class="picture-info" src="image/background/image20.jpg" alt="">
-							</div>
-							<div class="col-lg-3 col-md-3 col-sm-3 pd-l-r-15">
-								<img class="picture-info" src="image/background/image21.jpg" alt="">
-							</div>
-							<div class="col-lg-3 col-md-3 col-sm-3 pd-l-r-15">
-								<img class="picture-info" src="image/background/image22.jpg" alt="">
-							</div>
-							<div class="col-lg-3 col-md-3 col-sm-3 pd-l-r-15">
-								<img class="picture-info" src="image/background/image23.jpg" alt="">
-							</div>
-						</div>
+				<div class="col-lg-3">
+					<div class="about-sly">
+						<h3>Slytherin</h3>
+						<p>FAQ</p>
+						<p>Điều khoản dịch vụ</p>
+						<p>Chính sách bảo mật</p>
+						<p>Thông tin về chúng tôi</p>
+						<p>Diễn đàn</p>
 					</div>
 				</div>
-				<div class="col-lg-4">
-					<div class="image-sponsored">
-						<div class="row">
-							<div class="col-lg-12">
-								<div class="image-info-header-text">
-									<span>Thông tin hình ảnh</span><br>
-								</div>
-								<div class="image-info-text">
-									<span class="fw-image-info-text">Bảy cuốn sách trên cái bàn cạnh cái đèn gần cửa sổ</span><br>
-									<span>Thể loại: Linh tinh</span><br>
-									<span>Kích cỡ file: 1MB</span><br>
-									<span>Độ phân giải: 1426*1080</span><br>
-									<span class="fw-image-info-text">Cam kết: </span><br>
-									<div style="padding-left: 15px;">
-										<span>✓ Miễn phí cho mục đích sử dụng cá nhân và thương mại</span><br>
-										<span>✓ Không yêu cầu ghi nhận</span>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-12">
-								<div class="image-sponsored-text">
-									<span>Hình ảnh được tài trợ</span>
-								</div>
-							</div>
-							<div class="col-lg-6 col-md-2 col-sm-2 pd-l-r-15">
-								<img class="picture-info" src="image/background/image10.jpg" alt="">
-							</div>
-							<div class="col-lg-6 col-md-2 col-sm-2 pd-l-r-15">
-								<img class="picture-info" src="image/background/image11.jpg" alt="">
-							</div>
-							<div class="col-lg-6 col-md-2 col-sm-2 pd-l-r-15">
-								<img class="picture-info" src="image/background/image12.jpg" alt="">
-							</div>
-							<div class="col-lg-6 col-md-2 col-sm-2 pd-l-r-15">
-								<img class="picture-info" src="image/background/image13.jpg" alt="">
-							</div>
-							<div class="col-lg-6 col-md-2 col-sm-2 pd-l-r-15">
-								<img class="picture-info" src="image/background/image14.jpg" alt="">
-							</div>
-							<div class="col-lg-6 col-md-2 col-sm-2 pd-l-r-15">
-								<img class="picture-info" src="image/background/image20.jpg" alt="">
-							</div>
-						</div>
+				<div class="col-lg-9">
+					<div class="about-sly-content">
+						<h3>FAQ</h3>
+						<h4>Slytherin là gì?</h4>
+						<p>
+							Slytherin là cộng đồng sáng tạo, chia sẻ hình ảnh miễn phí có bản quền. Tất cả các nội dung được phát hành thep Creative Commons CCO, giúp họ an toàn khi sử dụng mà không cần xin phép ngay cả với mục đích thương mại.
+						</p>
+						<h4>Tôi có thể sử dụng ảnh của bạn?</h4>
+						<p>
+							Bạn có thể sao chép, sửa đổi, phân phối và sử dụng các ảnh, thậm chí cho mục đích thương mại, tất cả mà không cần xin phép và không phải thanh toán cho quyền sử dụng này. Tuy nhiên, nội dung mô tả vẫn có thể được bảo vệ bởi nhãn hiệu hàng hoá, quyền riêng tư hoặc công khai.
+						</p>
+						<h4>Có thể sử dụng các ảnh của Slytherin trên facebook và các mạng xã hội khác không?</h4>
+						<p>
+							Có, bạn có thể sử dụng các ảnh của chúng tôi trên các nền tảng truyền thông xã hội.
+						</p>
+						<h4>Hình ảnh của tôi đã được chấp nhận, nhưng nó không hiển thị trong hồ sơ của tôi. Tại sao?</h4>
+						<p>
+							Nó thường mất một vài phút để thể hiện những hình ảnh mới trong hồ sơ của bạn. Trong một vài trường hợp, nó có thể mất một vài ngày. Nếu thiếu nhiều hình ảnh, chúng tôi có thể đang chạy bản cập nhật và tất cả sẽ trở lại bình thường trong vòng một giờ.
+						</p>
 					</div>
 				</div>
 			</div>

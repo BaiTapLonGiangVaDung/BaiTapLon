@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Home</title>
+	<title>Trang chủ</title>
+	<link rel="shortcut icon" type="image/x-icon" href="https://unsplash.com/favicon.ico">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
@@ -28,7 +29,7 @@
 					<a class="p-r-logo" href="">
 						<img class="icon-logo" src="image/icon/twitter-logo.png" alt="">
 					</a>
-					<a href="" id="login-top">Đăng nhập</a>
+					<a href="login.php" id="login-top">Đăng nhập</a>
 				</div>
 			</div>
 		</div>
@@ -60,7 +61,7 @@
 					    <a class="nav-link" href="#">Blog</a>
 					  </li>
 					  <li class="nav-item">
-					    <a class="nav-link" href="#">Thông tin</a>
+					    <a class="nav-link" href="about.php">Thông tin</a>
 					  </li>
 					  <li class="nav-item">
 					    <a class="nav-link" href="#">Liên kết</a>

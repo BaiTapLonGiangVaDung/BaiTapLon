@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Home</title>
+	<title>Bộ sưu tập</title>
+	<link rel="shortcut icon" type="image/x-icon" href="https://unsplash.com/favicon.ico">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
@@ -33,7 +34,7 @@
 					<a class="p-r-logo" href="">
 						<img class="icon-logo" src="image/icon/twitter-logo.png" alt="">
 					</a>
-					<a href="" id="login-top">Đăng nhập</a>
+					<a href="login.php" id="login-top">Đăng nhập</a>
 				</div>
 			</div>
 		</div>
@@ -48,13 +49,13 @@
 						    	<a class="nav-link active" href="index.php">Trang chủ</a>
 						  	</li>
 						  	<li class="nav-item">
-						    	<a class="nav-link" href="">Bộ sưu tập</a>
+						    	<a class="nav-link" href="collection.php">Bộ sưu tập</a>
 						  	</li>
 						  	<li class="nav-item">
 						    	<a class="nav-link" href="#">Blog</a>
 						  	</li>
 						  	<li class="nav-item">
-						    	<a class="nav-link" href="#">Thông tin</a>
+						    	<a class="nav-link" href="about.php">Thông tin</a>
 						  	</li>
 						  	<li class="nav-item">
 						    	<a class="nav-link" href="#">Liên kết</a>
@@ -144,7 +145,7 @@
 						<h1 class="site-title">
 							<a href="#">Slytherin</a>
 						</h1>
-						<p class="site-tiny">Thời trang và phong cách</p>
+						<p class="site-tiny">Khám phá thế giới muôn màu</p>
 					</div>
 				</div>
 				<div class="col-lg-8">
