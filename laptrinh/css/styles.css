@@ -66,7 +66,7 @@
 	height:570px;
 }
 .new-arrivals1{
-	background: url("../image/background3.jpg") no-repeat center center;
+	background: url("../image/background10.jpg") no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -74,7 +74,7 @@
 	height:570px;
 }
 .new-arrivals2{
-	background: url("../image/background5.jpg") no-repeat center center;
+	background: url("../image/background8.jpg") no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -235,6 +235,21 @@ ul,li{
 	list-style-type: none;
 	padding-left: 0px;
 }
+#featured-photos{
+	text-align: center;
+	padding: 30px;
+}
+#featured-photos-list{
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+.featured-photos-object img{
+	width: 100%;
+	height: auto;
+}
+.p-l-r-5{
+	padding: 5px;
+}
 /*end css trang chủ*/
 
 /*css shop.php*/
@@ -379,10 +394,12 @@ ul,li{
 
 .grid figure h2 {
     word-spacing: -0.15em;
+    	font-size: 25px;
     font-weight: 300;
 }
 
 .grid figure h2 span {
+	font-size: 25px;
     font-weight: 400;
 }
 
@@ -433,7 +450,7 @@ figure.effect-marley h2::after {
     top: 100%;
     left: 0;
     width: 100%;
-    height: 1.5px;
+    height: 1px;
     background: #fff;
     content: '';
     -webkit-transform: translate3d(0,40px,0);

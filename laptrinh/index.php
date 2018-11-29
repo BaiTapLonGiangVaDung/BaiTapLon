@@ -205,6 +205,75 @@
 			</div>
 		</div>
 	</div>
+	<div id="featured-photos">
+		<div class="container-fluid">
+			<span class="f-40">HÌNH ẢNH NỔI BẬT</span>
+			<div id="featured-photos-list">
+				<div class="row">
+					<div class="col-lg-3 p-l-r-5">
+						<div class="featured-photos-object">
+							<img src="image/background/image14.jpg" alt="">
+						</div>
+					</div>
+					<div class="col-lg-3 p-l-r-5">
+						<div class="featured-photos-object">
+							<img src="image/background/image26.jpg" alt="">
+						</div>
+					</div>
+					<div class="col-lg-3 p-l-r-5">
+						<div class="featured-photos-object">
+							<img src="image/background/image16.jpg" alt="">
+						</div>
+					</div>
+					<div class="col-lg-3 p-l-r-5">
+						<div class="featured-photos-object">
+							<img src="image/background/image17.jpg" alt="">
+						</div>
+					</div>
+					<div class="col-lg-3 p-l-r-5">
+						<div class="featured-photos-object">
+							<img src="image/background/image18.jpg" alt="">
+						</div>
+					</div>
+					<div class="col-lg-3 p-l-r-5">
+						<div class="featured-photos-object">
+							<img src="image/background/image19.jpg" alt="">
+						</div>
+					</div>
+					<div class="col-lg-3 p-l-r-5">
+						<div class="featured-photos-object">
+							<img src="image/background/image20.jpg" alt="">
+						</div>
+					</div>
+					<div class="col-lg-3 p-l-r-5">
+						<div class="featured-photos-object">
+							<img src="image/background/image21.jpg" alt="">
+						</div>
+					</div>
+					<div class="col-lg-3 p-l-r-5">
+						<div class="featured-photos-object">
+							<img src="image/background/image22.jpg" alt="">
+						</div>
+					</div>
+					<div class="col-lg-3 p-l-r-5">
+						<div class="featured-photos-object">
+							<img src="image/background/image23.jpg" alt="">
+						</div>
+					</div>
+					<div class="col-lg-3 p-l-r-5">
+						<div class="featured-photos-object">
+							<img src="image/background/image24.jpg" alt="">
+						</div>
+					</div>
+					<div class="col-lg-3 p-l-r-5">
+						<div class="featured-photos-object">
+							<img src="image/background/image25.jpg" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	<div class="info-bottom">
 		<div class="container-fluid">
 			<div class="row">

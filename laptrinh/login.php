@@ -35,12 +35,13 @@
                     </div>
                     <a href="#" style="text-decoration:none">
                         <div class="btnLogin"> 
-                            <p id="login_p"> login </p>
+                            <p id="login_p"> Login </p>
                         </div>
                     </a>
+                    <br>
                     <p>
                         Bạn chưa có tài khoản ?
-                        <a href="#">Tham gia</a>
+                        <a href="#">Đăng ký</a>
                     </p>
                 </div>
                 <div class="col-md-3">
