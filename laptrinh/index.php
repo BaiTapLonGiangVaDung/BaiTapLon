@@ -1,17 +1,3 @@
-<?php
-	$con=mysqli_connect('localhost','root','123456','webhinhanh');
-		if(!$con){
-			die('ket noi that bai'.mysqli_connect_error());
-		}
-		//lấy ra ảnh
-		$sql="select * from hinhanh limit 16";
-		$resultImage = mysqli_query($con, $sql);
-		//Lấy ra bộ sưu tập
-		$sqlCollection="select * from bosuutap limit 6";
-		$resultCollection= mysqli_query($con, $sqlCollection);
-
- ?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -150,19 +136,72 @@
 		<div class="container-fluid">
 			<span class="f-40">BỘ SƯU TẬP NỔI BẬT</span>
 			<div class="row" style="margin-top: 30px;">
-				<?php foreach ($resultCollection as $item) {?>
-					<div class="col-lg-4 col-md-6 col-sm-12 p-l-r-bst">
-						<div class="grid">
-							<figure class="effect-marley">
-		                        <img src="image/<?php echo $item["AnhBoSuuTap"] ?>" alt=""/>
-		                        <figcaption>
-		                            <h2><?php echo $item["TenBoSuuTap"]; ?></h2>
-		                            <p><?php echo $item["MoTa"]; ?></p>
-		                        </figcaption>
-		                    </figure>
-						</div>
+				<div class="col-lg-4 col-md-6 col-sm-12 p-l-r-bst">
+					<div class="grid">
+						<figure class="effect-marley">
+	                        <img src="image/dog-min.jpg" alt="img12"/>
+	                        <figcaption>
+	                            <h2>Động <span>Vật</span></h2>
+	                            <p>Khám phá động vật qua những hình ảnh và những khoảng khắc của chúng.</p>
+	                        </figcaption>
+	                    </figure>
 					</div>
-				<?php } ?>
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-12 p-l-r-bst">
+					<div class="grid">
+						<figure class="effect-marley">
+	                        <img src="image/nature-min.jpg" alt="img12"/>
+	                        <figcaption>
+	                            <h2>Thiên <span>Nhiên</span></h2>
+	                            <p>Khám phá vẻ đẹp hùng vĩ của thiên nhiên qua hình ảnh.</p>
+	                        </figcaption>
+	                    </figure>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-12 p-l-r-bst">
+					<div class="grid">
+						<figure class="effect-marley">
+	                        <img src="image/food-min.jpg" alt="img12"/>
+	                        <figcaption>
+	                            <h2>Đồ <span>Ăn</span></h2>
+	                            <p>Đắm chìm vào thế giới của đồ ăn qua những hình ảnh của chúng tôi.</p>
+	                        </figcaption>
+	                    </figure>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-12 p-l-r-bst">
+					<div class="grid">
+						<figure class="effect-marley">
+	                        <img src="image/tech-min.jpg" alt="img12"/>
+	                        <figcaption>
+	                            <h2>Công <span>Nghệ</span></h2>
+	                            <p>Cùng nhau học hỏi và khám phá công nghệ .</p>
+	                        </figcaption>
+	                    </figure>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-12 p-l-r-bst">
+					<div class="grid">
+						<figure class="effect-marley">
+	                        <img src="image/holiday-min.jpg" alt="img12"/>
+	                        <figcaption>
+	                            <h2>Lễ <span>Hội</span></h2>
+	                            <p>Tìm hiểu về những lễ hội ,tập tục văn hóa nổi bật.</p>
+	                        </figcaption>
+	                    </figure>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-12 p-l-r-bst">
+					<div class="grid">
+						<figure class="effect-marley">
+	                        <img src="image/game-min.jpg" alt="img12"/>
+	                        <figcaption>
+	                            <h2>Trò <span>Chơi</span></h2>
+	                            <p>Lạc vào thế giới game đầy màu sắc.</p>
+	                        </figcaption>
+	                    </figure>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -171,13 +210,66 @@
 			<span class="f-40">HÌNH ẢNH NỔI BẬT</span>
 			<div id="featured-photos-list">
 				<div class="row">
-					<?php foreach ($resultImage as $item) {?>
-						<div class="col-lg-3 p-l-r-5">
-							<div class="featured-photos-object">
-								<img src="image/background/<?php echo $item["TenHinhAnh"] ?>" alt="">
-							</div>
+					<div class="col-lg-3 p-l-r-5">
+						<div class="featured-photos-object">
+							<img src="image/background/image14.jpg" alt="">
 						</div>
-					<?php } ?>
+					</div>
+					<div class="col-lg-3 p-l-r-5">
+						<div class="featured-photos-object">
+							<img src="image/background/image26.jpg" alt="">
+						</div>
+					</div>
+					<div class="col-lg-3 p-l-r-5">
+						<div class="featured-photos-object">
+							<img src="image/background/image16.jpg" alt="">
+						</div>
+					</div>
+					<div class="col-lg-3 p-l-r-5">
+						<div class="featured-photos-object">
+							<img src="image/background/image17.jpg" alt="">
+						</div>
+					</div>
+					<div class="col-lg-3 p-l-r-5">
+						<div class="featured-photos-object">
+							<img src="image/background/image18.jpg" alt="">
+						</div>
+					</div>
+					<div class="col-lg-3 p-l-r-5">
+						<div class="featured-photos-object">
+							<img src="image/background/image19.jpg" alt="">
+						</div>
+					</div>
+					<div class="col-lg-3 p-l-r-5">
+						<div class="featured-photos-object">
+							<img src="image/background/image20.jpg" alt="">
+						</div>
+					</div>
+					<div class="col-lg-3 p-l-r-5">
+						<div class="featured-photos-object">
+							<img src="image/background/image21.jpg" alt="">
+						</div>
+					</div>
+					<div class="col-lg-3 p-l-r-5">
+						<div class="featured-photos-object">
+							<img src="image/background/image22.jpg" alt="">
+						</div>
+					</div>
+					<div class="col-lg-3 p-l-r-5">
+						<div class="featured-photos-object">
+							<img src="image/background/image23.jpg" alt="">
+						</div>
+					</div>
+					<div class="col-lg-3 p-l-r-5">
+						<div class="featured-photos-object">
+							<img src="image/background/image24.jpg" alt="">
+						</div>
+					</div>
+					<div class="col-lg-3 p-l-r-5">
+						<div class="featured-photos-object">
+							<img src="image/background/image25.jpg" alt="">
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

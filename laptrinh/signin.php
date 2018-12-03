@@ -10,9 +10,10 @@
 </head>
 
 <body>
-    <div class="padding-login" >
+    <div class="padding-login">
         <div class="container-fluid" align="center">
             <div class="row">
+
                 <div class="col-md-5" id="boc">
                     <div id="signin-background">
                         <div  style="padding:40px; text-align:left">
@@ -33,9 +34,7 @@
                         </h1>
                         <p class="site-tiny">Khám phá thế giới muôn màu</p>
                     </div>
-                    <div style="margin-bottom: 34px;">
-                        <b style="font-size:23px">Đăng ký</b>
-                    </div>
+                    <b style="font-size:23px">Đăng ký</b>
                     <a href="#" style="text-decoration:none">
                         <div class="fb-login">
                             <p id="fb_p"> Facebook </p>

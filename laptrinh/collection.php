@@ -1,12 +1,3 @@
-<?php
-	$con=mysqli_connect('localhost','root','123456','webhinhanh');
-		if(!$con){
-			die('ket noi that bai'.mysqli_connect_error());
-		}
-		//lấy ra ảnh
-		$sql="select * from hinhanh";
-		$resultImageAll = mysqli_query($con, $sql);
- ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -78,7 +69,7 @@
 	<div id="form-right-shop">
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col-lg-2 col-md-2 col-sm-2">
+				<div class="col-lg-2">
 					<div id="list-shop">
 						<span class="text-bold-shop">Bộ sưu tập</span><br><br>
 						<ul >
@@ -91,16 +82,55 @@
 						</ul>
 					</div>
 				</div>
-				<div class="col-lg-10 col-md-10 col-sm-10">
+				<div class="col-lg-10">
 					<div class="box-list">
 						<div class="row">
-							<?php foreach ($resultImageAll as $item) {?>
-								<div class="col-lg-4 col-md-6 col-sm-12" style="padding: 0">
-									<a href="image.php" title="">
-										<img class="image-background" src="image/background/<?php echo $item["TenHinhAnh"] ?>" alt="">
-									</a>
-								</div>
-							<?php } ?>
+							<div class="col-lg-4">
+								<a href="image.php" title="">
+									<img class="image-background1" src="image/background/image1.jpg" alt="">
+								</a>
+							</div>
+							<div class="col-lg-4">
+								<img class="image-background1" src="image/background/image22.jpg" alt="">
+							</div>
+							<div class="col-lg-4">
+								<img class="image-background1" src="image/background/image23.jpg" alt="">
+							</div>
+							<div class="col-lg-4">
+								<img class="image-background1" src="image/background/image24.jpg" alt="">
+							</div>
+							<div class="col-lg-4">
+								<img class="image-background1" src="image/background/image25.jpg" alt="">
+							</div>
+							<div class="col-lg-4">
+								<img class="image-background1" src="image/background/image26.jpg" alt="">
+							</div>
+							<div class="col-lg-4">
+								<img class="image-background1" src="image/background/image27.jpg" alt="">
+							</div>
+							<div class="col-lg-4">
+								<img class="image-background1" src="image/background/image28.jpg" alt="">
+							</div>
+							<div class="col-lg-4">
+								<img class="image-background1" src="image/background/image29.jpg" alt="">
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="left-image w-33">
+							<img class="image-background" src="image/background/image1.jpg" alt="">
+							<img class="image-background" src="image/background/image3.jpg" alt="">
+							<img class="image-background" src="image/background/image4-min.jpg" alt="">
+						</div>
+						<div class="left-image w-33">
+							<img class="image-background" src="image/background/image2.jpg" alt="">
+							<img class="image-background" src="image/background/image5.jpg" alt="">
+							<img class="image-background" src="image/background/image6-min.jpg" alt="">
+						</div>
+						<div class="left-image w-33">
+							<img class="image-background" src="image/background/image9-min.jpg" alt="">
+							<img class="image-background" src="image/background/image7-min.jpg" alt="">
+							<img class="image-background" src="image/background/image8.jpg" alt="">
 						</div>
 					</div>
 				</div>
