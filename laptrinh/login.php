@@ -41,7 +41,7 @@
                     <br>
                     <p>
                         Bạn chưa có tài khoản ?
-                        <a href="#">Đăng ký</a>
+                        <a href="signin.php">Đăng ký</a>
                     </p>
                 </div>
                 <div class="col-md-3">
