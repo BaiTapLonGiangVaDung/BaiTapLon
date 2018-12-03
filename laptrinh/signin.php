@@ -11,20 +11,20 @@
 
 <body>
     <div class="padding-login">
-        <div class="container-fluid" align="center"> 
+        <div class="container-fluid" align="center">
             <div class="row">
 
-                <div class="col-md-5" id="boc">                    
+                <div class="col-md-5" id="boc">
                     <div id="signin-background">
                         <div  style="padding:40px; text-align:left">
-                        <div class="padding-sly" >
-                        <h1 class="site-title" style="font-size: 30px">
-                            <a href="index.php" style="color: wheat;padding-right: 313px;" style="margin-right: 313px">Slytherin</a>
-                        </h1>
-                        <p id="boc-p1">Nơi bắt đầu sự sáng tạo</p>
-                        <p id="boc-p2">Tìm kiếm hàng ngàn bức ảnh miễn phí, độ phân giải cao mà bạn không thể tìm kiếm ở bất cứ nơi đâu</p>
-                    </div>
-                        </div>  
+                            <div class="padding-sly" >
+                                <h1 class="site-title" style="font-size: 30px">
+                                    <a href="index.php" style="color: wheat;padding-right: 313px;" style="margin-right: 313px">Slytherin</a>
+                                </h1>
+                                <p id="boc-p1">Nơi bắt đầu sự sáng tạo</p>
+                                <p id="boc-p2">Tìm kiếm hàng ngàn bức ảnh miễn phí, độ phân giải cao mà bạn không thể tìm kiếm ở bất cứ nơi đâu</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-7" id="signin-p-82">
@@ -35,7 +35,6 @@
                         <p class="site-tiny">Khám phá thế giới muôn màu</p>
                     </div>
                     <b style="font-size:23px">Đăng ký</b>
-                    
                     <a href="#" style="text-decoration:none">
                         <div class="fb-login">
                             <p id="fb_p"> Facebook </p>
@@ -58,7 +57,6 @@
                     <br>
                     <p>
                         Bằng việc nhấn nút Đăng ký, bạn đã chấp nhận mọi <a href="#">Điều khoản </a> của Slytherin
-                        
                     </p>
                 </div>
 

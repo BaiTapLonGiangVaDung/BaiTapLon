@@ -608,16 +608,13 @@ figure.effect-marley:hover p {
 }
 #signin-background{
 	background-image: url('../image/4k.jpg');
-	
 	background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     background-color: #111111;
-	
 	height: 100%;
 }
 #boc{
-	
 	padding: 0;
 	z-index: 2;
 }
