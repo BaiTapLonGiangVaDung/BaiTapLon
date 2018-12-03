@@ -599,7 +599,43 @@ figure.effect-marley:hover p {
 	color:#555555;
 	font-size:18px;
 }
+
 /*end css login.php*/
+/*css sigin.php*/
+#signin-p-82{
+	padding-left: 82px;
+	padding-right: 82px;
+}
+#signin-background{
+	background-image: url('../image/4k.jpg');
+	
+	background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: #111111;
+	
+	height: 100%;
+}
+#boc{
+	
+	padding: 0;
+	z-index: 2;
+}
+#boc-p1{
+	font-size: 50px;
+    padding-top: 61px;   
+    padding-right: 200px;
+	font-style: oblique;
+	text-align: left;
+	color: white;
+}
+#boc-p2{
+	text-align: left;
+    padding-top: 70px;
+    font-size: 33px;
+	color: #d2d2d2;
+}
+/*end css sigin.php*/
 @media(min-width: 992px).col-lg-4{
 	max-width:33.333333%;
 }
