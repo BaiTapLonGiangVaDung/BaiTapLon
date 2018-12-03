@@ -279,7 +279,7 @@ ul,li{
 	color: white;
 }
 #list-shop{
-	padding-left: 80px;
+	padding-left: 27%;
 }
 .login-text-shop{
 	padding-top: 15px;
@@ -307,29 +307,13 @@ ul,li{
 }
 .image-background{
 	width: 100%;
-	height: auto;
-	padding-right: 10px;
-	padding-bottom: 10px;
-}
-.image-background1{
-	width: 395.95px;
 	height: 100%;
-	padding-right: 4px;
-	padding-bottom: 20px;
+	padding-right: 5px;
+	padding-left: 5px;
+	padding-bottom: 10px;
 }
 .image-li{
 	width: 380px;
-}
-.form-background{
-	padding-left: 25px;
-	padding-right: 25px;
-	padding-top: 18px;
-}
-.w-33{
-	width: calc(33.33% - 16px);
-}
-.left-image{
-	float: left;
 }
 .box-list{
 	padding-right: 30px;
@@ -578,7 +562,7 @@ figure.effect-marley:hover p {
 	padding-top:10px;
 	margin-top: 28px;
 }
-.btnLogin{ 
+.btnLogin{
 	background-color:#111111;
 	width: 100%;
 	height: 46px;
@@ -586,7 +570,7 @@ figure.effect-marley:hover p {
 	border: 1px transparent;
 }
 
-.fb-login:hover{
+.fb:hover{
 	background-color: #344a7d;
 }
 .btnLogin:hover{
@@ -599,20 +583,20 @@ figure.effect-marley:hover p {
 	color:#555555;
 	font-size:18px;
 }
-
 /*end css login.php*/
 /*css sigin.php*/
 #signin-p-82{
 	padding-left: 82px;
 	padding-right: 82px;
+	padding-top: 15px;
 }
 #signin-background{
-	background-image: url('../image/4k.jpg');
+	background-image: url('../image/background_signin.jpg');
 	background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     background-color: #111111;
-	height: 100%;
+	height: 104%;
 }
 #boc{
 	padding: 0;

@@ -1,16 +1,7 @@
-<?php
-	$con=mysqli_connect('localhost','root','123456','webhinhanh');
-		if(!$con){
-			die('ket noi that bai'.mysqli_connect_error());
-		}
-		//lấy ra ảnh
-		$sql="select * from hinhanh";
-		$resultImageAll = mysqli_query($con, $sql);
- ?>
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Bộ sưu tập</title>
+	<title>Thông tin về chúng tôi</title>
 	<link rel="shortcut icon" type="image/x-icon" href="https://unsplash.com/favicon.ico">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
@@ -75,35 +66,10 @@
 			</div>
 		</div>
 	</div>
-	<div id="form-right-shop">
+	<div id="menu-account">
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col-lg-2 col-md-2 col-sm-2">
-					<div id="list-shop">
-						<span class="text-bold-shop">Bộ sưu tập</span><br><br>
-						<ul >
-							<li class="p-b-li"><a href="#" class="font-info-bottom ">Động vật</a></li>
-							<li class="p-b-li"><a href="#" class="font-info-bottom">Thiên nhiên</a></li>
-							<li class="p-b-li"><a href="#" class="font-info-bottom">Đồ ăn</a></li>
-							<li class="p-b-li"><a href="#" class="font-info-bottom">Công nghệ</a></li>
-							<li class="p-b-li"><a href="#" class="font-info-bottom">Game</a></li>
-							<li class="p-b-li"><a href="#" class="font-info-bottom">Lễ Hội</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-lg-10 col-md-10 col-sm-10">
-					<div class="box-list">
-						<div class="row">
-							<?php foreach ($resultImageAll as $item) {?>
-								<div class="col-lg-4 col-md-6 col-sm-12" style="padding: 0">
-									<a href="image.php" title="">
-										<img class="image-background" src="image/background/<?php echo $item["TenHinhAnh"] ?>" alt="">
-									</a>
-								</div>
-							<?php } ?>
-						</div>
-					</div>
-				</div>
+				
 			</div>
 		</div>
 	</div>
