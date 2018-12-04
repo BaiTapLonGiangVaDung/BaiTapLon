@@ -29,20 +29,21 @@
                     <p>OR</p>
                     <div id="para">
                         <p align="left" style="margin-bottom: 0px">Tài khoản Email </p>
-                        <input type="text" id="txtEmail"  /> <br/>
+                        <input type="text" id="txtUsername" name="txtUsername" style="height: 40px;" /> <br/>
                         <p align="left" style="margin-bottom: 0px">Mật khẩu</p>
-                        <input type="password" id="txtP" />
+                        <input type="password" id="txtPassword" name="txtPassword" style="height: 40px;"/>
                     </div>
-                    <a href="#" style="text-decoration:none">
-                        <div class="btnLogin"> 
-                            <p id="login_p"> Login </p>
-                        </div>
-                    </a>
+                    <div id="btnLogin">
+                        <p id="login_p"> Đăng nhập </p>
+                    </div>
                     <br>
                     <p>
                         Bạn chưa có tài khoản ?
                         <a href="signin.php">Đăng ký</a>
                     </p>
+                    <div id="error">
+                        <p></p>
+                    </div>
                 </div>
                 <div class="col-md-3">
                 </div>
@@ -54,5 +55,6 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 	<script src="JS/customs.js"></script>
+    <script src="JS/checklogin.js"></script>
 </body>
 </html>

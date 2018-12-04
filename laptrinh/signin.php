@@ -27,13 +27,13 @@
                     </div>
                 </div>
                 <div class="col-md-7" id="signin-p-82">
-                    <div class="padding-sly" style="padding-bottom: 15px;">
-                        <h1 class="site-title" style="font-size: 65px">
+                    <div class="padding-sly">
+                        <h1 class="site-title" style="font-size: 55px">
                             <a href="index.php">Slytherin</a>
                         </h1>
                         <p class="site-tiny">Khám phá thế giới muôn màu</p>
                     </div>
-                    <div style="margin-bottom: 34px;">
+                    <div style="margin-bottom: 25px;">
                         <b style="font-size:23px">Đăng ký</b>
                     </div>
                     <a href="#" style="text-decoration:none">
@@ -44,14 +44,14 @@
                     <p>OR</p>
                     <div id="para">
                         <p align="left" style="margin-bottom: 0px">Tài khoản Email </p>
-                        <input type="text" id="txtEmail" /> <br />
+                        <input type="text" id="txtUsername" style="height: 40px;"/> <br />
                         <p align="left" style="margin-bottom: 0px">Mật khẩu</p>
-                        <input type="password" id="txtP" />
+                        <input type="password" id="txtUsername" style="height: 40px;"/>
                         <p align="left" style="margin-bottom: 0px">Tên tài khoản </p>
-                        <input type="text" id="txtEmail" /> <br />
+                        <input type="text" id="txtUsername" style="height: 40px;"/> <br />
                     </div>
                     <a href="#" style="text-decoration:none">
-                        <div class="btnLogin">
+                        <div id="btnSignin">
                             <p id="login_p"> Đăng ký </p>
                         </div>
                     </a>

@@ -1,11 +1,13 @@
 <?php
+	session_start();
 	$con=mysqli_connect('localhost','root','123456','webhinhanh');
-		if(!$con){
-			die('ket noi that bai'.mysqli_connect_error());
-		}
-		//lấy ra ảnh
-		$sql="select * from hinhanh";
-		$resultImageAll = mysqli_query($con, $sql);
+	if(!$con){
+		die('ket noi that bai'.mysqli_connect_error());
+	}
+	//lấy ra ảnh
+	$sql="select * from hinhanh";
+	$resultImageAll = mysqli_query($con, $sql);
+	$con->close();
  ?>
 <!DOCTYPE html>
 <html>
@@ -43,7 +45,14 @@
 					<a class="p-r-logo" href="">
 						<img class="icon-logo" src="image/icon/twitter-logo.png" alt="">
 					</a>
-					<a href="login.php" id="login-top">Đăng nhập</a>
+					<?php
+						if (isset($_SESSION['UserName'])) {
+					?>
+					<a href="accounts.php" id="account-name"><?php echo $_SESSION['UserName'] ?></a>
+					<a href="logout.php" id="logout">/Đăng xuất</a>
+					<?php }else
+						echo "<a href='login.php' id='login-top'>Đăng nhập</a>";
+					?>
 				</div>
 			</div>
 		</div>

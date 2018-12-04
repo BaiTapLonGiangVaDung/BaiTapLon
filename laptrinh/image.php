@@ -1,3 +1,6 @@
+<?php
+	session_start();
+ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,7 +37,14 @@
 					<a class="p-r-logo" href="">
 						<img class="icon-logo" src="image/icon/twitter-logo.png" alt="">
 					</a>
-					<a href="login.php" id="login-top">Đăng nhập</a>
+					<?php
+						if (isset($_SESSION['UserName'])) {
+					?>
+					<a href="accounts.php" id="account-name"><?php echo $_SESSION['UserName'] ?></a>
+					<a href="logout.php" id="logout">/Đăng xuất</a>
+					<?php }else
+						echo "<a href='login.php' id='login-top'>Đăng nhập</a>";
+					?>
 				</div>
 			</div>
 		</div>
