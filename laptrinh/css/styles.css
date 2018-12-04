@@ -279,7 +279,7 @@ ul,li{
 	color: white;
 }
 #list-shop{
-	padding-left: 27%;
+	padding-left: 80px;
 }
 .login-text-shop{
 	padding-top: 15px;
@@ -307,13 +307,29 @@ ul,li{
 }
 .image-background{
 	width: 100%;
-	height: 100%;
-	padding-right: 5px;
-	padding-left: 5px;
+	height: auto;
+	padding-right: 10px;
 	padding-bottom: 10px;
+}
+.image-background1{
+	width: 395.95px;
+	height: 100%;
+	padding-right: 4px;
+	padding-bottom: 20px;
 }
 .image-li{
 	width: 380px;
+}
+.form-background{
+	padding-left: 25px;
+	padding-right: 25px;
+	padding-top: 18px;
+}
+.w-33{
+	width: calc(33.33% - 16px);
+}
+.left-image{
+	float: left;
 }
 .box-list{
 	padding-right: 30px;
@@ -562,7 +578,7 @@ figure.effect-marley:hover p {
 	padding-top:10px;
 	margin-top: 28px;
 }
-.btnLogin{
+.btnLogin{ 
 	background-color:#111111;
 	width: 100%;
 	height: 46px;
@@ -570,7 +586,7 @@ figure.effect-marley:hover p {
 	border: 1px transparent;
 }
 
-.fb:hover{
+.fb-login:hover{
 	background-color: #344a7d;
 }
 .btnLogin:hover{
@@ -583,22 +599,25 @@ figure.effect-marley:hover p {
 	color:#555555;
 	font-size:18px;
 }
+
 /*end css login.php*/
 /*css sigin.php*/
 #signin-p-82{
 	padding-left: 82px;
 	padding-right: 82px;
-	padding-top: 15px;
 }
 #signin-background{
-	background-image: url('../image/background_signin.jpg');
+	background-image: url('../image/4k.jpg');
+	
 	background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     background-color: #111111;
-	height: 104%;
+	
+	height: 100%;
 }
 #boc{
+	
 	padding: 0;
 	z-index: 2;
 }
@@ -617,6 +636,95 @@ figure.effect-marley:hover p {
 	color: #d2d2d2;
 }
 /*end css sigin.php*/
+/*css account.php*/
+#acc-top{
+	margin-bottom: 20px;
+	padding: 0 0 8px;
+	border-bottom: 2px solid #ddd;
+	font-size: 23px;
+    margin-top: 10px;
+}
+.tab-menu a {
+	font-size: 19px;
+    display: inline-block;
+    padding: 10px 0;
+    margin: 10px 15px;
+    cursor: pointer;
+    color: #71767a;
+    border-bottom: 2px solid transparent;
+    line-height: 24px;
+}
+.bocboc{
+	font-size: 18px;
+	margin-top: 23px;	
+}
+.bocboc label{
+	text-align: right;
+    display: inline-block;
+    vertical-align: middle;
+	width: 158px;
+	margin-right: 0px;
+	width: 188px;
+	padding-right: 17px;
+}
+.bocboc input[type=text]{
+	
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 3px #ddd;   
+    vertical-align: middle;    
+	box-sizing: border-box;
+	width: 393px;
+    height: 37px;
+    padding-right: 12px;
+	padding-left: 12px;
+	border-radius: 7px;
+}
+.bocboc textarea{
+    height: 37px;
+	width: 395px;
+	resize: none;
+	padding-left: 10px;
+	border-radius: 7px;
+	border: 1px solid #ccc;
+	box-shadow: inset 0 1px 3px #ddd;
+}
+.bocboc select{
+	border-radius: 7px;
+	border: 1px solid #ccc;
+	box-shadow: inset 0 1px 3px #ddd;
+}
+#thongtin{
+	height: 75px;
+}
+#giaotiep label{
+	overflow: hidden;
+	text-align: left;
+    width: 443px;
+	padding: 1px;
+}
+#thongbao label{
+	overflow: hidden;
+	text-align: left;
+    width: 549px;
+	padding: 1px;
+	
+}
+#luu{
+	cursor: pointer;
+	text-align: center;
+	border-radius: 6px;
+    border: 1px transparent;
+    font-size: 21px;  
+    color: white;
+    height: 38px;
+    width: 201px;
+    background-color: #19dc19e3;
+    text-align: center;
+    margin-left: 574.156px;
+}
+
+/*end css account.php*/
 @media(min-width: 992px).col-lg-4{
 	max-width:33.333333%;
 }
