@@ -42,7 +42,7 @@
                         <a href="signin.php">Đăng ký</a>
                     </p>
                     <div id="error">
-                        <p></p>
+                        
                     </div>
                 </div>
                 <div class="col-md-3">

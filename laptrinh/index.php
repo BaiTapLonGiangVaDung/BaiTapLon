@@ -160,15 +160,17 @@
 			<div class="row" style="margin-top: 30px;">
 				<?php foreach ($resultCollection as $item) {?>
 					<div class="col-lg-4 col-md-6 col-sm-12 p-l-r-bst">
-						<div class="grid">
-							<figure class="effect-marley">
-		                        <img src="image/<?php echo $item["AnhBoSuuTap"] ?>" alt=""/>
-		                        <figcaption>
-		                            <h2><?php echo $item["TenBoSuuTap"]; ?></h2>
-		                            <p><?php echo $item["MoTa"]; ?></p>
-		                        </figcaption>
-		                    </figure>
-						</div>
+						<a href="category.php?idcol=<?php echo $item["MaBoSuuTap"] ?>" title="">
+							<div class="grid">
+								<figure class="effect-marley">
+			                        <img src="image/<?php echo $item["AnhBoSuuTap"] ?>" alt=""/>
+			                        <figcaption>
+			                            <h2><?php echo $item["TenBoSuuTap"]; ?></h2>
+			                            <p><?php echo $item["MoTa"]; ?></p>
+			                        </figcaption>
+			                    </figure>
+							</div>
+						</a>
 					</div>
 				<?php } ?>
 			</div>
@@ -181,9 +183,11 @@
 				<div class="row">
 					<?php foreach ($resultImage as $item) {?>
 						<div class="col-lg-3 p-l-r-5">
-							<div class="featured-photos-object">
-								<img src="image/background/<?php echo $item["TenHinhAnh"] ?>" alt="">
-							</div>
+							<a href="image.php?id=<?php echo $item["MaHinhAnh"] ?>" title="">
+								<div class="featured-photos-object">
+									<img src="image/background/<?php echo $item["TenHinhAnh"] ?>" alt="">
+								</div>
+							</a>
 						</div>
 					<?php } ?>
 				</div>

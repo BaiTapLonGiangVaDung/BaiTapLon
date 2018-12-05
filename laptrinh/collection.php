@@ -5,8 +5,11 @@
 		die('ket noi that bai'.mysqli_connect_error());
 	}
 	//lấy ra ảnh
-	$sql="select * from hinhanh";
+	$sql="select * from hinhanh ";
 	$resultImageAll = mysqli_query($con, $sql);
+
+	$sqlCategory="select* from bosuutap";
+	$resultCategory = mysqli_query($con, $sqlCategory);
 	$con->close();
  ?>
 <!DOCTYPE html>
@@ -91,12 +94,13 @@
 					<div id="list-shop">
 						<span class="text-bold-shop">Bộ sưu tập</span><br><br>
 						<ul >
-							<li class="p-b-li"><a href="#" class="font-info-bottom ">Động vật</a></li>
-							<li class="p-b-li"><a href="#" class="font-info-bottom">Thiên nhiên</a></li>
-							<li class="p-b-li"><a href="#" class="font-info-bottom">Đồ ăn</a></li>
-							<li class="p-b-li"><a href="#" class="font-info-bottom">Công nghệ</a></li>
-							<li class="p-b-li"><a href="#" class="font-info-bottom">Game</a></li>
-							<li class="p-b-li"><a href="#" class="font-info-bottom">Lễ Hội</a></li>
+							<li class="p-b-li"><a href="collection.php" class="font-info-bottom">Tất cả</a></li>
+							<?php foreach ($resultCategory as $item) {?>
+								<li class="p-b-li">
+									<a href="category.php?idcol=<?php echo $item["MaBoSuuTap"] ?>" class="font-info-bottom "><?php echo $item["TenBoSuuTap"]; ?>
+									</a>
+								</li>
+							<?php } ?>
 						</ul>
 					</div>
 				</div>
@@ -105,7 +109,7 @@
 						<div class="row">
 							<?php foreach ($resultImageAll as $item) {?>
 								<div class="col-lg-4 col-md-6 col-sm-12" style="padding: 0">
-									<a href="image.php" title="">
+									<a href="image.php?id=<?php echo $item["MaHinhAnh"] ?>" title="">
 										<img class="image-background" src="image/background/<?php echo $item["TenHinhAnh"] ?>" alt="">
 									</a>
 								</div>

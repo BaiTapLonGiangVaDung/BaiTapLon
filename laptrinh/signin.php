@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Đăng nhập</title>
+    <title>Đăng Ký</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
@@ -36,29 +36,26 @@
                     <div style="margin-bottom: 25px;">
                         <b style="font-size:23px">Đăng ký</b>
                     </div>
-                    <a href="#" style="text-decoration:none">
-                        <div class="fb-login">
-                            <p id="fb_p"> Facebook </p>
-                        </div>
-                    </a>
-                    <p>OR</p>
                     <div id="para">
                         <p align="left" style="margin-bottom: 0px">Tài khoản Email </p>
-                        <input type="text" id="txtUsername" style="height: 40px;"/> <br />
-                        <p align="left" style="margin-bottom: 0px">Mật khẩu</p>
-                        <input type="password" id="txtUsername" style="height: 40px;"/>
+                        <input type="text" id="txtEmail" style="height: 40px;"/> <br />
                         <p align="left" style="margin-bottom: 0px">Tên tài khoản </p>
-                        <input type="text" id="txtUsername" style="height: 40px;"/> <br />
+                        <input type="text" id="txtUsernameLogin" style="height: 40px;"/> <br />
+                        <p align="left" style="margin-bottom: 0px">Mật khẩu</p>
+                        <input type="password" id="txtPasswordLogin" style="height: 40px;"/>
+                        <p align="left" style="margin-bottom: 0px">Nhập lại mật khẩu</p>
+                        <input type="password" id="txtPasswordAgain" style="height: 40px;"/>
                     </div>
-                    <a href="#" style="text-decoration:none">
-                        <div id="btnSignin">
-                            <p id="login_p"> Đăng ký </p>
-                        </div>
-                    </a>
+                    <div id="btnSignin">
+                        <p id="login_p"> Đăng ký </p>
+                    </div>
                     <br>
                     <p>
                         Bằng việc nhấn nút Đăng ký, bạn đã chấp nhận mọi <a href="#">Điều khoản </a> của Slytherin
                     </p>
+                    <div id="errorSignin" style="height: 20px;">
+                        
+                    </div>
                 </div>
 
             </div>
@@ -68,7 +65,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-    <script src="JS/customs.js"></script>
+    <script src="JS/checksignin.js"></script>
 </body>
 
 </html>

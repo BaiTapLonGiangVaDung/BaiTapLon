@@ -4,24 +4,19 @@
 	if(!$con){
 		die('ket noi that bai'.mysqli_connect_error());
 	}
-	$id=$_GET['id'];
+	$idcol=$_GET['idcol'];
 	//lấy ra ảnh
-	$sql= "select* from hinhanh h, bosuutap b where h.MaBoSuuTap=b.MaBoSuuTap and MaHinhAnh=$id;";
-	$resultImage = mysqli_query($con, $sql);
-	$row = mysqli_fetch_assoc($resultImage);
-	$collectionImage=$row["MaBoSuuTap"];
+	$sql="select* from hinhanh h, bosuutap b where h.MaBoSuuTap=b.MaBoSuuTap and h.MaBoSuuTap=$idcol";
+	$resultImageAll = mysqli_query($con, $sql);
 
-	$sqlcollectionImage= "select * from hinhanh where MaBoSuuTap=$collectionImage limit 8";
-	$resultCollectionImage = mysqli_query($con, $sqlcollectionImage);
-
-	$sqlImageSponsored= "select * from hinhanh where AnhTaiTro=1 limit 6";
-	$resultImageSponsored = mysqli_query($con, $sqlImageSponsored);
+	$sqlCategory="select* from bosuutap";
+	$resultCategory = mysqli_query($con, $sqlCategory);
 	$con->close();
  ?>
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Hình ảnh</title>
+	<title>Bộ sưu tập</title>
 	<link rel="shortcut icon" type="image/x-icon" href="https://unsplash.com/favicon.ico">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
@@ -93,56 +88,30 @@
 			</div>
 		</div>
 	</div>
-	<div id="image-form">
+	<div id="form-right-shop">
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col-lg-8 p-r-30">
-					<img class="picture-info" src="image/background/<?php echo $row["TenHinhAnh"] ?>" alt="">
-					<div class="image-related">
-						<div class="row">
-							<div class="col-lg-12">
-								<div class="image-related-text">
-									<span>Hình ảnh liên quan</span>
-								</div>
-							</div>
-							<?php foreach ($resultCollectionImage as $item) {?>
-								<div class="col-lg-3 col-md-3 col-sm-3 pd-l-r-15">
-									<a href="image.php?id=<?php echo $item["MaHinhAnh"] ?>" title="">
-										<img class="picture-related-info" src="image/background/<?php echo $item["TenHinhAnh"] ?>" alt="">
+				<div class="col-lg-2 col-md-2 col-sm-2">
+					<div id="list-shop">
+						<span class="text-bold-shop">Bộ sưu tập</span><br><br>
+						<ul >
+							<li class="p-b-li"><a href="collection.php" class="font-info-bottom">Tất cả</a></li>
+							<?php foreach ($resultCategory as $item) {?>
+								<li class="p-b-li">
+									<a href="category.php?idcol=<?php echo $item["MaBoSuuTap"] ?>" class="font-info-bottom "><?php echo $item["TenBoSuuTap"]; ?>
 									</a>
-								</div>
+								</li>
 							<?php } ?>
-						</div>
+						</ul>
 					</div>
 				</div>
-				<div class="col-lg-4">
-					<div class="image-sponsored">
+				<div class="col-lg-10 col-md-10 col-sm-10">
+					<div class="box-list">
 						<div class="row">
-							<div class="col-lg-12">
-								<div class="image-info-header-text">
-									<span>Thông tin hình ảnh</span><br>
-								</div>
-								<div class="image-info-text">
-									<span class="fw-image-info-text"><?php echo $row["MoTaHinhAnh"] ?></span><br>
-									<span>Thể loại: <?php echo $row["TenBoSuuTap"] ?></span><br>
-									<span>Kích cỡ file: <?php echo $row["KichCo"] ?></span><br>
-									<span>Độ phân giải: <?php echo $row["DoPhanGiai"] ?></span><br>
-									<span class="fw-image-info-text">Cam kết: </span><br>
-									<div style="padding-left: 15px;">
-										<span>✓ Miễn phí cho mục đích sử dụng cá nhân và thương mại</span><br>
-										<span>✓ Không yêu cầu ghi nhận</span>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-12">
-								<div class="image-sponsored-text">
-									<span>Hình ảnh được tài trợ</span>
-								</div>
-							</div>
-							<?php foreach ($resultImageSponsored as $item) {?>
-								<div class="col-lg-6 col-md-2 col-sm-2 pd-l-r-15">
+							<?php foreach ($resultImageAll as $item) {?>
+								<div class="col-lg-4 col-md-6 col-sm-12" style="padding: 0">
 									<a href="image.php?id=<?php echo $item["MaHinhAnh"] ?>" title="">
-										<img class="picture-info" src="image/background/<?php echo $item["TenHinhAnh"] ?>" alt="">
+										<img class="image-background" src="image/background/<?php echo $item["TenHinhAnh"] ?>" alt="">
 									</a>
 								</div>
 							<?php } ?>
