@@ -160,7 +160,7 @@
 			<div class="row" style="margin-top: 30px;">
 				<?php foreach ($resultCollection as $item) {?>
 					<div class="col-lg-4 col-md-6 col-sm-12 p-l-r-bst">
-						<a href="category.php?idcol=<?php echo $item["MaBoSuuTap"] ?>" title="">
+						<a href="collection.php?idcol=<?php echo $item["MaBoSuuTap"] ?>" title="">
 							<div class="grid">
 								<figure class="effect-marley">
 			                        <img src="image/<?php echo $item["AnhBoSuuTap"] ?>" alt=""/>

@@ -193,10 +193,11 @@
 							<span class="font-bold-bottom">Danh mục</span><br><br>
 							<div >
 								<ul >
-									<li class="p-b-li"><a href="#" class="font-info-bottom ">Đầm</a></li>
-									<li class="p-b-li"><a href="#" class="font-info-bottom">Kính râm</a></li>
-									<li class="p-b-li"><a href="#" class="font-info-bottom">Đồng hồ</a></li>
-									<li class="p-b-li"><a href="#" class="font-info-bottom">Giày</a></li>
+									<li class="p-b-li"><a href="#" class="font-info-bottom ">Động vật</a></li>
+									<li class="p-b-li"><a href="#" class="font-info-bottom">Thiên nhiên</a></li>
+									<li class="p-b-li"><a href="#" class="font-info-bottom">Công nghệ</a></li>
+									<li class="p-b-li"><a href="#" class="font-info-bottom">Trò chơi</a></li>
+									<li class="p-b-li"><a href="#" class="font-info-bottom">Đồ ăn</a></li>
 								</ul>
 
 							</div>

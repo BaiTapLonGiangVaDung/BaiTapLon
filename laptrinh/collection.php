@@ -4,9 +4,17 @@
 	if(!$con){
 		die('ket noi that bai'.mysqli_connect_error());
 	}
+	$resultImageAll;
 	//lấy ra ảnh
-	$sql="select * from hinhanh ";
-	$resultImageAll = mysqli_query($con, $sql);
+	if (isset($_GET['idcol'])) {
+		$idcol=$_GET['idcol'];
+		$sql="select* from hinhanh h, bosuutap b where h.MaBoSuuTap=b.MaBoSuuTap and h.MaBoSuuTap=$idcol";
+		$resultImageAll = mysqli_query($con, $sql);
+	}else {
+		$sql="select * from hinhanh ";
+		$resultImageAll = mysqli_query($con, $sql);
+	}
+	
 
 	$sqlCategory="select* from bosuutap";
 	$resultCategory = mysqli_query($con, $sqlCategory);
@@ -97,7 +105,7 @@
 							<li class="p-b-li"><a href="collection.php" class="font-info-bottom">Tất cả</a></li>
 							<?php foreach ($resultCategory as $item) {?>
 								<li class="p-b-li">
-									<a href="category.php?idcol=<?php echo $item["MaBoSuuTap"] ?>" class="font-info-bottom "><?php echo $item["TenBoSuuTap"]; ?>
+									<a href="collection.php?idcol=<?php echo $item["MaBoSuuTap"] ?>" class="font-info-bottom "><?php echo $item["TenBoSuuTap"]; ?>
 									</a>
 								</li>
 							<?php } ?>
@@ -161,10 +169,11 @@
 							<span class="font-bold-bottom">Danh mục</span><br><br>
 							<div >
 								<ul >
-									<li class="p-b-li"><a href="#" class="font-info-bottom ">Đầm</a></li>
-									<li class="p-b-li"><a href="#" class="font-info-bottom">Kính râm</a></li>
-									<li class="p-b-li"><a href="#" class="font-info-bottom">Đồng hồ</a></li>
-									<li class="p-b-li"><a href="#" class="font-info-bottom">Giày</a></li>
+									<li class="p-b-li"><a href="#" class="font-info-bottom ">Động vật</a></li>
+									<li class="p-b-li"><a href="#" class="font-info-bottom">Thiên nhiên</a></li>
+									<li class="p-b-li"><a href="#" class="font-info-bottom">Công nghệ</a></li>
+									<li class="p-b-li"><a href="#" class="font-info-bottom">Trò chơi</a></li>
+									<li class="p-b-li"><a href="#" class="font-info-bottom">Đồ ăn</a></li>
 								</ul>
 
 							</div>
