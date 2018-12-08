@@ -28,7 +28,7 @@
                     </a>
                     <p>OR</p>
                     <div id="para">
-                        <p align="left" style="margin-bottom: 0px">Tài khoản Email </p>
+                        <p align="left" style="margin-bottom: 0px">Tài khoản </p>
                         <input type="text" id="txtUsername" name="txtUsername" style="height: 40px;" /> <br/>
                         <p align="left" style="margin-bottom: 0px">Mật khẩu</p>
                         <input type="password" id="txtPassword" name="txtPassword" style="height: 40px;"/>

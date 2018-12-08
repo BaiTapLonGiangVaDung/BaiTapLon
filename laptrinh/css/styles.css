@@ -744,6 +744,13 @@ figure.effect-marley:hover p {
     margin-left: 574.156px;
 }
 /*end css account.php*/
+/*css verify.php*/
+#content-verify{
+	text-align: center;
+	font-size: 50px;
+	padding-top: 50px;
+}
+/*end css verify.php*/
 @media(min-width: 992px).col-lg-4{
 	max-width:33.333333%;
 }

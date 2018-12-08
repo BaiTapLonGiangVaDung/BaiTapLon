@@ -1,5 +1,28 @@
 <?php
 	session_start();
+	$con=mysqli_connect('localhost','root','123456','webhinhanh');
+	if(!$con){
+		die('ket noi that bai'.mysqli_connect_error());
+	}
+	$mesage;
+	if(isset($_GET['email']) and isset($_GET['verify'])){
+		$email=$_GET['email'];
+		$verify=$_GET['verify'];
+		$sql="select * from taikhoan where email='$email' and Verification='$verify'";
+		$verifySelect= mysqli_query($con, $sql);
+		if (mysqli_num_rows($verifySelect)) {
+			$sqlUpdate="update taikhoan set Active =1 where email='$email' and Verification='$verify' and Active=0";
+			if(mysqli_query($con, $sqlUpdate)){
+				$mesage="Tài khoản đã được kích hoạt thành công";
+			}else
+				$mesage="Lỗi";
+		}else{
+			$mesage="Url không hợp lệ hoặc bạn đã kích hoạt tài khoản của mình";
+		}
+	}else{
+		$mesage="Làm ơn sử dụng liên kết đã được gửi đến email của bạn";
+	}
+
  ?>
 <!DOCTYPE html>
 <html>
@@ -76,8 +99,9 @@
 			</div>
 		</div>
 	</div>
-	
-
+	<div id="content-verify">
+		<span><?php echo $mesage; ?></span>
+	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
 	<script src="JS/customs.js"></script>

@@ -11,15 +11,15 @@
 	$password=trim($_POST['password']);
 	$email= trim($_POST['email']);
 	$Verification= md5(rand(0,1000));
-	function generate_token() {
+	/*function generate_token() {
         return md5(microtime().mt_rand());
     }
 
     $options = [
-        'salt' => generate_token(), //write your own code to generate a suitable salt
-        'cost' => 12 // the default cost is 10
-    ];
-    $hash = password_hash($password, PASSWORD_DEFAULT, $options);
+        'salt' => generate_token(),
+        'cost' => 12
+    ];*/
+    $hash = password_hash($password, PASSWORD_DEFAULT);
 
     $mail = new PHPMailer(true);                              // Passing `true` enables exceptions
 	try {
@@ -33,7 +33,7 @@
 	    $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
 	    $mail->Port = 587;                                    // TCP port to connect to
 	    //Recipients
-	    $mail->addAddress($email, $username);  
+	    $mail->addAddress($email, $username);
 	    $mail->SetFrom($email);  // Add a recipient              // Name is optional
 	    //Content
 	    $mail->isHTML(true);                                  // Set email format to HTML
@@ -54,7 +54,7 @@
 			echo 1;
 			$mail->send();
 		}else
-			echo "Lỗi đăng ký";
+			echo "Tên tài khoản có thể bị trùng vui lòng nhập tài khoản khác";
     }
 	
  ?>
