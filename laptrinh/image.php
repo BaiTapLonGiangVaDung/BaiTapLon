@@ -11,7 +11,7 @@
 	$row = mysqli_fetch_assoc($resultImage);
 	$collectionImage=$row["MaBoSuuTap"];
 
-	$sqlcollectionImage= "select * from hinhanh where MaBoSuuTap=$collectionImage limit 8";
+	$sqlcollectionImage= "select * from hinhanh where MaBoSuuTap=$collectionImage ORDER BY rand() limit 8";
 	$resultCollectionImage = mysqli_query($con, $sqlcollectionImage);
 
 	$sqlImageSponsored= "select * from hinhanh where AnhTaiTro=1 limit 6";
@@ -123,7 +123,7 @@
 									<span>Thông tin hình ảnh</span><br>
 								</div>
 								<div class="image-info-text">
-									<span class="fw-image-info-text"><?php echo $row["MoTaHinhAnh"] ?></span><br>
+									<span class="fw-image-info-text">Mô tả hình ảnh: <?php echo $row["MoTaHinhAnh"] ?></span><br>
 									<span>Thể loại: <?php echo $row["TenBoSuuTap"] ?></span><br>
 									<span>Kích cỡ file: <?php echo $row["KichCo"] ?></span><br>
 									<span>Độ phân giải: <?php echo $row["DoPhanGiai"] ?></span><br>

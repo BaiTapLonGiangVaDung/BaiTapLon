@@ -2,18 +2,18 @@ $(document).ready(function(){
 	$('#btnSignin').click(function(){
 		var username= $('#txtUsernameLogin').val();
 		var password= $('#txtPasswordLogin').val();
-		var passwordAgain= $('#txtPasswordAgain').val();
+		var ConfirmPassword= $('#txtConfirmPassword').val();
 		var email= $('#txtEmail').val();
 		var error= $('#errorSignin');
 		error.html("");
-		if (password==passwordAgain) {
+		if (password==ConfirmPassword) {
 			$.ajax({
-			url: 'checksignin.php',
-			type: 'POST',
-			data: {
-				username: username,
-				password: password,
-				email: email
+				url: 'checksignin.php',
+				type: 'POST',
+				data: {
+					username: username,
+					password: password,
+					email: email
 			},
 			success: function(response){
 				if (response==1) {

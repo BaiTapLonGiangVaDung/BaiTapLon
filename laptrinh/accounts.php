@@ -84,6 +84,7 @@
                 <a href="#">Tải lên</a>
                 <a href="#">Mục ưa thích</a>
                 <a href="#">Cài đặt</a>
+                <a href="photoapproval.php" >Phê duyệt ảnh</a>
             </div>
         </div>
     </div>

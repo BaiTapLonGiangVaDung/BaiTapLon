@@ -44,7 +44,7 @@
                         <p align="left" style="margin-bottom: 0px">Mật khẩu</p>
                         <input type="password" id="txtPasswordLogin" style="height: 40px;"/>
                         <p align="left" style="margin-bottom: 0px">Nhập lại mật khẩu</p>
-                        <input type="password" id="txtPasswordAgain" style="height: 40px;"/>
+                        <input type="password" id="txtConfirmPassword" style="height: 40px;"/>
                     </div>
                     <div id="btnSignin">
                         <p id="login_p"> Đăng ký </p>
@@ -54,7 +54,6 @@
                         Bằng việc nhấn nút Đăng ký, bạn đã chấp nhận mọi <a href="#">Điều khoản </a> của Slytherin
                     </p>
                     <div id="errorSignin" style="height: 20px;">
-                        
                     </div>
                 </div>
 

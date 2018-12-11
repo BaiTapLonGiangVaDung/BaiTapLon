@@ -4,24 +4,15 @@
 	if(!$con){
 		die('ket noi that bai'.mysqli_connect_error());
 	}
-	$resultImageAll;
 	//lấy ra ảnh
-	if (isset($_GET['idcol'])) {
-		$idcol=$_GET['idcol'];
-		$sql="select* from hinhanh h, bosuutap b where h.MaBoSuuTap=b.MaBoSuuTap and h.MaBoSuuTap=$idcol";
-		$resultImageAll = mysqli_query($con, $sql);
-	}else {
-		$sql="select * from hinhanh ";
-		$resultImageAll = mysqli_query($con, $sql);
-	}
-	$sqlCategory="select* from bosuutap";
-	$resultCategory = mysqli_query($con, $sqlCategory);
+	$sql="select * from hinhanh where PheDuyet=0";
+	$resultImage = mysqli_query($con, $sql);
 	$con->close();
  ?>
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Bộ sưu tập</title>
+	<title>Phê duyệt hình ảnh</title>
 	<link rel="shortcut icon" type="image/x-icon" href="https://unsplash.com/favicon.ico">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
@@ -93,39 +84,38 @@
 			</div>
 		</div>
 	</div>
-	<div id="form-right-shop">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-lg-2 col-md-2 col-sm-2">
-					<div id="list-shop">
-						<span class="text-bold-shop">Bộ sưu tập</span><br><br>
-						<ul >
-							<li class="p-b-li"><a href="collection.php" class="font-info-bottom">Tất cả</a></li>
-							<?php foreach ($resultCategory as $item) {?>
-								<li class="p-b-li">
-									<a href="collection.php?idcol=<?php echo $item["MaBoSuuTap"] ?>" class="font-info-bottom "><?php echo $item["TenBoSuuTap"]; ?>
-									</a>
-								</li>
-							<?php } ?>
-						</ul>
-					</div>
-				</div>
-				<div class="col-lg-10 col-md-10 col-sm-10">
-					<div class="box-list">
-						<div class="row">
-							<?php foreach ($resultImageAll as $item) {?>
-								<div class="col-lg-4 col-md-6 col-sm-12" style="padding: 0">
-									<a href="image.php?id=<?php echo $item["MaHinhAnh"] ?>" title="">
-										<img class="image-background" src="image/background/<?php echo $item["TenHinhAnh"] ?>" alt="">
-									</a>
-								</div>
-							<?php } ?>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+	<div style="margin:10px auto">
+        <div class="tab-menu" style="margin:auto;">
+            <div style="max-width:1440px;margin:auto;padding:0 5px;text-align:left">
+                <a style="float:right" href="#">Hồ sơ của tôi</a>
+                <a href="#">Ảnh của tôi</a>
+                <a href="#">Tải lên</a>
+                <a href="#">Mục ưa thích</a>
+                <a href="#">Cài đặt</a>
+                <a href="photoapproval.php" style="font-weight: 500">Phê duyệt ảnh</a>
+            </div>
+        </div>
+    </div>
+    <div id="list-photo-approval">
+    	<div class="container-fluid">
+	        <?php foreach ($resultImage as $item) {?>
+				<div class="Photo-approval">
+		            <div class="row">
+		                <div class="col-lg-8">
+		                    <img class="image-approval" src="image/background/<?php echo $item['TenHinhAnh'] ?>" alt="">
+		                </div>
+		                <div class="col-lg-4">
+		                	<div id="clickbutton-approval-<?php echo $item['MaHinhAnh'] ?>" >
+		                		<button type="" id="d<?php echo $item['MaHinhAnh'] ?>">Duyệt ảnh</button>
+		                    	<button type="" id="x<?php echo $item['MaHinhAnh'] ?>">Xóa</button>
+		                	</div>
+		                    <span class="span-approval">Mô tả hình ảnh: <?php echo $item['MoTaHinhAnh'] ?></span>
+		                </div>
+		            </div>
+		        </div>
+			<?php } ?>
+	    </div>
+    </div>
 	<div class="info-bottom">
 		<div class="container-fluid">
 			<div class="row">
@@ -167,11 +157,10 @@
 							<span class="font-bold-bottom">Danh mục</span><br><br>
 							<div >
 								<ul >
-									<li class="p-b-li"><a href="#" class="font-info-bottom ">Động vật</a></li>
-									<li class="p-b-li"><a href="#" class="font-info-bottom">Thiên nhiên</a></li>
-									<li class="p-b-li"><a href="#" class="font-info-bottom">Công nghệ</a></li>
-									<li class="p-b-li"><a href="#" class="font-info-bottom">Trò chơi</a></li>
-									<li class="p-b-li"><a href="#" class="font-info-bottom">Đồ ăn</a></li>
+									<li class="p-b-li"><a href="#" class="font-info-bottom ">Đầm</a></li>
+									<li class="p-b-li"><a href="#" class="font-info-bottom">Kính râm</a></li>
+									<li class="p-b-li"><a href="#" class="font-info-bottom">Đồng hồ</a></li>
+									<li class="p-b-li"><a href="#" class="font-info-bottom">Giày</a></li>
 								</ul>
 
 							</div>

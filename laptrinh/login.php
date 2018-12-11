@@ -41,9 +41,7 @@
                         Bạn chưa có tài khoản ?
                         <a href="signin.php">Đăng ký</a>
                     </p>
-                    <div id="error">
-                        
-                    </div>
+                    <div id="error"></div>
                 </div>
                 <div class="col-md-3">
                 </div>

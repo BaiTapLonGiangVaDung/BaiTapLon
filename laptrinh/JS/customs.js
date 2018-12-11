@@ -14,3 +14,26 @@ function myFunction() {
     navbar.classList.remove("sticky");
   }
 }
+$(document).ready(function(){
+	$('#list-photo-approval button').click(function(){
+		var idphoto= $(this).attr('id');
+		var typeButton=idphoto.substr(0,1);
+		var id=idphoto.slice(1);
+		$.ajax({
+			url: 'solveapproval.php',
+			type: 'POST',
+			data: {
+				typeButton: typeButton,
+				id: id
+			},
+			success: function(response){
+				if (response=='d') {
+					$('#clickbutton-approval-'+id).html("<button id='btn-click-approval'>Ảnh đã được duyệt</button>");
+				}
+				if (response=='x') {
+					$('#clickbutton-approval-'+id).html("<button id='btn-click-approval'>Ảnh đã được xóa</button>");
+				}
+			}
+		});
+	});
+});
