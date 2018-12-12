@@ -21,7 +21,7 @@ create table HinhAnh(
     TenHinhAnh varchar(200),
     KichCo varchar(20),
     DoPhanGiai varchar(20),
-    MoTaHinhANh varchar(50),
+    MoTaHinhAnh varchar(50),
 	MaBoSuuTap int,
     MaTaiKhoan int,
     AnhTaiTro int,
@@ -42,6 +42,34 @@ insert into bosuutap(TenBoSuuTap) value('Sách');
 
 /*end insert bo suu tap*/
 /*insert hinhanh*/
+INSERT INTO `webhinhanh`.`hinhanh` (`TenHinhAnh`, `KichCo`, `DoPhanGiai`, `MoTaHinhAnh`, `MaBoSuuTap`) VALUES ('image1.jpg', '510KB', '3840x2160', 'Những Cuốn Sách', '8');
+INSERT INTO `webhinhanh`.`hinhanh` (`TenHinhAnh`, `KichCo`, `DoPhanGiai`, `MoTaHinhAnh`, `MaBoSuuTap`) VALUES ('image2.jpg', '398KB', '1920x1080', 'Cánh đồng hoa tim tím', '2');
+INSERT INTO `webhinhanh`.`hinhanh` (`TenHinhAnh`, `KichCo`, `DoPhanGiai`, `MoTaHinhAnh`, `MaBoSuuTap`) VALUES ('image3.jpg', '319KB', '1920x1080', 'Vách núi sát biển', '2');
+INSERT INTO `webhinhanh`.`hinhanh` (`TenHinhAnh`, `KichCo`, `DoPhanGiai`, `MoTaHinhAnh`, `MaBoSuuTap`) VALUES ('image4-min.jpg', '446KB', '3840x2160', 'Xe Đạp', '7');
+INSERT INTO `webhinhanh`.`hinhanh` (`TenHinhAnh`, `KichCo`, `DoPhanGiai`, `MoTaHinhAnh`, `MaBoSuuTap`) VALUES ('image5.jpg', '484KB', '3840x2160', 'Từ điển', '8');
+INSERT INTO `webhinhanh`.`hinhanh` (`TenHinhAnh`, `KichCo`, `DoPhanGiai`, `MoTaHinhAnh`, `MaBoSuuTap`) VALUES ('image6-min.jpg', '364KB', '3840x2160', 'Sách cũ', '8');
+INSERT INTO `webhinhanh`.`hinhanh` (`TenHinhAnh`, `KichCo`, `DoPhanGiai`, `MoTaHinhAnh`, `MaBoSuuTap`) VALUES ('image7-min.jpg', '390KB', '3840x2160', 'Gấu Bông lạc lõng', '7');
+INSERT INTO `webhinhanh`.`hinhanh` (`TenHinhAnh`, `KichCo`, `DoPhanGiai`, `MoTaHinhAnh`, `MaBoSuuTap`) VALUES ('image8.jpg', '666KB', '3840x2160', 'Bản đồ', '8');
+INSERT INTO `webhinhanh`.`hinhanh` (`TenHinhAnh`, `KichCo`, `DoPhanGiai`, `MoTaHinhAnh`, `MaBoSuuTap`) VALUES ('image9-min.jpg', '539KB', '3840x2160', 'Cà phê sách', '3');
+INSERT INTO `webhinhanh`.`hinhanh` (`TenHinhAnh`, `KichCo`, `DoPhanGiai`, `MoTaHinhAnh`, `MaBoSuuTap`) VALUES ('image10.jpg', '462KB', '3840x2160', 'Khúc gỗ tình yêu', '8');
+INSERT INTO `webhinhanh`.`hinhanh` (`TenHinhAnh`, `KichCo`, `DoPhanGiai`, `MoTaHinhAnh`, `MaBoSuuTap`) VALUES ('image11.jpg', '705KB', '3840x2160', 'Tách cà phê màu đen', '3');
+INSERT INTO `webhinhanh`.`hinhanh` (`TenHinhAnh`, `KichCo`, `DoPhanGiai`, `MoTaHinhAnh`, `MaBoSuuTap`) VALUES ('image12.jpg', '415KB', '3840x2160', 'Tách trà ', '3');
+INSERT INTO `webhinhanh`.`hinhanh` (`TenHinhAnh`, `KichCo`, `DoPhanGiai`, `MoTaHinhAnh`, `MaBoSuuTap`) VALUES ('image13.jpg', '464KB', '3840x2160', 'Vòng tay hình sao', '7');
+INSERT INTO `webhinhanh`.`hinhanh` (`TenHinhAnh`, `KichCo`, `DoPhanGiai`, `MoTaHinhAnh`, `MaBoSuuTap`) VALUES ('image14.jpg', '443KB', '3840x2160', 'Hình nộm gỗ vuông', '7');
+INSERT INTO `webhinhanh`.`hinhanh` (`TenHinhAnh`, `KichCo`, `DoPhanGiai`, `MoTaHinhAnh`, `MaBoSuuTap`) VALUES ('image15.jpg', '452KB', '1920x1080', 'Núi tuyết', '2');
+INSERT INTO `webhinhanh`.`hinhanh` (`TenHinhAnh`, `KichCo`, `DoPhanGiai`, `MoTaHinhAnh`, `MaBoSuuTap`) VALUES ('image16.jpg', '291KB', '1920x1080', 'Hoàng hôn bên bờ hồ', '2');
+INSERT INTO `webhinhanh`.`hinhanh` (`TenHinhAnh`, `KichCo`, `DoPhanGiai`, `MoTaHinhAnh`, `MaBoSuuTap`) VALUES ('image17.jpg', '64.2KB', '1024x682', 'Cô gái với mái tóc đẹp', '7');
+INSERT INTO `webhinhanh`.`hinhanh` (`TenHinhAnh`, `KichCo`, `DoPhanGiai`, `MoTaHinhAnh`, `MaBoSuuTap`) VALUES ('image18.jpg', '155KB', '1920x1080', 'Biến khi bình minh', '2');
+INSERT INTO `webhinhanh`.`hinhanh` (`TenHinhAnh`, `KichCo`, `DoPhanGiai`, `MoTaHinhAnh`, `MaBoSuuTap`) VALUES ('image19.jpg', '452KB', '1920x1080', 'Thác nước mùa thu', '2');
+INSERT INTO `webhinhanh`.`hinhanh` (`TenHinhAnh`, `KichCo`, `DoPhanGiai`, `MoTaHinhAnh`, `MaBoSuuTap`) VALUES ('image20.jpg', '254KB', '1920x1080', 'Những chiếc đèn', '7');
+INSERT INTO `webhinhanh`.`hinhanh` (`TenHinhAnh`, `KichCo`, `DoPhanGiai`, `MoTaHinhAnh`, `MaBoSuuTap`) VALUES ('image21.jpg', '468KB', '1920x1080', 'Ngọn núi sát biển', '2');
+INSERT INTO `webhinhanh`.`hinhanh` (`TenHinhAnh`, `KichCo`, `DoPhanGiai`, `MoTaHinhAnh`, `MaBoSuuTap`) VALUES ('image22.jpg', '344KB', '1920x1080', '2 con cú dễ thương', '1');
+INSERT INTO `webhinhanh`.`hinhanh` (`TenHinhAnh`, `KichCo`, `DoPhanGiai`, `MoTaHinhAnh`, `MaBoSuuTap`) VALUES ('image23.jpg', '502KB', '1920x1080', 'Thành phố bên biển', '2');
+INSERT INTO `webhinhanh`.`hinhanh` (`TenHinhAnh`, `KichCo`, `DoPhanGiai`, `MoTaHinhAnh`, `MaBoSuuTap`) VALUES ('image24.jpg', '459KB', '1920x1080', 'Bầu trời sao đêm', '2');
+INSERT INTO `webhinhanh`.`hinhanh` (`TenHinhAnh`, `KichCo`, `DoPhanGiai`, `MoTaHinhAnh`, `MaBoSuuTap`) VALUES ('image25.jpg', '583KB', '1920x1080', 'Lối mòn trong rừng', '2');
+INSERT INTO `webhinhanh`.`hinhanh` (`TenHinhAnh`, `KichCo`, `DoPhanGiai`, `MoTaHinhAnh`, `MaBoSuuTap`) VALUES ('image26.jpg', '539KB', '3840x2400', 'Lối thoát hiểm', '7');
+INSERT INTO `webhinhanh`.`hinhanh` (`TenHinhAnh`, `KichCo`, `DoPhanGiai`, `MoTaHinhAnh`, `MaBoSuuTap`) VALUES ('image27.jpg', '286KB', '3840x2400', 'Quả bóng ước mơ', '7');
+INSERT INTO `webhinhanh`.`hinhanh` (`TenHinhAnh`, `KichCo`, `DoPhanGiai`, `MoTaHinhAnh`, `MaBoSuuTap`) VALUES ('image28.jpg', '400KB', '1920x1080', 'Chiếc thuyền cạnh bờ', '2');
 INSERT INTO `webhinhanh`.`hinhanh` (`TenHinhAnh`, `KichCo`, `DoPhanGiai`, `MoTaHinhAnh`, `MaBoSuuTap`) VALUES ('angel_christmas_reflections_statue_106588_3840x2160-min.jpg', '605KB', '3840x2160', 'Búp bê noen', '5');
 INSERT INTO `webhinhanh`.`hinhanh` (`TenHinhAnh`, `KichCo`, `DoPhanGiai`, `MoTaHinhAnh`, `MaBoSuuTap`) VALUES ('assassins_creed_syndicate_jacob_frye_112077_3840x2160-min.jpg', '568KB', '3840x2160', 'Assassins creed', '6');
 INSERT INTO `webhinhanh`.`hinhanh` (`TenHinhAnh`, `KichCo`, `DoPhanGiai`, `MoTaHinhAnh`, `MaBoSuuTap`) VALUES ('bengali_fire_sparks_holiday_118188_3840x2160-min.jpg', '645KB', '3840x2160', 'Pháo hoa', '5');
