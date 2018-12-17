@@ -30,6 +30,11 @@ create table HinhAnh(
     constraint FK_BoSuuTap foreign key(MaBoSuuTap) references bosuutap(MaBoSuuTap),
     constraint FK_TaiKhoan foreign key(MaTaiKhoan) references taikhoan(MaTaiKhoan)
 );
+create table chucvu(
+	MaChucVu int auto_increment,
+    TenChucVu varchar(50),
+    primary key(MaChucVu)
+);
 /*insert bo suu tap*/
 insert into bosuutap(TenBoSuuTap,AnhBoSuuTap,MoTa) value('Động Vật','dog-min.jpg','Khám phá thế giới động vật qua những hình ảnh và những khoảng khắc của chúng.');
 insert into bosuutap(TenBoSuuTap,AnhBoSuuTap,MoTa) value('Thiên Nhiên','nature-min.jpg','Khám phá vẻ đẹp hùng vĩ của thiên nhiên qua hình ảnh.');

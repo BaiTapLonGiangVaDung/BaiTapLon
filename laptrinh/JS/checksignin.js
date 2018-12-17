@@ -14,7 +14,7 @@ $(document).ready(function(){
 					username: username,
 					password: password,
 					email: email
-			},
+				},
 			success: function(response){
 				if (response==1) {
 				error.html("<p>Đăng ký thành công,xin hãy vào gmail để xác thực tài khoản</p>")

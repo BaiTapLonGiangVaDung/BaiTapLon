@@ -8,10 +8,10 @@
 	//lấy ra ảnh
 	if (isset($_GET['idcol'])) {
 		$idcol=$_GET['idcol'];
-		$sql="select* from hinhanh h, bosuutap b where h.MaBoSuuTap=b.MaBoSuuTap and h.MaBoSuuTap=$idcol";
+		$sql="select* from hinhanh h, bosuutap b where h.MaBoSuuTap=b.MaBoSuuTap and h.MaBoSuuTap=$idcol and h.PheDuyet=1";
 		$resultImageAll = mysqli_query($con, $sql);
 	}else {
-		$sql="select * from hinhanh ";
+		$sql="select * from hinhanh where PheDuyet=1";
 		$resultImageAll = mysqli_query($con, $sql);
 	}
 	$sqlCategory="select* from bosuutap";

@@ -18,10 +18,10 @@
 			else
 				echo "Tài khoản của bạn chưa được kích hoạt,vui lòng kiểm tra gmail để xác nhận";
 		}else{
-			echo "Tài khoản hoặc mật khẩu không đúng";
+			echo "Mật khẩu không đúng";
 		}
 
 	}else
-		echo "Lỗi kết nối";
+		echo "Tài khoản không tồn tại";
 	$con->close();
  ?>

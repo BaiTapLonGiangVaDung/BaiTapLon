@@ -87,11 +87,9 @@
 	<div style="margin:10px auto">
         <div class="tab-menu" style="margin:auto;">
             <div style="max-width:1440px;margin:auto;padding:0 5px;text-align:left">
-                <a style="float:right" href="#">Hồ sơ của tôi</a>
-                <a href="#">Ảnh của tôi</a>
-                <a href="#">Tải lên</a>
-                <a href="#">Mục ưa thích</a>
-                <a href="#">Cài đặt</a>
+                <a href="accounts.php">Hồ sơ của tôi</a>
+                <a href="mypicture.php">Ảnh của tôi</a>
+                <a href="upload.php">Tải lên</a>
                 <a href="photoapproval.php" style="font-weight: 500">Phê duyệt ảnh</a>
             </div>
         </div>

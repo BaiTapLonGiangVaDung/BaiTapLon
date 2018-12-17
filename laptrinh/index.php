@@ -182,11 +182,9 @@
 			<div id="featured-photos-list">
 				<div class="row">
 					<?php foreach ($resultImage as $item) {?>
-						<div class="col-lg-3 p-l-r-5">
+						<div class="col-lg-3 col-md-4 col-sm-6 p-l-r-5">
 							<a href="image.php?id=<?php echo $item["MaHinhAnh"] ?>" title="">
-								<div class="featured-photos-object">
-									<img src="image/background/<?php echo $item["TenHinhAnh"] ?>" alt="">
-								</div>
+								<img class="featured-photos-object" src="image/background/<?php echo $item["TenHinhAnh"] ?>" alt="">
 							</a>
 						</div>
 					<?php } ?>
