@@ -1,5 +1,15 @@
 <?php
-	session_start();
+    session_start();
+    $con=mysqli_connect('localhost','root','123456','webhinhanh');
+    if(!$con){
+        die('ket noi that bai'.mysqli_connect_error());
+    }
+    //lấy ra ảnh
+    $username=$_SESSION['UserName'];
+    $sql="select * from taikhoan where TenDangNhap='$username'";
+    $result = mysqli_query($con, $sql);
+    $row = mysqli_fetch_assoc($result);
+    $idChucVu=$row["MaChucVu"];
  ?>
 <!DOCTYPE html>
 <html>
@@ -79,11 +89,12 @@
 	<div style="margin:10px auto">
         <div class="tab-menu" style="margin:auto;">
             <div style="max-width:1440px;margin:auto;padding:0 5px;text-align:left">
-                <a style="float:right" href="#">Hồ sơ của tôi</a>
-                <a href="#">Ảnh của tôi</a>
-                <a href="#">Tải lên</a>
-                <a href="#">Mục ưa thích</a>
-                <a href="#">Cài đặt</a>
+                <a href="" style="font-weight: 500">Hồ sơ của tôi</a>
+                <a href="mypicture.php">Ảnh của tôi</a>
+                <a href="upload.php">Tải lên</a>
+                <?php if($idChucVu==1){?>
+                    <a href="photoapproval.php" >Phê duyệt ảnh</a>
+                <?php } ?>
             </div>
         </div>
     </div>

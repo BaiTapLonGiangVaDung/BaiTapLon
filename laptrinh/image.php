@@ -1,5 +1,22 @@
 <?php
 	session_start();
+	$con=mysqli_connect('localhost','root','123456','webhinhanh');
+	if(!$con){
+		die('ket noi that bai'.mysqli_connect_error());
+	}
+	$id=$_GET['id'];
+	//lấy ra ảnh
+	$sql= "select* from hinhanh h, bosuutap b where h.MaBoSuuTap=b.MaBoSuuTap and MaHinhAnh=$id;";
+	$resultImage = mysqli_query($con, $sql);
+	$row = mysqli_fetch_assoc($resultImage);
+	$collectionImage=$row["MaBoSuuTap"];
+
+	$sqlcollectionImage= "select * from hinhanh where MaBoSuuTap=$collectionImage ORDER BY rand() limit 8";
+	$resultCollectionImage = mysqli_query($con, $sqlcollectionImage);
+
+	$sqlImageSponsored= "select * from hinhanh where AnhTaiTro=1 limit 6";
+	$resultImageSponsored = mysqli_query($con, $sqlImageSponsored);
+	$con->close();
  ?>
 <!DOCTYPE html>
 <html>
@@ -80,7 +97,7 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-lg-8 p-r-30">
-					<img class="picture-info" src="image/background/image1.jpg" alt="">
+					<img class="picture-info" src="image/background/<?php echo $row["TenHinhAnh"] ?>" alt="">
 					<div class="image-related">
 						<div class="row">
 							<div class="col-lg-12">
@@ -88,30 +105,13 @@
 									<span>Hình ảnh liên quan</span>
 								</div>
 							</div>
-							<div class="col-lg-3 col-md-3 col-sm-3 pd-l-r-15">
-								<img class="picture-info" src="image/background/image17.jpg" alt="">
-							</div>
-							<div class="col-lg-3 col-md-3 col-sm-3 pd-l-r-15">
-								<img class="picture-info" src="image/background/image18.jpg" alt="">
-							</div>
-							<div class="col-lg-3 col-md-3 col-sm-3 pd-l-r-15">
-								<img class="picture-info" src="image/background/image19.jpg" alt="">
-							</div>
-							<div class="col-lg-3 col-md-3 col-sm-3 pd-l-r-15">
-								<img class="picture-info" src="image/background/image16.jpg" alt="">
-							</div>
-							<div class="col-lg-3 col-md-3 col-sm-3 pd-l-r-15">
-								<img class="picture-info" src="image/background/image20.jpg" alt="">
-							</div>
-							<div class="col-lg-3 col-md-3 col-sm-3 pd-l-r-15">
-								<img class="picture-info" src="image/background/image21.jpg" alt="">
-							</div>
-							<div class="col-lg-3 col-md-3 col-sm-3 pd-l-r-15">
-								<img class="picture-info" src="image/background/image22.jpg" alt="">
-							</div>
-							<div class="col-lg-3 col-md-3 col-sm-3 pd-l-r-15">
-								<img class="picture-info" src="image/background/image23.jpg" alt="">
-							</div>
+							<?php foreach ($resultCollectionImage as $item) {?>
+								<div class="col-lg-3 col-md-3 col-sm-3 pd-l-r-15">
+									<a href="image.php?id=<?php echo $item["MaHinhAnh"] ?>" title="">
+										<img class="picture-related-info" src="image/background/<?php echo $item["TenHinhAnh"] ?>" alt="">
+									</a>
+								</div>
+							<?php } ?>
 						</div>
 					</div>
 				</div>
@@ -123,10 +123,10 @@
 									<span>Thông tin hình ảnh</span><br>
 								</div>
 								<div class="image-info-text">
-									<span class="fw-image-info-text">Bảy cuốn sách trên cái bàn cạnh cái đèn gần cửa sổ</span><br>
-									<span>Thể loại: Linh tinh</span><br>
-									<span>Kích cỡ file: 1MB</span><br>
-									<span>Độ phân giải: 1426*1080</span><br>
+									<span class="fw-image-info-text">Mô tả hình ảnh: <?php echo $row["MoTaHinhAnh"] ?></span><br>
+									<span>Thể loại: <?php echo $row["TenBoSuuTap"] ?></span><br>
+									<span>Kích cỡ file: <?php echo $row["KichCo"] ?></span><br>
+									<span>Độ phân giải: <?php echo $row["DoPhanGiai"] ?></span><br>
 									<span class="fw-image-info-text">Cam kết: </span><br>
 									<div style="padding-left: 15px;">
 										<span>✓ Miễn phí cho mục đích sử dụng cá nhân và thương mại</span><br>
@@ -139,24 +139,13 @@
 									<span>Hình ảnh được tài trợ</span>
 								</div>
 							</div>
-							<div class="col-lg-6 col-md-2 col-sm-2 pd-l-r-15">
-								<img class="picture-info" src="image/background/image10.jpg" alt="">
-							</div>
-							<div class="col-lg-6 col-md-2 col-sm-2 pd-l-r-15">
-								<img class="picture-info" src="image/background/image11.jpg" alt="">
-							</div>
-							<div class="col-lg-6 col-md-2 col-sm-2 pd-l-r-15">
-								<img class="picture-info" src="image/background/image12.jpg" alt="">
-							</div>
-							<div class="col-lg-6 col-md-2 col-sm-2 pd-l-r-15">
-								<img class="picture-info" src="image/background/image13.jpg" alt="">
-							</div>
-							<div class="col-lg-6 col-md-2 col-sm-2 pd-l-r-15">
-								<img class="picture-info" src="image/background/image14.jpg" alt="">
-							</div>
-							<div class="col-lg-6 col-md-2 col-sm-2 pd-l-r-15">
-								<img class="picture-info" src="image/background/image20.jpg" alt="">
-							</div>
+							<?php foreach ($resultImageSponsored as $item) {?>
+								<div class="col-lg-6 col-md-2 col-sm-2 pd-l-r-15">
+									<a href="image.php?id=<?php echo $item["MaHinhAnh"] ?>" title="">
+										<img class="picture-info" src="image/background/<?php echo $item["TenHinhAnh"] ?>" alt="">
+									</a>
+								</div>
+							<?php } ?>
 						</div>
 					</div>
 				</div>
@@ -204,10 +193,11 @@
 							<span class="font-bold-bottom">Danh mục</span><br><br>
 							<div >
 								<ul >
-									<li class="p-b-li"><a href="#" class="font-info-bottom ">Đầm</a></li>
-									<li class="p-b-li"><a href="#" class="font-info-bottom">Kính râm</a></li>
-									<li class="p-b-li"><a href="#" class="font-info-bottom">Đồng hồ</a></li>
-									<li class="p-b-li"><a href="#" class="font-info-bottom">Giày</a></li>
+									<li class="p-b-li"><a href="#" class="font-info-bottom ">Động vật</a></li>
+									<li class="p-b-li"><a href="#" class="font-info-bottom">Thiên nhiên</a></li>
+									<li class="p-b-li"><a href="#" class="font-info-bottom">Công nghệ</a></li>
+									<li class="p-b-li"><a href="#" class="font-info-bottom">Trò chơi</a></li>
+									<li class="p-b-li"><a href="#" class="font-info-bottom">Đồ ăn</a></li>
 								</ul>
 
 							</div>

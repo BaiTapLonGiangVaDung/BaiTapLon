@@ -28,7 +28,7 @@
                     </a>
                     <p>OR</p>
                     <div id="para">
-                        <p align="left" style="margin-bottom: 0px">Tài khoản Email </p>
+                        <p align="left" style="margin-bottom: 0px">Tài khoản </p>
                         <input type="text" id="txtUsername" name="txtUsername" style="height: 40px;" /> <br/>
                         <p align="left" style="margin-bottom: 0px">Mật khẩu</p>
                         <input type="password" id="txtPassword" name="txtPassword" style="height: 40px;"/>
@@ -41,9 +41,7 @@
                         Bạn chưa có tài khoản ?
                         <a href="signin.php">Đăng ký</a>
                     </p>
-                    <div id="error">
-                        <p></p>
-                    </div>
+                    <div id="error"></div>
                 </div>
                 <div class="col-md-3">
                 </div>

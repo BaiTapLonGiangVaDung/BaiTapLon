@@ -4,9 +4,18 @@
 	if(!$con){
 		die('ket noi that bai'.mysqli_connect_error());
 	}
+	$resultImageAll;
 	//lấy ra ảnh
-	$sql="select * from hinhanh";
-	$resultImageAll = mysqli_query($con, $sql);
+	if (isset($_GET['idcol'])) {
+		$idcol=$_GET['idcol'];
+		$sql="select* from hinhanh h, bosuutap b where h.MaBoSuuTap=b.MaBoSuuTap and h.MaBoSuuTap=$idcol and h.PheDuyet=1";
+		$resultImageAll = mysqli_query($con, $sql);
+	}else {
+		$sql="select * from hinhanh where PheDuyet=1";
+		$resultImageAll = mysqli_query($con, $sql);
+	}
+	$sqlCategory="select* from bosuutap";
+	$resultCategory = mysqli_query($con, $sqlCategory);
 	$con->close();
  ?>
 <!DOCTYPE html>
@@ -91,12 +100,13 @@
 					<div id="list-shop">
 						<span class="text-bold-shop">Bộ sưu tập</span><br><br>
 						<ul >
-							<li class="p-b-li"><a href="#" class="font-info-bottom ">Động vật</a></li>
-							<li class="p-b-li"><a href="#" class="font-info-bottom">Thiên nhiên</a></li>
-							<li class="p-b-li"><a href="#" class="font-info-bottom">Đồ ăn</a></li>
-							<li class="p-b-li"><a href="#" class="font-info-bottom">Công nghệ</a></li>
-							<li class="p-b-li"><a href="#" class="font-info-bottom">Game</a></li>
-							<li class="p-b-li"><a href="#" class="font-info-bottom">Lễ Hội</a></li>
+							<li class="p-b-li"><a href="collection.php" class="font-info-bottom">Tất cả</a></li>
+							<?php foreach ($resultCategory as $item) {?>
+								<li class="p-b-li">
+									<a href="collection.php?idcol=<?php echo $item["MaBoSuuTap"] ?>" class="font-info-bottom "><?php echo $item["TenBoSuuTap"]; ?>
+									</a>
+								</li>
+							<?php } ?>
 						</ul>
 					</div>
 				</div>
@@ -105,7 +115,7 @@
 						<div class="row">
 							<?php foreach ($resultImageAll as $item) {?>
 								<div class="col-lg-4 col-md-6 col-sm-12" style="padding: 0">
-									<a href="image.php" title="">
+									<a href="image.php?id=<?php echo $item["MaHinhAnh"] ?>" title="">
 										<img class="image-background" src="image/background/<?php echo $item["TenHinhAnh"] ?>" alt="">
 									</a>
 								</div>
@@ -157,10 +167,11 @@
 							<span class="font-bold-bottom">Danh mục</span><br><br>
 							<div >
 								<ul >
-									<li class="p-b-li"><a href="#" class="font-info-bottom ">Đầm</a></li>
-									<li class="p-b-li"><a href="#" class="font-info-bottom">Kính râm</a></li>
-									<li class="p-b-li"><a href="#" class="font-info-bottom">Đồng hồ</a></li>
-									<li class="p-b-li"><a href="#" class="font-info-bottom">Giày</a></li>
+									<li class="p-b-li"><a href="#" class="font-info-bottom ">Động vật</a></li>
+									<li class="p-b-li"><a href="#" class="font-info-bottom">Thiên nhiên</a></li>
+									<li class="p-b-li"><a href="#" class="font-info-bottom">Công nghệ</a></li>
+									<li class="p-b-li"><a href="#" class="font-info-bottom">Trò chơi</a></li>
+									<li class="p-b-li"><a href="#" class="font-info-bottom">Đồ ăn</a></li>
 								</ul>
 
 							</div>
