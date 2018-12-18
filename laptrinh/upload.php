@@ -107,12 +107,12 @@
                             <legend>Tải lên tệp tin</legend>
 
                             <div class="form-upload">
-                                <span ">Chọn tệp tin</span><br>
+                                <span >Chọn tệp tin</span><br>
                                 <input id="file" type="file" name="image" required=""/>
                             </div>
                             <div class="form-upload">
                                 <span>Thể loại: </span>
-                                <select name="gioitinh" id="col-val" name="col-val">
+                                <select id="col-val" name="col-val">
                                     <option value selected>-------</option>
                                     <option value="1">Động vật</option>
                                     <option value="2">Thiên nhiên</option>

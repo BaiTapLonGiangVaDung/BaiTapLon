@@ -112,6 +112,11 @@
                           </a>
                       </div>
                 <?php } ?>
+                <?php if (mysqli_num_rows($resultImage)==0) {?>
+                    <div id="my-image-null">
+                      <img src='image/icon/image-icon.png' class='image-upload-form'>
+                    </div>
+                <?php } ?>
             </div>
         </div>
     </div>

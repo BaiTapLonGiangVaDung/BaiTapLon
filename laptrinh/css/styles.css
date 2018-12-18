@@ -832,6 +832,10 @@ figure.effect-marley:hover p {
 	padding-right: 50px;
 	padding-bottom: 50px;
 }
+#my-image-null{
+	padding-left: 80px;
+	padding-right: 80px;
+}
 /*end css mypicture.php*/
 @media(min-width: 992px).col-lg-4{
 	max-width:33.333333%;
