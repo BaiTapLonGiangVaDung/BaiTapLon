@@ -1,13 +1,20 @@
 create database webhinhanh;
 use webhinhanh;
+create table chucvu(
+	MaChucVu int auto_increment,
+    TenChucVu varchar(50),
+    primary key(MaChucVu)
+);
 create table taikhoan(
 	MaTaiKhoan int auto_increment,
     TenDangNhap varchar(50) unique,
     MatKhau varchar(200),
     Email varchar(50),
-    Active int,
+    Active int DEFAULT 0 ,
     Verification varchar(45),
-    primary key(MaTaiKhoan)
+    MaChucVu int DEFAULT 2,
+    primary key(MaTaiKhoan),
+    constraint FK_ChucVu foreign key(MaChucVu) references chucvu(MaChucVu)
 );
 create table bosuutap(
 	MaBoSuuTap int auto_increment,
@@ -22,19 +29,21 @@ create table HinhAnh(
     KichCo varchar(20),
     DoPhanGiai varchar(20),
     MoTaHinhAnh varchar(50),
-	MaBoSuuTap int,
+	MaBoSuuTap int DEFAULT 7,
     MaTaiKhoan int,
     AnhTaiTro int,
-    PheDuyet int,
+    PheDuyet int DEFAULT 0,
+    Resize VARCHAR(200),
     primary key(MaHinhAnh),
     constraint FK_BoSuuTap foreign key(MaBoSuuTap) references bosuutap(MaBoSuuTap),
     constraint FK_TaiKhoan foreign key(MaTaiKhoan) references taikhoan(MaTaiKhoan)
 );
-create table chucvu(
-	MaChucVu int auto_increment,
-    TenChucVu varchar(50),
-    primary key(MaChucVu)
-);
+/*insert chucvu*/
+INSERT INTO chucvu(TenChucVu) VALUES ('Admin');
+INSERT INTO chucvu(TenChucVu) VALUES ('Người đăng ảnh');
+INSERT INTO chucvu(TenChucVu) VALUES ('Người xem');
+/*end insert chucvu*/
+
 /*insert bo suu tap*/
 insert into bosuutap(TenBoSuuTap,AnhBoSuuTap,MoTa) value('Động Vật','dog-min.jpg','Khám phá thế giới động vật qua những hình ảnh và những khoảng khắc của chúng.');
 insert into bosuutap(TenBoSuuTap,AnhBoSuuTap,MoTa) value('Thiên Nhiên','nature-min.jpg','Khám phá vẻ đẹp hùng vĩ của thiên nhiên qua hình ảnh.');
