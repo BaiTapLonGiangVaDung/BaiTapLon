@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	$con=mysqli_connect('localhost','root','123456','webhinhanh');
+	$con=mysqli_connect('localhost','root','','webhinhanh');
 	if(!$con){
 		die('ket noi that bai'.mysqli_connect_error());
 	}
@@ -34,7 +34,7 @@
 			</div>
 			<div class="col-lg-5 col-md-4 col-sm-4">
 				<div class="site-title-shop" align="center">
-					<a href="index.php">Slytherin</a>
+					<a href="index.php" style="padding-left:100px">Slytherin</a>
 				</div>
 			</div>
 			<div class="col-lg-4 col-md-5 col-sm-3" align="right">
@@ -77,16 +77,10 @@
 						  	</li>
 						  	<li class="nav-item">
 						    	<a class="nav-link" href="collection.php">Bộ sưu tập</a>
-						  	</li>
-						  	<li class="nav-item">
-						    	<a class="nav-link" href="#">Blog</a>
-						  	</li>
+						  	</li>						  
 						  	<li class="nav-item">
 						    	<a class="nav-link" href="about.php">Thông tin</a>
-						  	</li>
-						  	<li class="nav-item">
-						    	<a class="nav-link" href="#">Liên kết</a>
-						  	</li>
+						  	</li>						  	
 						</ul>
 					</div>
 				</div>
@@ -108,7 +102,7 @@
 							<?php foreach ($resultCollectionImage as $item) {?>
 								<div class="col-lg-3 col-md-3 col-sm-3 pd-l-r-15">
 									<a href="image.php?id=<?php echo $item["MaHinhAnh"] ?>" title="">
-										<img class="picture-related-info" src="image/resize/<?php echo $item["Resize"] ?>" alt="">
+										<img class="picture-related-info" src="image/background/<?php echo $item["TenHinhAnh"] ?>" alt="">
 									</a>
 								</div>
 							<?php } ?>
@@ -142,7 +136,7 @@
 							<?php foreach ($resultImageSponsored as $item) {?>
 								<div class="col-lg-6 col-md-2 col-sm-2 pd-l-r-15">
 									<a href="image.php?id=<?php echo $item["MaHinhAnh"] ?>" title="">
-										<img class="picture-info" src="image/resize/<?php echo $item["Resize"] ?>" alt="">
+										<img class="picture-info" src="image/background/<?php echo $item["TenHinhAnh"] ?>" alt="">
 									</a>
 								</div>
 							<?php } ?>
