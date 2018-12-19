@@ -60,10 +60,7 @@
 						  	</li>
 						  	<li class="nav-item">
 						    	<a class="nav-link" href="collection.php">Bộ sưu tập</a>
-						  	</li>
-						  	<li class="nav-item">
-						    	<a class="nav-link" href="#">Blog</a>
-						  	</li>
+						  	</li>						  	
 						  	<li class="nav-item">
 						    	<a class="nav-link" href="about.php">Thông tin</a>
 						  	</li>
@@ -82,11 +79,10 @@
 				<div class="col-lg-3">
 					<div class="about-sly">
 						<h3>Slytherin</h3>
-						<p>FAQ</p>
-						<p>Điều khoản dịch vụ</p>
-						<p>Chính sách bảo mật</p>
-						<p>Thông tin về chúng tôi</p>
-						<p>Diễn đàn</p>
+						<div>	
+                            <a class="nav-link" href="about.php" style="padding-left: 0px;color: #7d7d7d;">FAQ</a>				
+                            <a class="nav-link" href="term.php" style="padding-left: 0px;color: #7d7d7d;">Điều khoản dịch vụ</a>
+                        </div>				
 					</div>
 				</div>
 				<div class="col-lg-9">

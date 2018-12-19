@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	$con=mysqli_connect('localhost','root','123456','webhinhanh');
+	$con=mysqli_connect('localhost','root','','webhinhanh');
 	if(!$con){
 		die('ket noi that bai'.mysqli_connect_error());
 	}
@@ -77,10 +77,7 @@
 						  	</li>
 						  	<li class="nav-item">
 						    	<a class="nav-link" href="collection.php">Bộ sưu tập</a>
-						  	</li>
-						  	<li class="nav-item">
-						    	<a class="nav-link" href="#">Blog</a>
-						  	</li>
+						  	</li>						  	
 						  	<li class="nav-item">
 						    	<a class="nav-link" href="about.php">Thông tin</a>
 						  	</li>
@@ -116,7 +113,7 @@
 							<?php foreach ($resultImageAll as $item) {?>
 								<div class="col-lg-4 col-md-6 col-sm-12" style="padding: 0">
 									<a href="image.php?id=<?php echo $item["MaHinhAnh"] ?>" title="">
-										<img class="image-background" src="image/resize/<?php echo $item["Resize"] ?>" alt="">
+										<img class="image-background" src="image/background/<?php echo $item["TenHinhAnh"] ?>" alt="">
 									</a>
 								</div>
 							<?php } ?>
