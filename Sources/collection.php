@@ -116,7 +116,7 @@
 							<?php foreach ($resultImageAll as $item) {?>
 								<div class="col-lg-4 col-md-6 col-sm-12" style="padding: 0">
 									<a href="image.php?id=<?php echo $item["MaHinhAnh"] ?>" title="">
-										<img class="image-background" src="image/background/<?php echo $item["TenHinhAnh"] ?>" alt="">
+										<img class="image-background" src="image/resize/<?php echo $item["Resize"] ?>" alt="">
 									</a>
 								</div>
 							<?php } ?>

@@ -108,7 +108,7 @@
 							<?php foreach ($resultCollectionImage as $item) {?>
 								<div class="col-lg-3 col-md-3 col-sm-3 pd-l-r-15">
 									<a href="image.php?id=<?php echo $item["MaHinhAnh"] ?>" title="">
-										<img class="picture-related-info" src="image/background/<?php echo $item["TenHinhAnh"] ?>" alt="">
+										<img class="picture-related-info" src="image/resize/<?php echo $item["Resize"] ?>" alt="">
 									</a>
 								</div>
 							<?php } ?>
@@ -142,7 +142,7 @@
 							<?php foreach ($resultImageSponsored as $item) {?>
 								<div class="col-lg-6 col-md-2 col-sm-2 pd-l-r-15">
 									<a href="image.php?id=<?php echo $item["MaHinhAnh"] ?>" title="">
-										<img class="picture-info" src="image/background/<?php echo $item["TenHinhAnh"] ?>" alt="">
+										<img class="picture-info" src="image/resize/<?php echo $item["Resize"] ?>" alt="">
 									</a>
 								</div>
 							<?php } ?>

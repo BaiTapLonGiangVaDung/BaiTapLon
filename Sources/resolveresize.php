@@ -10,11 +10,11 @@ function ak_img_resize($target, $newcopy, $w, $h, $ext) {
     }
     $img = "";
     $ext = strtolower($ext);
-    if ($ext == "gif"){ 
+    if ($ext == "gif"){
       $img = imagecreatefromgif($target);
-    } else if($ext =="png"){ 
+    } else if($ext =="png"){
       $img = imagecreatefrompng($target);
-    } else { 
+    } else {
       $img = imagecreatefromjpeg($target);
     }
     $tci = imagecreatetruecolor($w, $h);
