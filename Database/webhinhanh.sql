@@ -47,7 +47,7 @@ INSERT INTO chucvu(TenChucVu) VALUES ('Người xem');
 /*insert bo suu tap*/
 insert into bosuutap(TenBoSuuTap,AnhBoSuuTap,MoTa) value('Động Vật','dog-min.jpg','Khám phá thế giới động vật qua những hình ảnh và những khoảng khắc của chúng.');
 insert into bosuutap(TenBoSuuTap,AnhBoSuuTap,MoTa) value('Thiên Nhiên','nature-min.jpg','Khám phá vẻ đẹp hùng vĩ của thiên nhiên qua hình ảnh.');
-insert into bosuutap(TenBoSuuTap,AnhBoSuuTap,MoTa) value('Đồ Ăn','food-min.jpg','Đắm chìm vào thế giới của đồ ăn qua những hình ảnh của chúng tôi.');
+insert into bosuutap(TenBoSuuTap,AnhBoSuuTap,MoTa) value('Ẩm thực','food-min.jpg','Đắm chìm vào thế giới của đồ ăn qua những hình ảnh của chúng tôi.');
 insert into bosuutap(TenBoSuuTap,AnhBoSuuTap,MoTa) value('Công nghệ','tech-min.jpg','Cùng nhau học hỏi và khám phá công nghệ.');
 insert into bosuutap(TenBoSuuTap,AnhBoSuuTap,MoTa) value('Lễ Hội','holiday-min.jpg','Tìm hiểu về những lễ hội ,tập tục văn hóa nổi bật.');
 insert into bosuutap(TenBoSuuTap,AnhBoSuuTap,MoTa) value('Trò Chơi','game-min.jpg','Lạc vào thế giới game đầy màu sắc.');
