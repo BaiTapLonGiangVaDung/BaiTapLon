@@ -81,10 +81,7 @@
 					  </li>					  
 					  <li class="nav-item">
 					    <a class="nav-link" href="about.php">Thông tin</a>
-					  </li>
-					  <li class="nav-item">
-					    <a class="nav-link" href="term.php">Liên kết</a>
-					  </li>
+					  </li>					  
 					</ul>
 				</div>
 			</div>

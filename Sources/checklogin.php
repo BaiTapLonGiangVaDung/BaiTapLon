@@ -2,7 +2,7 @@
 	session_start();
 	$username=trim($_POST['username']);
 	$password=trim($_POST['password']);
-	$con=mysqli_connect('localhost','root','123456','webhinhanh');
+	$con=mysqli_connect('localhost','root','','webhinhanh');
 	if(!$con){
 		die('ket noi that bai'.mysqli_connect_error());
 	}

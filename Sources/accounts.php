@@ -1,9 +1,10 @@
 <?php
     session_start();
-    $con=mysqli_connect('localhost','root','123456','webhinhanh');
+    $con=mysqli_connect('localhost','root','','webhinhanh');
     if(!$con){
         die('ket noi that bai'.mysqli_connect_error());
     }
+    
     //lấy ra ảnh
     $username=$_SESSION['UserName'];
     $sql="select * from taikhoan where TenDangNhap='$username'";
@@ -27,7 +28,7 @@
 			</div>
 			<div class="col-lg-5 col-md-4 col-sm-4">
 				<div class="site-title-shop" align="center">
-					<a href="index.php">Slytherin</a>
+					<a href="index.php" style="padding-left: 100px;">Slytherin</a>
 				</div>
 			</div>
 			<div class="col-lg-4 col-md-5 col-sm-3" align="right">
@@ -70,16 +71,10 @@
 						  	</li>
 						  	<li class="nav-item">
 						    	<a class="nav-link" href="collection.php">Bộ sưu tập</a>
-						  	</li>
-						  	<li class="nav-item">
-						    	<a class="nav-link" href="#">Blog</a>
-						  	</li>
+						  	</li>						  	
 						  	<li class="nav-item">
 						    	<a class="nav-link" href="about.php">Thông tin</a>
-						  	</li>
-						  	<li class="nav-item">
-						    	<a class="nav-link" href="#">Liên kết</a>
-						  	</li>
+						  	</li>						  	
 						</ul>
 					</div>
 				</div>
@@ -100,8 +95,8 @@
     </div>
     <div class="container-fluid p-l-r-50">
         <div class="row">
-            <div class="col-md-6">
-                <p id="acc-top">Dữ liệu cá nhân</p>
+            <div class="col-md-12">
+                <p id="acc-top">Thông tin cá nhân</p>
                 <div class="bocboc">
                     <label>Tên người dùng</label>
                     <input type="text" /> <br />
@@ -273,97 +268,14 @@
                     <label  style="vertical-align: top;">Thông tin về tôi</label>
                     <textarea id="thongtin" placeholder="Hãy cho chúng tôi biết ngắn gọn về bản thân bạn"></textarea>
                 </div>
-            </div>
-
-            <div class="col-md-6">
-                <p id="acc-top">Hồ sơ trực tuyến</p>
-                <div class="bocboc">
-                    <label style="vertical-align: top;">Facebook</label>
-                    <textarea placeholder="https://www.facebook.com/..."></textarea>
-                </div>
-                <div class="bocboc">
-                    <label style="vertical-align: top;">Twitter</label>
-                    <textarea placeholder="https://www.twitter.com/..."></textarea>
-                </div>
-                <div class="bocboc">
-                    <label style="vertical-align: top;">Instagram</label>
-                    <textarea placeholder="https://www.instagram.com/..."></textarea>
-                </div>
-                <div class="bocboc">
-                    <label style="vertical-align: top;">Website</label>
-                    <textarea placeholder="https://..."></textarea>
-                </div>
-                <p id="acc-top">Tùy chọn</p>
-                <div class="bocboc">
-                    <label>Địa chỉ Email</label>
-                    <input type="text" />
-                </div>
-                <div class="bocboc">
-                    <label style="float:left">Giao tiếp</label>
-                    <div id="giaotiep">
-                        <ul>
-                            <li>
-                                <label>
-                                    <input type="checkbox" /> Tắt tin nhắn riêng tư
-                                </label>
-                            </li>
-                            <li>
-                                <label style="padding-left: 189px">
-                                    <input type="checkbox" /> Tắt nhận xét
-                                </label>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="bocboc">
-                    <label style="float:left" >Thông báo Email</label>
-                    <div id="thongbao">
-                        <ul>
-                            <li>
-                                <label style="width: 400px;">
-                                    <input type="checkbox" checked="checked"  /> Tin nhắn cá nhân
-                                </label>
-                            </li>
-                            <li>
-                                <label style="padding-left: 189px">
-                                    <input type="checkbox" /> Gửi cho tôi tin tức và các mẹo mới nhất
-                                </label>
-                            </li>
-                            <li>
-                                <label style="padding-left: 189px">
-                                    <input type="checkbox" checked="checked" /> Gửi cho tôi những thông báo quan trọng
-                                </label>
-                            </li>
-                            <li>
-                                <label style="padding-left: 189px">
-                                    <input type="checkbox" checked="checked" > Thông báo cho tôi những bình luận mới
-                                </label>
-                            </li>
-                            <li>
-                                <label style="padding-left: 189px"> 
-                                    <input type="checkbox"checked="checked"  /> Thông báo cho tôi những hình ảnh mới của bạn bè
-                                </label>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="bocboc">
-                    <label style="vertical-align:top">Địa chỉ PayPal hoặc Merchant ID để tiếp nhận sự đóng góp   </label>
-                    <input type="text"/>
-                </div>
-                <div class="bocboc">
-                    <label>Hơn</label>
-                    <a href="#">Thay đổi mật khẩu</a> <br/>
-                    <a href="#" style="padding-left:195px">Xóa tài khoản</a>
-                </div>
-            </div>
-        </div>
+            
+                
         <hr style="margin-top: 20px;margin-bottom: 30px;background-color: lightgray;" >
         <div id="luu" style="align:center">
             <p>Lưu</p>
         </div>
     </div>
-	<div class="info-bottom">
+	<div class="info-bottom" style="margin-top: 21px;">
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-lg-4">
