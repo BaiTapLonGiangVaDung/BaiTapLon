@@ -102,7 +102,8 @@
                     <input type="text" /> <br />
                 </div>
                 <div class="bocboc">
-                    <label>Ảnh hồ sơ</label>
+                    <label style="vertical-align: bottom">Ảnh hồ sơ</label>
+                    <img src="./image/icon/default-avatar.png" style="height:200px"/>
                 </div>
                 <div class="bocboc">
                     <label id="lb-gioitinh">Giới tính</label>
