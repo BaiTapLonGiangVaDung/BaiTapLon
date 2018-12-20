@@ -1,6 +1,6 @@
 <?php
     session_start();
-    $con=mysqli_connect('localhost','root','','webhinhanh');
+    $con=mysqli_connect('localhost','root','123456','webhinhanh');
     if(!$con){
         die('ket noi that bai'.mysqli_connect_error());
     }
@@ -103,7 +103,7 @@
                 </div>
                 <div class="bocboc">
                     <label style="vertical-align: bottom">Ảnh hồ sơ</label>
-                    <img src="./image/icon/default-avatar.png" style="height:200px"/>
+                    <img src="./image/avatar/user.png" style="height:200px"/>
                 </div>
                 <div class="bocboc">
                     <label id="lb-gioitinh">Giới tính</label>

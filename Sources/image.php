@@ -1,10 +1,15 @@
 <?php
 	session_start();
-	$con=mysqli_connect('localhost','root','','webhinhanh');
+	$con=mysqli_connect('localhost','root','123456','webhinhanh');
 	if(!$con){
 		die('ket noi that bai'.mysqli_connect_error());
 	}
 	$id=$_GET['id'];
+	$iduser=$_SESSION['MaTaiKhoan'];
+	$sql= "select* from taikhoan where MaTaiKhoan=$iduser;";
+	$resultImage = mysqli_query($con, $sql);
+	$userinfo = mysqli_fetch_assoc($resultImage);
+
 	//lấy ra ảnh
 	$sql= "select* from hinhanh h, bosuutap b where h.MaBoSuuTap=b.MaBoSuuTap and MaHinhAnh=$id;";
 	$resultImage = mysqli_query($con, $sql);
@@ -16,6 +21,9 @@
 
 	$sqlImageSponsored= "select * from hinhanh where AnhTaiTro=1 limit 6";
 	$resultImageSponsored = mysqli_query($con, $sqlImageSponsored);
+
+	$sqlComment="select * from taikhoan t, binhluan b where t.MaTaiKhoan=b.MaTaiKhoan and b.MaHinhAnh=$id";
+	$resultComment = mysqli_query($con, $sqlComment);
 	$con->close();
  ?>
 <!DOCTYPE html>
@@ -24,6 +32,10 @@
 	<title>Hình ảnh</title>
 	<link rel="shortcut icon" type="image/x-icon" href="https://unsplash.com/favicon.ico">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+	<script type="text/javascript">
+		var idUserName=<?php echo $_SESSION['MaTaiKhoan'] ?>;
+		var idImage=<?php echo $id ?>;
+	</script>
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body >
@@ -34,7 +46,7 @@
 			</div>
 			<div class="col-lg-5 col-md-4 col-sm-4">
 				<div class="site-title-shop" align="center">
-					<a href="index.php" style="padding-left:100px">Slytherin</a>
+					<a href="index.php">Slytherin</a>
 				</div>
 			</div>
 			<div class="col-lg-4 col-md-5 col-sm-3" align="right">
@@ -77,10 +89,16 @@
 						  	</li>
 						  	<li class="nav-item">
 						    	<a class="nav-link" href="collection.php">Bộ sưu tập</a>
-						  	</li>						  
+						  	</li>
+						  	<li class="nav-item">
+						    	<a class="nav-link" href="#">Blog</a>
+						  	</li>
 						  	<li class="nav-item">
 						    	<a class="nav-link" href="about.php">Thông tin</a>
-						  	</li>						  	
+						  	</li>
+						  	<li class="nav-item">
+						    	<a class="nav-link" href="#">Liên kết</a>
+						  	</li>
 						</ul>
 					</div>
 				</div>
@@ -102,8 +120,36 @@
 							<?php foreach ($resultCollectionImage as $item) {?>
 								<div class="col-lg-3 col-md-3 col-sm-3 pd-l-r-15">
 									<a href="image.php?id=<?php echo $item["MaHinhAnh"] ?>" title="">
-										<img class="picture-related-info" src="image/background/<?php echo $item["TenHinhAnh"] ?>" alt="">
+										<img class="picture-related-info" src="image/resize/<?php echo $item["Resize"] ?>" alt="">
 									</a>
+								</div>
+							<?php } ?>
+						</div>
+					</div>
+					<div id="comment-form">
+						<div class="row" style="margin-left: 0px;">
+							<div class="col-lg-1 col-md-1 comment-image">
+								<img class="avatar-comment" src="image/avatar/<?php echo $userinfo['AnhDaiDien'] ?>" alt="">
+							</div>
+							<div class="col-lg-11 col-md-11 ">
+								<textarea id="txtComment" class="comment-text" name="" placeholder="Thêm bình luận của bạn"></textarea>
+								<button id="btn-comment" class="btn btn-primary">Bình luận</button>
+							</div>
+							<?php foreach ($resultComment as $item) {?>
+								<div class="col-lg-12 comment-all">
+									<div class="row">
+										<div class="col-lg-1 col-md-1 comment-image">
+											<img class="avatar-comment" src="image/avatar/<?php echo $item['AnhDaiDien'] ?>" alt="">
+										</div>
+										<div class="col-lg-11 col-md-11">
+											<div>
+												<span class="span-username-comment"><?php echo $item['TenDangNhap'] ?></span>
+											</div>
+											<div style="margin-top: 5px;">
+												<span><?php echo $item['BinhLuan'] ?></span>
+											</div>
+										</div>
+									</div>
 								</div>
 							<?php } ?>
 						</div>
@@ -136,7 +182,7 @@
 							<?php foreach ($resultImageSponsored as $item) {?>
 								<div class="col-lg-6 col-md-2 col-sm-2 pd-l-r-15">
 									<a href="image.php?id=<?php echo $item["MaHinhAnh"] ?>" title="">
-										<img class="picture-info" src="image/background/<?php echo $item["TenHinhAnh"] ?>" alt="">
+										<img class="picture-info" src="image/resize/<?php echo $item["Resize"] ?>" alt="">
 									</a>
 								</div>
 							<?php } ?>

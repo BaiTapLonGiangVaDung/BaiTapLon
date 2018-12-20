@@ -17,7 +17,7 @@
 			</div>
 			<div class="col-lg-5 col-md-4 col-sm-4">
 				<div class="site-title-shop" align="center">
-					<a href="index.php" style="padding-left: 100px;">Slytherin</a>
+					<a href="index.php">Slytherin</a>
 				</div>
 			</div>
 			<div class="col-lg-4 col-md-5 col-sm-3" align="right">
@@ -60,10 +60,16 @@
 						  	</li>
 						  	<li class="nav-item">
 						    	<a class="nav-link" href="collection.php">Bộ sưu tập</a>
-						  	</li>						  	
+						  	</li>
+						  	<li class="nav-item">
+						    	<a class="nav-link" href="#">Blog</a>
+						  	</li>
 						  	<li class="nav-item">
 						    	<a class="nav-link" href="about.php">Thông tin</a>
-						  	</li>						  	
+						  	</li>
+						  	<li class="nav-item">
+						    	<a class="nav-link" href="#">Liên kết</a>
+						  	</li>
 						</ul>
 					</div>
 				</div>
@@ -76,10 +82,8 @@
 				<div class="col-lg-3">
 					<div class="about-sly">
 						<h3>Slytherin</h3>
-						<div>	
-                            <a class="nav-link" href="about.php" style="padding-left: 0px;color: #7d7d7d;">FAQ</a>				
+							<a class="nav-link" href="about.php" style="padding-left: 0px;color: #7d7d7d;">FAQ</a>
                             <a class="nav-link" href="term.php" style="padding-left: 0px;color: #7d7d7d;">Điều khoản dịch vụ</a>
-                        </div>				
 					</div>
 				</div>
 				<div class="col-lg-9">

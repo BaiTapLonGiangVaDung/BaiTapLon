@@ -263,7 +263,7 @@ ul,li{
 }
 /*end css trang chủ*/
 
-/*css shop.php*/
+/*css collection.php*/
 #div-top-shop{
 	padding-left: 90px;
 	padding-top: 6px;
@@ -318,10 +318,14 @@ ul,li{
 }
 .image-background{
 	width: 100%;
-	height: 100%;
+	height: auto;
+}
+.image-background-form{
+	max-height: 226px;
+	overflow: hidden;
 	padding-right: 5px;
 	padding-left: 5px;
-	padding-bottom: 10px;
+	margin-bottom: 10px;
 }
 .image-li{
 	width: 380px;
@@ -465,7 +469,7 @@ figure.effect-marley:hover p {
     -webkit-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
 }
-/*end css shop.php*/
+/*end css collection.php*/
 /*css image.php*/
 #image-form{
 	padding-top: 40px;
@@ -516,6 +520,46 @@ figure.effect-marley:hover p {
 .fw-image-info-text{
 	font-weight: 500;
 	font-size: 16px;
+}
+#comment-form{
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+.avatar-comment{
+	width: auto;
+	height: 100%;
+}
+.comment-image{
+	padding: 0px;
+	height: 60px;
+	max-width: 60px !important;
+	overflow: hidden;
+	border-radius: 100%;
+}
+.comment-text{
+	width: 100%;
+	display: inline-block;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 3px #ddd;
+    vertical-align: middle;
+	box-sizing: border-box;
+    height: 80px;
+    padding-right: 12px;
+	padding-left: 12px;
+	border-radius: 7px;
+}
+#btn-comment{
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+.comment-all{
+	border-top: 0.8px solid #55555538;
+	padding-top: 10px;
+	padding-bottom: 20px;
+}
+.span-username-comment{
+	text-transform: capitalize;
+	color: #5656ad;
 }
 /*end css image.php*/
 
@@ -835,6 +879,14 @@ figure.effect-marley:hover p {
 #my-image-null{
 	padding-left: 80px;
 	padding-right: 80px;
+}
+.featured-photos-object-mypicture{
+	width: 100%;
+	height: auto;
+}
+.image-background-form-mypicture{
+	max-height: 194px;
+	overflow: hidden;
 }
 /*end css mypicture.php*/
 @media(min-width: 992px).col-lg-4{

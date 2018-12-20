@@ -2,7 +2,7 @@
 	session_start();
 	$username=trim($_POST['username']);
 	$password=trim($_POST['password']);
-	$con=mysqli_connect('localhost','root','','webhinhanh');
+	$con=mysqli_connect('localhost','root','123456','webhinhanh');
 	if(!$con){
 		die('ket noi that bai'.mysqli_connect_error());
 	}
@@ -13,6 +13,7 @@
 		if (password_verify($password, $row['MatKhau'])) {
 			if ($row["Active"]==1) {
 			$_SESSION['UserName']=$username;
+			$_SESSION['MaTaiKhoan']=$row['MaTaiKhoan'];
 			echo 1;
 			}
 			else

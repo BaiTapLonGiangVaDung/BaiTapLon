@@ -86,6 +86,22 @@ $(document).ready(function(){
                 }
             }
         }
-        
+    });
+    $('#btn-comment').click(function(){
+        var comment=$('#txtComment').val();
+        $.ajax({
+            url: 'resolvecomment.php',
+            type: 'POST',
+            data: {
+                comment: comment,
+                idUserName: idUserName,
+                idImage: idImage
+            },
+            success: function(response){
+                if (response==1) {
+                    window.location.reload();
+                }
+            }
+        });
     });
 });

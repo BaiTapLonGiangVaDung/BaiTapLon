@@ -38,6 +38,15 @@ create table HinhAnh(
     constraint FK_BoSuuTap foreign key(MaBoSuuTap) references bosuutap(MaBoSuuTap),
     constraint FK_TaiKhoan foreign key(MaTaiKhoan) references taikhoan(MaTaiKhoan)
 );
+create table binhluan(
+	MaTuongTac int auto_increment,
+    MaTaiKhoan int,
+    MaHinhAnh int,
+    BinhLuan varchar(500),
+    primary key(MaTuongTac),
+    constraint FK_TaiKhoan_2 foreign key(MaTaiKhoan) references taikhoan(MaTaiKhoan),
+    constraint FK_HinhAnh_2 foreign key(MaHinhAnh) references hinhanh(MaHinhAnh)
+);
 /*insert chucvu*/
 INSERT INTO chucvu(TenChucVu) VALUES ('Admin');
 INSERT INTO chucvu(TenChucVu) VALUES ('Người đăng ảnh');

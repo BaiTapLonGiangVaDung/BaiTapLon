@@ -45,7 +45,7 @@
 	if(empty($email) || empty($password) || empty($username)){
         echo "Vui lòng điền đủ thông tin";
     }else{
-    	$con=mysqli_connect('localhost','root','','webhinhanh');
+    	$con=mysqli_connect('localhost','root','123456','webhinhanh');
 		if(!$con){
 			die('ket noi that bai'.mysqli_connect_error());
 		}

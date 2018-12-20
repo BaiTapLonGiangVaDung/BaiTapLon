@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	$con=mysqli_connect('localhost','root','','webhinhanh');
+	$con=mysqli_connect('localhost','root','123456','webhinhanh');
 	if(!$con){
 		die('ket noi that bai'.mysqli_connect_error());
 	}
@@ -34,7 +34,7 @@
 			</div>
 			<div class="col-lg-5 col-md-4 col-sm-4">
 				<div class="site-title-shop" align="center">
-					<a href="index.php" style="padding-left: 100px;">Slytherin</a>
+					<a href="index.php">Slytherin</a>
 				</div>
 			</div>
 			<div class="col-lg-4 col-md-5 col-sm-3" align="right">
@@ -77,10 +77,16 @@
 						  	</li>
 						  	<li class="nav-item">
 						    	<a class="nav-link" href="collection.php">Bộ sưu tập</a>
-						  	</li>						  	
+						  	</li>
+						  	<li class="nav-item">
+						    	<a class="nav-link" href="#">Blog</a>
+						  	</li>
 						  	<li class="nav-item">
 						    	<a class="nav-link" href="about.php">Thông tin</a>
-						  	</li>						  	
+						  	</li>
+						  	<li class="nav-item">
+						    	<a class="nav-link" href="#">Liên kết</a>
+						  	</li>
 						</ul>
 					</div>
 				</div>
@@ -110,7 +116,9 @@
 							<?php foreach ($resultImageAll as $item) {?>
 								<div class="col-lg-4 col-md-6 col-sm-12" style="padding: 0">
 									<a href="image.php?id=<?php echo $item["MaHinhAnh"] ?>" title="">
-										<img class="image-background" src="image/background/<?php echo $item["TenHinhAnh"] ?>" alt="">
+										<div class="image-background-form">
+											<img class="image-background" src="image/resize/<?php echo $item["Resize"] ?>" alt="">
+										</div>
 									</a>
 								</div>
 							<?php } ?>
