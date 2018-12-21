@@ -13,6 +13,7 @@ create table taikhoan(
     Active int DEFAULT 0 ,
     Verification varchar(45),
     MaChucVu int DEFAULT 2,
+    AnhDaiDien varchar(200) DEFAULT 'user.png',
     primary key(MaTaiKhoan),
     constraint FK_ChucVu foreign key(MaChucVu) references chucvu(MaChucVu)
 );
@@ -47,6 +48,12 @@ create table binhluan(
     constraint FK_TaiKhoan_2 foreign key(MaTaiKhoan) references taikhoan(MaTaiKhoan),
     constraint FK_HinhAnh_2 foreign key(MaHinhAnh) references hinhanh(MaHinhAnh)
 );
+ALTER TABLE `webhinhanh`.`taikhoan` 
+ADD COLUMN `HoTen` VARCHAR(45) NULL AFTER `AnhDaiDien`,
+ADD COLUMN `ThanhPho` VARCHAR(45) NULL AFTER `HoTen`,
+ADD COLUMN `QuocGia` VARCHAR(45) NULL AFTER `ThanhPho`,
+ADD COLUMN `GioiTinh` VARCHAR(10) NULL AFTER `QuocGia`,
+ADD COLUMN `NgaySinh` DATE NULL AFTER `GioiTinh`;
 /*insert chucvu*/
 INSERT INTO chucvu(TenChucVu) VALUES ('Admin');
 INSERT INTO chucvu(TenChucVu) VALUES ('Người đăng ảnh');

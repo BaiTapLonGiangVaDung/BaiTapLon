@@ -788,6 +788,18 @@ figure.effect-marley:hover p {
     text-align: center;
     margin-left: 574.156px;
 }
+.image-avatar{
+	width: auto;
+    height: 386px;
+}
+.avatar-image{
+	max-height: 386px;
+    overflow: hidden;
+    margin-left: 27%;
+    margin-right: 30px;
+    max-width: 386px;
+    border-radius: 100%;
+}
 /*end css account.php*/
 /*css verify.php*/
 #content-verify{

@@ -104,4 +104,28 @@ $(document).ready(function(){
             }
         });
     });
+    $('#luu').click(function(){
+        var hoten=$('#txtHoTen').val();
+        var gioitinh=$('#id-gioitinh').val();
+        var thanhpho=$('#txtThanhPho').val();
+        var quocgia=$('#txtQuocGia').val();
+        var ngaysinh=$('#txtNgaySinh').val();
+        $.ajax({
+            url: 'resolveinfoaccount.php',
+            type: 'POST',
+            data: {
+                idUserName: idUserName,
+                hoten: hoten,
+                gioitinh: gioitinh,
+                thanhpho: thanhpho,
+                quocgia: quocgia,
+                ngaysinh: ngaysinh
+            },
+            success: function(response){
+                if (response==1) {
+                    window.location.reload();
+                }
+            }
+        });
+    });
 });
