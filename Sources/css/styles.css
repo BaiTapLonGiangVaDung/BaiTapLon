@@ -901,6 +901,60 @@ figure.effect-marley:hover p {
 	overflow: hidden;
 }
 /*end css mypicture.php*/
+/*css froum.php*/
+#froum{
+	padding-left: 20%;
+	padding-right: 20%;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	background-color: #fafafa;
+}
+.froum-content{
+	border-radius: 3px;
+    border: 1px solid #e6e6e6;
+    margin-bottom: 30px;
+}
+.avatar-froum-div{
+	max-height: 60px;
+	max-width: 60px;
+	overflow: hidden;
+	border-radius: 100%;
+}
+.avatar-froum{
+	height: 60px;
+	width: auto;
+
+}
+.image-froum{
+	width: 100%;
+	height: auto;
+}
+.header-avatar-froum{
+	padding-left: 30px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.icon-like button{
+	max-height: 40px;
+	max-width: 40px;
+	background: none;
+	border: none;
+	cursor: pointer;
+}
+.icon-like img{
+	width: 100%;
+	height: auto;
+}
+.icon-like{
+	padding-left: 10px;
+	padding-top: 10px;
+}
+.describe-image{
+	padding-left: 15px;
+	padding-top: 5px;
+	padding-bottom: 10px;
+}
+/*end css froum.php*/
 @media(min-width: 992px).col-lg-4{
 	max-width:33.333333%;
 }

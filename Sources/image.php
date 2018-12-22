@@ -5,10 +5,12 @@
 		die('ket noi that bai'.mysqli_connect_error());
 	}
 	$id=$_GET['id'];
-	$iduser=$_SESSION['MaTaiKhoan'];
-	$sql= "select* from taikhoan where MaTaiKhoan=$iduser;";
-	$resultImage = mysqli_query($con, $sql);
-	$userinfo = mysqli_fetch_assoc($resultImage);
+	if (isset($_SESSION['MaTaiKhoan'])) {
+		$iduser=$_SESSION['MaTaiKhoan'];
+		$sql= "select* from taikhoan where MaTaiKhoan=$iduser;";
+		$resultImage = mysqli_query($con, $sql);
+		$userinfo = mysqli_fetch_assoc($resultImage);
+	}
 
 	//lấy ra ảnh
 	$sql= "select* from hinhanh h, bosuutap b where h.MaBoSuuTap=b.MaBoSuuTap and MaHinhAnh=$id;";
@@ -91,7 +93,7 @@
 						    	<a class="nav-link" href="collection.php">Bộ sưu tập</a>
 						  	</li>
 						  	<li class="nav-item">
-						    	<a class="nav-link" href="#">Blog</a>
+						    	<a class="nav-link" href="forum.php">Diễn đàn</a>
 						  	</li>
 						  	<li class="nav-item">
 						    	<a class="nav-link" href="about.php">Thông tin</a>
