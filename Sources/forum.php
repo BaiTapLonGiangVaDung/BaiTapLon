@@ -4,17 +4,38 @@
 	if(!$con){
 		die('ket noi that bai'.mysqli_connect_error());
 	}
-	$sql="select * from taikhoan t, hinhanh h where t.MaTaiKhoan=h.MaTaiKhoan and t.MaTaiKhoan >0;";
+	if (isset($_SESSION['MaTaiKhoan'])) {
+		$iduser=$_SESSION['MaTaiKhoan'];
+		$sql= "select* from taikhoan where MaTaiKhoan=$iduser;";
+		$resultImage = mysqli_query($con, $sql);
+		$userinfo = mysqli_fetch_assoc($resultImage);
+		$sql="select h.MaHinhAnh, h.TenHinhAnh, h.MoTaHinhAnh, t.MaTaiKhoan, t.TenDangNhap, t.AnhDaiDien,th.TrangThai FROM hinhanh h
+		LEFT JOIN taikhoan t ON t.MaTaiKhoan=h.MaTaiKhoan
+		LEFT JOIN thich th ON th.MaHinhAnh=h.MaHinhAnh and th.MaTaiKhoan=$iduser
+ 		where h.MaTaiKhoan>0";
+	}else{
+		$sql="select * FROM hinhanh h
+		LEFT JOIN taikhoan t ON t.MaTaiKhoan=h.MaTaiKhoan
+ 		where h.MaTaiKhoan>0";
+	}
 	$result=mysqli_query($con, $sql);
+	//Lấy ra 3 ảnh có nhiều lượt like nhất
+	$sqlTopLike="select h.MaHinhAnh,h.TenHinhAnh,h.Resize,count(t.MaHinhAnh) as demlike from hinhanh h
+			left join thich t on t.MaHinhAnh=h.MaHinhAnh
+    		where h.MaTaiKhoan>0 group by h.MaHinhAnh limit 3;";
+	$resultTopLike = mysqli_query($con, $sqlTopLike);
 	$con->close();
  ?>
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Phê duyệt hình ảnh</title>
+	<title>Diễn đàn</title>
 	<link rel="shortcut icon" type="image/x-icon" href="https://unsplash.com/favicon.ico">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<script type="text/javascript">
+		var idUserName=<?php echo $_SESSION['MaTaiKhoan'] ?>;
+	</script>
 </head>
 <body >
 	<div class="container-fluid" id="div-top-shop">
@@ -83,36 +104,88 @@
 			</div>
 		</div>
 	</div>
-	<div class="container-fluid" style="padding: 0px;">
-		<div id="froum">
-			<?php foreach ($result as $item) {?>
-				<div class="froum-content">
-					<div class="header-avatar-froum">
-						<div class="row">
-							<div class="avatar-froum-div col-lg-2" style="padding: 0px;">
-								<img class="avatar-froum" src="image/avatar/<?php echo $item['AnhDaiDien'] ?>" alt="">
+	<div id="froum-all">
+		<div class="container-fluid" style="padding: 0px;">
+			<div class="row">
+				<div class="col-lg-8">
+					<?php foreach ($result as $item) {?>
+						<div class="froum-content">
+							<div class="header-avatar-froum">
+								<div class="row">
+									<div class="avatar-froum-div col-lg-2" style="padding: 0px;">
+										<img class="avatar-froum" src="image/avatar/<?php echo $item['AnhDaiDien'] ?>" alt="">
+									</div>
+									<div class="col-lg-10">
+										<span style="font-weight: 500"><?php echo $item['TenDangNhap'] ?></span><br>
+										<span style="font-size: 15px;">50 phút trước</span>
+									</div>
+								</div>
 							</div>
-							<div class="col-lg-10">
-								<span style="font-weight: 500"><?php echo $item['TenDangNhap'] ?></span><br>
-								<span style="font-size: 15px;">50 phút trước</span>
+							<div>
+								<a href="image.php?id=<?php echo $item["MaHinhAnh"] ?>" title="">
+									<img class="image-froum" src="image/background/<?php echo $item['TenHinhAnh'] ?>" alt="">
+								</a>
+							</div>
+							<div class="icon-like">
+								<button id="like-<?php echo $item['MaHinhAnh']?>">
+									<?php
+										if (isset($_SESSION['UserName'])) {
+											if($item['TrangThai']==1){
+									?>
+												<img src='image/icon/like-like.png'>
+									<?php }else
+												echo"<img src='image/icon/like.png'>";
+									}else
+										echo "<img src='image/icon/like.png'>";
+									?>
+								</button>
+								<span>Thích</span>
+							</div>
+							<div class="describe-image">
+								<span>0 lượt thích</span><br>
+								<span><?php echo $item['MoTaHinhAnh'] ?></span><br>
 							</div>
 						</div>
+					<?php } ?>
+				</div>
+				<div class="col-lg-4">
+					<div class="row" style="padding-left: 15px;">
+						<?php if (isset($_SESSION['UserName'])) {?>
+							<div class="avatar-froum-div col-lg-4" style="padding: 0px;">
+								<img class="avatar-froum" src="image/avatar/<?php echo $userinfo['AnhDaiDien'] ?>" alt="">
+							</div>
+							<div class="col-lg-8">
+								<span style="font-weight: 500"><?php echo $userinfo['TenDangNhap'] ?></span><br>
+								<span style="font-size: 15px;"><?php echo $userinfo['HoTen'] ?></span>
+							</div>
+						<?php }else{?>
+							<div class="avatar-froum-div col-lg-4" style="padding: 0px;">
+								<img class="avatar-froum" src="image/avatar/user.png" alt="">
+							</div>
+							<div class="col-lg-8">
+								<span style="font-size: 15px;">Bạn chưa đăng nhập</span>
+							</div>
+						<?php }?>
 					</div>
-					<div>
-						<img class="image-froum" src="image/background/<?php echo $item['TenHinhAnh'] ?>" alt="">
-					</div>
-					<div class="icon-like">
-						<button>
-							<img src="image/icon/like.png">
-						</button>
-						<span>Thích</span>
-					</div>
-					<div class="describe-image">
-						<span>0 lượt thích</span><br>
-						<span><?php echo $item['MoTaHinhAnh'] ?></span><br>
+					<div id="top-like">
+						<div class="title-toplike">
+							<span >Ảnh nhiều lượt thích</span>
+						</div>
+						<?php foreach ($resultTopLike as $item) {?>
+							<div class="image-top-like-all">
+								<div class="row">
+									<div class="col-lg-5">
+										<img class="image-top-like" src="image/resize/<?php echo $item['Resize'] ?>" alt="">
+									</div>
+									<div class="col-lg-5">
+										<span><?php echo $item['demlike'] ?> lượt thích</span>
+									</div>
+								</div>
+							</div>
+						<?php } ?>
 					</div>
 				</div>
-			<?php } ?>
+			</div>
 		</div>
 	</div>
 	<div class="info-bottom">

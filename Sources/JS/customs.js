@@ -132,4 +132,41 @@ $(document).ready(function(){
             }
         });
     });
+    $('#froum-all button').click(function(){
+        var idButton= $(this).attr('id');
+        var idImage=idButton.slice(5);
+        $.ajax({
+            url: 'resolvelike.php',
+            type: 'POST',
+            data: {
+                idUserName: idUserName,
+                idImage: idImage
+            },
+            success: function(response){
+                if (response==1) {
+                    $('#like-'+idImage).html('<img src="image/icon/like-like.png">');
+                }else{
+                    $('#like-'+idImage).html('<img src="image/icon/like.png">');
+                }
+            }
+        });
+    });
+    $('#like-image').click(function(){
+        $.ajax({
+            url: 'resolvelike.php',
+            type: 'POST',
+            data: {
+                idUserName: idUserName,
+                idImage: idImage
+            },
+            success: function(response){
+                if (response==1) {
+                    $('#like-image').html('<img src="image/icon/like-like.png">');
+                }else{
+                    $('#like-image').html('<img src="image/icon/like.png">');
+                }
+            }
+        });
+    });
+
 });

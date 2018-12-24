@@ -48,6 +48,15 @@ create table binhluan(
     constraint FK_TaiKhoan_2 foreign key(MaTaiKhoan) references taikhoan(MaTaiKhoan),
     constraint FK_HinhAnh_2 foreign key(MaHinhAnh) references hinhanh(MaHinhAnh)
 );
+create table thich(
+	MaThich int auto_increment,
+	MaTaiKhoan int,
+    MaHinhAnh int,
+    TrangThai int,
+    primary key(MaThich),
+    constraint FK_TaiKhoan_3 foreign key(MaTaiKhoan) references taikhoan(MaTaiKhoan),
+    constraint FK_HinhAnh_3 foreign key(MaHinhAnh) references hinhanh(MaHinhAnh)
+);
 ALTER TABLE `webhinhanh`.`taikhoan` 
 ADD COLUMN `HoTen` VARCHAR(45) NULL AFTER `AnhDaiDien`,
 ADD COLUMN `ThanhPho` VARCHAR(45) NULL AFTER `HoTen`,

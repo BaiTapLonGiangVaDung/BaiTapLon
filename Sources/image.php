@@ -4,7 +4,6 @@
 	if(!$con){
 		die('ket noi that bai'.mysqli_connect_error());
 	}
-	$id=$_GET['id'];
 	if (isset($_SESSION['MaTaiKhoan'])) {
 		$iduser=$_SESSION['MaTaiKhoan'];
 		$sql= "select* from taikhoan where MaTaiKhoan=$iduser;";
@@ -13,19 +12,35 @@
 	}
 
 	//lấy ra ảnh
-	$sql= "select* from hinhanh h, bosuutap b where h.MaBoSuuTap=b.MaBoSuuTap and MaHinhAnh=$id;";
+	$id=$_GET['id'];
+	$sql= "select * from hinhanh h, bosuutap b where h.MaBoSuuTap=b.MaBoSuuTap and MaHinhAnh=$id;";
 	$resultImage = mysqli_query($con, $sql);
 	$row = mysqli_fetch_assoc($resultImage);
 	$collectionImage=$row["MaBoSuuTap"];
-
+	//Lấy ra thông tin người đăng ảnh
+	$sqlPoster= "select * from hinhanh h, taikhoan t where h.MaTaiKhoan=t.MaTaiKhoan and MaHinhAnh=$id;";
+	$resultPoster = mysqli_query($con, $sqlPoster);
+	$rowPoster = mysqli_fetch_assoc($resultPoster);
+	//Lấy ra những ảnh cùng bộ sưu tập
 	$sqlcollectionImage= "select * from hinhanh where MaBoSuuTap=$collectionImage ORDER BY rand() limit 8";
 	$resultCollectionImage = mysqli_query($con, $sqlcollectionImage);
-
+	//Lấy ra những ảnh được tài trợ
 	$sqlImageSponsored= "select * from hinhanh where AnhTaiTro=1 limit 6";
 	$resultImageSponsored = mysqli_query($con, $sqlImageSponsored);
-
+	//Lấy ra danh sách những bình luận của ảnh
 	$sqlComment="select * from taikhoan t, binhluan b where t.MaTaiKhoan=b.MaTaiKhoan and b.MaHinhAnh=$id";
 	$resultComment = mysqli_query($con, $sqlComment);
+	//Lấy ra trạng thái thích của ảnh và người dùng
+	if (isset($_SESSION['MaTaiKhoan'])) {
+		$iduser=$_SESSION['MaTaiKhoan'];
+		$sqlLike="select * from thich where MaHinhAnh=$id and MaTaiKhoan=$iduser";
+		$resultLike = mysqli_query($con, $sqlLike);
+		$rowLike = mysqli_fetch_assoc($resultLike);
+	};
+	//Đếm số like của ảnh
+	$sqlDemLike="select *,count(*) as demlike from thich where MaHinhAnh=$id;";
+	$resultDemLike = mysqli_query($con, $sqlDemLike);
+	$rowDemLike = mysqli_fetch_assoc($resultDemLike);
 	$con->close();
  ?>
 <!DOCTYPE html>
@@ -112,20 +127,53 @@
 			<div class="row">
 				<div class="col-lg-8 p-r-30">
 					<img class="picture-info" src="image/background/<?php echo $row["TenHinhAnh"] ?>" alt="">
-					<div class="image-related">
-						<div class="row">
-							<div class="col-lg-12">
-								<div class="image-related-text">
-									<span>Hình ảnh liên quan</span>
+					<div class="col-lg-12" style="padding: 0px;">
+						<div class="icon-like">
+							<button id="like-image">
+								<?php
+									if (isset($_SESSION['UserName'])) {
+										if($rowLike['TrangThai']==1){
+								?>
+											<img src='image/icon/like-like.png'>
+								<?php }else
+											echo"<img src='image/icon/like.png'>";
+								}else
+									echo "<img src='image/icon/like.png'>";
+								?>
+							</button>
+							<span>Thích</span>
+							<span style="margin-left: 25px;"><?php echo $rowDemLike['demlike'] ?> lượt thích</span><br>
+						</div>
+						<div class="image-info-header-text">
+							<span>Thông tin hình ảnh</span><br>
+						</div>
+						<div class="image-info-text">
+							<div id="avatar-poster">
+								<div class="row">
+									<div class="col-lg-1 col-md-1 comment-image">
+										<?php if (isset($rowPoster['AnhDaiDien'])){ ?>
+											<img class="avatar-comment" src="image/avatar/<?php echo $rowPoster['AnhDaiDien'] ?>" alt="">
+										<?php }else{?>
+											<img class="avatar-comment" src="image/avatar/user.png" alt="">
+										<?php  }?>
+									</div>
+									<div class="col-lg-11 col-md-11">
+										<div>
+											<span><?php echo $rowPoster['TenDangNhap'] ?></span><br>
+											<span><?php echo $rowPoster['HoTen'] ?></span>
+										</div>
+									</div>
 								</div>
 							</div>
-							<?php foreach ($resultCollectionImage as $item) {?>
-								<div class="col-lg-3 col-md-3 col-sm-3 pd-l-r-15">
-									<a href="image.php?id=<?php echo $item["MaHinhAnh"] ?>" title="">
-										<img class="picture-related-info" src="image/resize/<?php echo $item["Resize"] ?>" alt="">
-									</a>
-								</div>
-							<?php } ?>
+							<span class="fw-image-info-text">Mô tả hình ảnh: <?php echo $row["MoTaHinhAnh"] ?></span><br>
+							<span>Thể loại: <?php echo $row["TenBoSuuTap"] ?></span><br>
+							<span>Kích cỡ file: <?php echo $row["KichCo"] ?></span><br>
+							<span>Độ phân giải: <?php echo $row["DoPhanGiai"] ?></span><br>
+							<span class="fw-image-info-text">Cam kết: </span><br>
+							<div style="padding-left: 15px;">
+								<span>✓ Miễn phí cho mục đích sử dụng cá nhân và thương mại</span><br>
+								<span>✓ Không yêu cầu ghi nhận</span>
+							</div>
 						</div>
 					</div>
 					<div id="comment-form">
@@ -161,22 +209,6 @@
 					<div class="image-sponsored">
 						<div class="row">
 							<div class="col-lg-12">
-								<div class="image-info-header-text">
-									<span>Thông tin hình ảnh</span><br>
-								</div>
-								<div class="image-info-text">
-									<span class="fw-image-info-text">Mô tả hình ảnh: <?php echo $row["MoTaHinhAnh"] ?></span><br>
-									<span>Thể loại: <?php echo $row["TenBoSuuTap"] ?></span><br>
-									<span>Kích cỡ file: <?php echo $row["KichCo"] ?></span><br>
-									<span>Độ phân giải: <?php echo $row["DoPhanGiai"] ?></span><br>
-									<span class="fw-image-info-text">Cam kết: </span><br>
-									<div style="padding-left: 15px;">
-										<span>✓ Miễn phí cho mục đích sử dụng cá nhân và thương mại</span><br>
-										<span>✓ Không yêu cầu ghi nhận</span>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-12">
 								<div class="image-sponsored-text">
 									<span>Hình ảnh được tài trợ</span>
 								</div>
@@ -185,6 +217,20 @@
 								<div class="col-lg-6 col-md-2 col-sm-2 pd-l-r-15">
 									<a href="image.php?id=<?php echo $item["MaHinhAnh"] ?>" title="">
 										<img class="picture-info" src="image/resize/<?php echo $item["Resize"] ?>" alt="">
+									</a>
+								</div>
+							<?php } ?>
+							<div class="col-lg-12">
+								<div class="image-related-text">
+									<span>Hình ảnh cùng chủ đề</span>
+								</div>
+							</div>
+							<?php foreach ($resultCollectionImage as $item) {?>
+								<div class="col-lg-6 col-md-2 col-sm-2 pd-l-r-15">
+									<a href="image.php?id=<?php echo $item["MaHinhAnh"] ?>" title="">
+										<div class="div-picture-related-info">
+											<img class="picture-related-info" src="image/resize/<?php echo $item["Resize"] ?>" alt="">
+										</div>
 									</a>
 								</div>
 							<?php } ?>

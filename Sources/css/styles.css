@@ -484,13 +484,19 @@ figure.effect-marley:hover p {
 	width: 100%;
 	height: auto;
 }
+.div-picture-related-info{
+	max-width: 221px;
+	overflow: hidden;
+	max-height: 125px;
+}
 .picture-related-info{
 	width: 100%;
-	height: 100%;
+	height: auto;
 }
 .image-info-header-text{
 	font-size: 25px;
 	padding-bottom: 15px;
+	padding-top: 15px;
 	font-weight: 500;
 }
 .image-info-text{
@@ -522,7 +528,7 @@ figure.effect-marley:hover p {
 	font-size: 16px;
 }
 #comment-form{
-	padding-top: 50px;
+	padding-top: 30px;
 	padding-bottom: 50px;
 }
 .avatar-comment{
@@ -560,6 +566,10 @@ figure.effect-marley:hover p {
 .span-username-comment{
 	text-transform: capitalize;
 	color: #5656ad;
+}
+#avatar-poster{
+	padding-left: 15px;
+	padding-bottom: 15px;
 }
 /*end css image.php*/
 
@@ -902,9 +912,9 @@ figure.effect-marley:hover p {
 }
 /*end css mypicture.php*/
 /*css froum.php*/
-#froum{
-	padding-left: 20%;
-	padding-right: 20%;
+#froum-all{
+	padding-left: 15%;
+	padding-right: 15%;
 	padding-top: 50px;
 	padding-bottom: 50px;
 	background-color: #fafafa;
@@ -953,6 +963,28 @@ figure.effect-marley:hover p {
 	padding-left: 15px;
 	padding-top: 5px;
 	padding-bottom: 10px;
+}
+#top-like{
+	border-radius: 3px;
+    border: 1px solid #e6e6e6;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+.title-toplike{
+	padding-top: 10px;
+	padding-left: 15px;
+	padding-bottom: 20px;
+}
+.title-toplike span{
+	font-weight: 500;
+}
+.image-top-like{
+	max-width: 115px;
+	max-height: auto;
+}
+.image-top-like-all{
+	padding-left: 15px;
+	padding-bottom: 15px;
 }
 /*end css froum.php*/
 @media(min-width: 992px).col-lg-4{
