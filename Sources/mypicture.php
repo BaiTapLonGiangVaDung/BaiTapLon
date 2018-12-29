@@ -12,8 +12,10 @@
     $idChucVu=$row["MaChucVu"];
     $idMaTaiKhoan=$row["MaTaiKhoan"];
 
-    $sql="select * from hinhanh where MaTaiKhoan= $idMaTaiKhoan";
+    $sql="select * from hinhanh where MaTaiKhoan= $idMaTaiKhoan and PheDuyet=1";
     $resultImage = mysqli_query($con, $sql);
+    $sqlpd="select * from hinhanh where MaTaiKhoan= $idMaTaiKhoan and PheDuyet=0";
+    $resultImagepd = mysqli_query($con, $sqlpd);
  ?>
 <!DOCTYPE html>
 <html>
@@ -105,6 +107,9 @@
     <div id="mypicture-form">
         <div class="container-fluid">
             <div class="row">
+              <div class="col-lg-12">
+                <p id="acc-top">Hình ảnh</p>
+              </div>
                 <?php foreach ($resultImage as $item) {?>
                       <div class="col-lg-3 col-md-4 col-sm-6 p-l-r-5">
                           <a href="image.php?id=<?php echo $item["MaHinhAnh"] ?>" title="">
@@ -119,6 +124,23 @@
                       <img src='image/icon/image-icon.png' class='image-upload-form'>
                     </div>
                 <?php } ?>
+                <div class="col-lg-12" style="padding-top: 30px;">
+                  <p id="acc-top">Hình ảnh đang chờ được duyệt</p>
+                </div>
+                  <?php foreach ($resultImagepd as $item) {?>
+                        <div class="col-lg-3 col-md-4 col-sm-6 p-l-r-5">
+                            <a href="image.php?id=<?php echo $item["MaHinhAnh"] ?>" title="">
+                              <div class="image-background-form-mypicture">
+                                <img class="featured-photos-object-mypicture" src="image/resize/<?php echo $item["Resize"] ?>" alt="">
+                              </div>
+                            </a>
+                        </div>
+                  <?php } ?>
+                  <?php if (mysqli_num_rows($resultImagepd)==0) {?>
+                      <div id="my-image-null">
+                        <img src='image/icon/image-icon.png' class='image-upload-form'>
+                      </div>
+                  <?php } ?>
             </div>
         </div>
     </div>

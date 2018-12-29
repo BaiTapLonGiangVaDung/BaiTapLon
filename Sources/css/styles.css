@@ -571,6 +571,13 @@ figure.effect-marley:hover p {
 	padding-left: 15px;
 	padding-bottom: 15px;
 }
+.username-comment a{
+	text-decoration: none;
+}
+.name-poster-image a{
+	text-decoration: none;
+	text-transform: capitalize;
+}
 /*end css image.php*/
 
 /*css about.php*/
@@ -712,7 +719,7 @@ figure.effect-marley:hover p {
 #acc-top{
 	margin-bottom: 20px;
 	padding: 0 0 8px;
-	border-bottom: 2px solid #ddd;
+	border-bottom: 1px solid #ddd;
 	font-size: 23px;
 }
 .tab-menu a {
@@ -730,6 +737,7 @@ figure.effect-marley:hover p {
 	padding-left: 50px;
 	padding-right: 50px;
 	padding-bottom: 50px;
+	padding-top: 20px;
 }
 .bocboc{
 	font-size: 18px;
@@ -897,6 +905,7 @@ figure.effect-marley:hover p {
 	padding-left: 50px;
 	padding-right: 50px;
 	padding-bottom: 50px;
+	padding-top: 10px;
 }
 #my-image-null{
 	padding-left: 80px;
@@ -944,6 +953,10 @@ figure.effect-marley:hover p {
 	padding-top: 10px;
 	padding-bottom: 10px;
 }
+.header-avatar-froum a{
+	color: black;
+	text-decoration: none;
+}
 .icon-like button{
 	max-height: 40px;
 	max-width: 40px;
@@ -987,6 +1000,21 @@ figure.effect-marley:hover p {
 	padding-bottom: 15px;
 }
 /*end css froum.php*/
+/*css others.pph*/
+#block{
+	cursor: pointer;
+	text-align: center;
+	border-radius: 6px;
+    border: 1px transparent;
+    font-size: 21px;  
+    color: white;
+    height: 38px;
+    width: 201px;
+    background-color: #19dc19e3;
+    text-align: center;
+    margin-left: 574.156px;
+}
+/*end css others.php*/
 @media(min-width: 992px).col-lg-4{
 	max-width:33.333333%;
 }

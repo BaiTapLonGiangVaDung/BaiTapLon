@@ -128,9 +128,15 @@
                                 <span>Mô tả</span><br>
                                 <textarea name="txtDescription" id="txtDescription"></textarea>
                             </div>
-                            <div class="form-upload">
-                                <button id="upload" class="btn btn-primary">Tải tệp tin lên</button>
-                            </div>
+                            <?php if($_SESSION['ChucVu']!=3){?>
+                                <div class="form-upload">
+                                  <button id="upload" class="btn btn-primary">Tải tệp tin lên</button>
+                                </div>
+                            <?php }else{ ?>
+                                <div class="form-upload">
+                                    <p>Tài khoản của bạn không có quyền tải ảnh</p>
+                                </div>
+                            <?php } ?>
                             <div id="upload_image">
 
                             </div>

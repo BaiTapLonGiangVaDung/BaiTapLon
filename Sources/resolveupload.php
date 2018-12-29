@@ -32,7 +32,7 @@
             $resultSelect = mysqli_query($con, $sql);
             $row = mysqli_fetch_assoc($resultSelect);
             $idUser=$row["MaTaiKhoan"];
-            $sqlInsert="insert into hinhanh (`TenHinhAnh`, `KichCo`, `MoTaHinhAnh`, `MaBoSuuTap`, `MaTaiKhoan`,`Resize`) VALUES ('$file_name', '$sizefile"."KB"."', '$description', '$coll', '$idUser','resize_$file_name')";
+            $sqlInsert="insert into hinhanh (`TenHinhAnh`, `KichCo`, `MoTaHinhAnh`, `MaBoSuuTap`, `MaTaiKhoan`,`Resize`,`NgayDang`) VALUES ('$file_name', '$sizefile"."KB"."', '$description', '$coll', '$idUser','resize_$file_name',NOW())";
             $resultInsert = mysqli_query($con, $sqlInsert);
         }
     }

@@ -62,8 +62,8 @@
 						    	<a class="nav-link" href="collection.php">Bộ sưu tập</a>
 						  	</li>
 						  	<li class="nav-item">
-						    	<a class="nav-link" href="#">Blog</a>
-						  	</li>
+		                        <a class="nav-link" href="forum.php">Diễn đàn</a>
+		                     </li>
 						  	<li class="nav-item">
 						    	<a class="nav-link" href="about.php">Thông tin</a>
 						  	</li>

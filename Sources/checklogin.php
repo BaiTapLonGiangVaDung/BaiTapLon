@@ -12,9 +12,10 @@
 	if (mysqli_num_rows($result)==1){
 		if (password_verify($password, $row['MatKhau'])) {
 			if ($row["Active"]==1) {
-			$_SESSION['UserName']=$username;
-			$_SESSION['MaTaiKhoan']=$row['MaTaiKhoan'];
-			echo 1;
+				$_SESSION['UserName']=$username;
+				$_SESSION['MaTaiKhoan']=$row['MaTaiKhoan'];
+				$_SESSION['ChucVu']=$row['MaChucVu'];
+				echo 1;
 			}
 			else
 				echo "Tài khoản của bạn chưa được kích hoạt,vui lòng kiểm tra gmail để xác nhận";

@@ -168,5 +168,19 @@ $(document).ready(function(){
             }
         });
     });
+    $('#block').click(function(){
+        $.ajax({
+            url: 'resolveblock.php',
+            type: 'POST',
+            data: {
+                UserNameOther: UserNameOther,
+            },
+            success: function(response){
+                if (response==1) {
+                    alert("Đã cấm người dùng");
+                }
+            }
+        });
+    });
 
 });

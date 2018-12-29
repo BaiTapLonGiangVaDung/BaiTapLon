@@ -49,11 +49,11 @@
 	<title>Hình ảnh</title>
 	<link rel="shortcut icon" type="image/x-icon" href="https://unsplash.com/favicon.ico">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
 	<script type="text/javascript">
 		var idUserName=<?php echo $_SESSION['MaTaiKhoan'] ?>;
 		var idImage=<?php echo $id ?>;
 	</script>
-	<link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body >
 	<div class="container-fluid" id="div-top-shop">
@@ -143,6 +143,7 @@
 							</button>
 							<span>Thích</span>
 							<span style="margin-left: 25px;"><?php echo $rowDemLike['demlike'] ?> lượt thích</span><br>
+							<span>Ngày đăng: <?php echo $row["NgayDang"] ?></span>
 						</div>
 						<div class="image-info-header-text">
 							<span>Thông tin hình ảnh</span><br>
@@ -158,8 +159,8 @@
 										<?php  }?>
 									</div>
 									<div class="col-lg-11 col-md-11">
-										<div>
-											<span><?php echo $rowPoster['TenDangNhap'] ?></span><br>
+										<div class="name-poster-image">
+											<a href="others.php?username=<?php echo $rowPoster['TenDangNhap'] ?>"><?php echo $rowPoster['TenDangNhap'] ?></a><br>
 											<span><?php echo $rowPoster['HoTen'] ?></span>
 										</div>
 									</div>
@@ -192,8 +193,8 @@
 											<img class="avatar-comment" src="image/avatar/<?php echo $item['AnhDaiDien'] ?>" alt="">
 										</div>
 										<div class="col-lg-11 col-md-11">
-											<div>
-												<span class="span-username-comment"><?php echo $item['TenDangNhap'] ?></span>
+											<div class="username-comment">
+												<a href="others.php?username=<?php echo $item['TenDangNhap'] ?>" class="span-username-comment"><?php echo $item['TenDangNhap'] ?></a>
 											</div>
 											<div style="margin-top: 5px;">
 												<span><?php echo $item['BinhLuan'] ?></span>

@@ -5,7 +5,9 @@
 		die('ket noi that bai'.mysqli_connect_error());
 	}
 	//lấy ra ảnh
-	$sql="select * from hinhanh where PheDuyet=0";
+	$sql="select * FROM hinhanh h
+		LEFT JOIN taikhoan t ON t.MaTaiKhoan=h.MaTaiKhoan
+ 		where h.PheDuyet=0";
 	$resultImage = mysqli_query($con, $sql);
 	$con->close();
  ?>
@@ -107,7 +109,9 @@
 		                		<button type="" id="d<?php echo $item['MaHinhAnh'] ?>">Duyệt ảnh</button>
 		                    	<button type="" id="x<?php echo $item['MaHinhAnh'] ?>">Xóa</button>
 		                	</div>
-		                    <span class="span-approval">Mô tả hình ảnh: <?php echo $item['MoTaHinhAnh'] ?></span>
+		                	<span class="span-approval">Người đăng:<a href="others.php?username=<?php echo $item['TenDangNhap'] ?>"><?php echo $item['TenDangNhap'] ?></a></span><br>
+		                    <span class="span-approval">Mô tả hình ảnh: <?php echo $item['MoTaHinhAnh'] ?></span><br>
+		                    <span class="span-approval">Ngày đăng: <?php echo $item['NgayDang'] ?></span>
 		                </div>
 		            </div>
 		        </div>

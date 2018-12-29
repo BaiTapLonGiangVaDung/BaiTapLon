@@ -35,10 +35,12 @@ create table HinhAnh(
     AnhTaiTro int,
     PheDuyet int DEFAULT 0,
     Resize VARCHAR(200),
+    NgayDang DATETIME,
     primary key(MaHinhAnh),
     constraint FK_BoSuuTap foreign key(MaBoSuuTap) references bosuutap(MaBoSuuTap),
     constraint FK_TaiKhoan foreign key(MaTaiKhoan) references taikhoan(MaTaiKhoan)
 );
+
 create table binhluan(
 	MaTuongTac int auto_increment,
     MaTaiKhoan int,
