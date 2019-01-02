@@ -1,10 +1,7 @@
 <?php
 	$idUserName=trim($_POST['idUserName']);
 	$idImage=trim($_POST['idImage']);
-	$con=mysqli_connect('localhost','root','123456','webhinhanh');
-	if(!$con){
-		die('ket noi that bai'.mysqli_connect_error());
-	}
+	require('connection.php');
 	$sql="select * from thich where MaHinhAnh=$idImage and MaTaiKhoan=$idUserName";
 	$result=mysqli_query($con, $sql);
 	if(mysqli_num_rows($result)==1){

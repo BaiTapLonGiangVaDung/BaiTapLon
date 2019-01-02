@@ -45,10 +45,7 @@
 	if(empty($email) || empty($password) || empty($username)){
         echo "Vui lòng điền đủ thông tin";
     }else{
-    	$con=mysqli_connect('localhost','root','123456','webhinhanh');
-		if(!$con){
-			die('ket noi that bai'.mysqli_connect_error());
-		}
+    	require('connection.php');
 		$sql="insert into taikhoan(TenDangNhap, MatKhau, Email,Active,Verification) value('$username','$hash','$email',0,'$Verification')";
 		if(mysqli_query($con, $sql)){
 			echo 1;

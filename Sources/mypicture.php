@@ -1,9 +1,6 @@
 <?php
     session_start();
-    $con=mysqli_connect('localhost','root','123456','webhinhanh');
-    if(!$con){
-        die('ket noi that bai'.mysqli_connect_error());
-    }
+    require('connection.php');
     //lấy ra ảnh
     $username=$_SESSION['UserName'];
     $sql="select * from taikhoan where TenDangNhap='$username'";
@@ -21,7 +18,7 @@
 <html>
 <head>
    <title>Thông tin về chúng tôi</title>
-   <link rel="shortcut icon" type="image/x-icon" href="https://unsplash.com/favicon.ico">
+   <link rel="shortcut icon" type="image/x-icon" href="image/icon/photo-camera.png">
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
    <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
@@ -38,29 +35,30 @@
          </div>
          <div class="col-lg-4 col-md-5 col-sm-3" align="right">
             <div class="p-t-logo">
-               <a class="p-r-logo" href="https://www.facebook.com/">
-                  <img class="icon-logo" src="image/icon/fb-logo.png" alt="">
-               </a>
-               <a class="p-r-logo" href="https://www.google.com/">
-                  <img class="icon-logo" src="image/icon/google-plus.png" alt="">
-               </a>
-               <a class="p-r-logo" href="">
-                  <img class="icon-logo" src="image/icon/inta-logo.png" alt="">
-               </a>
-               <a class="p-r-logo" href="">
-                  <img class="icon-logo" src="image/icon/sky-logo.png" alt="">
-               </a>
-               <a class="p-r-logo" href="">
-                  <img class="icon-logo" src="image/icon/twitter-logo.png" alt="">
-               </a>
-               <?php
-                  if (isset($_SESSION['UserName'])) {
-               ?>
-               <a href="accounts.php" id="account-name" name="account-name"><?php echo $_SESSION['UserName'] ?></a>
-               <a href="logout.php" id="logout">/Đăng xuất</a>
-               <?php }else
-                  echo "<a href='login.php' id='login-top'>Đăng nhập</a>";
-               ?>
+              <div class="row">
+                <div class="col-lg-7" >
+                  <div id="search">
+                    <div class="row">
+                      <div class="col-lg-10 col-md-10 col-sm-10" style="padding: 0px;">
+                        <input type="text" name="txtSearch" id="txtSearch">
+                      </div>
+                      <div id="btn-search" class="col-lg-2 col-md-2 col-sm-2" style="padding-left:5px;">
+                        <img class="image-search" src="image/icon/search-gay.png" alt="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-5" style="padding-left: 0px;">
+                  <?php
+                    if (isset($_SESSION['UserName'])) {
+                  ?>
+                  <a href="accounts.php" id="account-name"><?php echo $_SESSION['UserName'] ?></a>
+                  <a href="logout.php" id="logout">/Đăng xuất</a>
+                  <?php }else
+                    echo "<a href='login.php' id='login-top'>Đăng nhập</a>";
+                  ?>
+                </div>
+              </div>
             </div>
          </div>
       </div>

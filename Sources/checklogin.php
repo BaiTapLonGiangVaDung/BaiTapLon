@@ -2,10 +2,7 @@
 	session_start();
 	$username=trim($_POST['username']);
 	$password=trim($_POST['password']);
-	$con=mysqli_connect('localhost','root','123456','webhinhanh');
-	if(!$con){
-		die('ket noi that bai'.mysqli_connect_error());
-	}
+	require('connection.php');
 	$sql="select* from taikhoan where TenDangNhap='$username'";
 	$result= mysqli_query($con, $sql);
 	$row = mysqli_fetch_assoc($result);

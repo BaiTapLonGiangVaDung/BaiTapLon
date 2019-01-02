@@ -1,10 +1,7 @@
 <?php
 	$type=trim($_POST['typeButton']);
 	$id=trim($_POST['id']);
-	$con=mysqli_connect('localhost','root','123456','webhinhanh');
-	if(!$con){
-		die('ket noi that bai'.mysqli_connect_error());
-	}
+	require('connection.php');
 	if($type=='d'){
 		$sql="update hinhanh set PheDuyet =1 where MaHinhAnh=$id";
 	}

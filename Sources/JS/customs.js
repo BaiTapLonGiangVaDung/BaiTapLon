@@ -182,5 +182,9 @@ $(document).ready(function(){
             }
         });
     });
+    $('#btn-search').click(function(){
+        var search=$('#txtSearch').val();
+        window.location.href='collection.php?search='+search;
+    });
 
 });

@@ -19,10 +19,7 @@
         ak_img_resize($target_file, $resized_file, $wmax, $hmax, $fileExt);
 
 
-        $con=mysqli_connect('localhost','root','123456','webhinhanh');
-        if(!$con){
-            die('ket noi that bai'.mysqli_connect_error());
-        }
+        require('connection.php');
         if(isset($_POST['coll']) and isset($_POST['description'])){
             $coll= $_POST['coll'];
             $description=$_POST['description'];

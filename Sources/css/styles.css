@@ -320,6 +320,23 @@ ul,li{
 	width: 100%;
 	height: auto;
 }
+#search{
+	padding-left: 30px;
+	padding-bottom: 25px;
+	padding-right: 10px;
+}
+#search input[type=text]{
+	max-width: 97%;
+	border: solid 1px #dbdbdb;
+	border-radius: 2px;
+}
+#btn-search{
+	cursor: pointer;
+}
+.image-search{
+	height: 25px;
+	width: auto;
+}
 .image-background-form{
 	max-height: 226px;
 	overflow: hidden;
