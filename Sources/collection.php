@@ -10,7 +10,7 @@
 	}
 	else if(isset($_GET['search'])){
 		$search=$_GET['search'];
-		$sql="select * from hinhanh where MoTaHinhAnh like '%$search%';";
+		$sql="select * from hinhanh where MoTaHinhAnh like '%$search%' and PheDuyet=1;";
 		$resultImageAll = mysqli_query($con, $sql);
 	}else {
 		$sql="select * from hinhanh where PheDuyet=1";

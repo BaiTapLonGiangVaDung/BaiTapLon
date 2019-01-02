@@ -151,9 +151,9 @@
 								<div class="row">
 									<div class="col-lg-1 col-md-1 comment-image">
 										<?php if (isset($rowPoster['AnhDaiDien'])){ ?>
-											<img class="avatar-comment" src="image/avatar/<?php echo $rowPoster['AnhDaiDien'] ?>" alt="">
+											<img class="avatar-comment" src="image/avatarresize/<?php echo $rowPoster['AnhDaiDien'] ?>" alt="">
 										<?php }else{?>
-											<img class="avatar-comment" src="image/avatar/user.png" alt="">
+											<img class="avatar-comment" src="image/avatarresize/user.png" alt="">
 										<?php  }?>
 									</div>
 									<div class="col-lg-11 col-md-11">
@@ -178,7 +178,7 @@
 					<div id="comment-form">
 						<div class="row" style="margin-left: 0px;">
 							<div class="col-lg-1 col-md-1 comment-image">
-								<img class="avatar-comment" src="image/avatar/<?php echo $userinfo['AnhDaiDien'] ?>" alt="">
+								<img class="avatar-comment" src="image/avatarresize/<?php echo $userinfo['AnhDaiDien'] ?>" alt="">
 							</div>
 							<div class="col-lg-11 col-md-11 ">
 								<textarea id="txtComment" class="comment-text" name="" placeholder="Thêm bình luận của bạn"></textarea>
@@ -188,7 +188,7 @@
 								<div class="col-lg-12 comment-all">
 									<div class="row">
 										<div class="col-lg-1 col-md-1 comment-image">
-											<img class="avatar-comment" src="image/avatar/<?php echo $item['AnhDaiDien'] ?>" alt="">
+											<img class="avatar-comment" src="image/avatarresize/<?php echo $item['AnhDaiDien'] ?>" alt="">
 										</div>
 										<div class="col-lg-11 col-md-11">
 											<div class="username-comment">

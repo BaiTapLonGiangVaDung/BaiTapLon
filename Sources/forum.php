@@ -111,7 +111,7 @@
 							<div class="header-avatar-froum">
 								<div class="row">
 									<div class="avatar-froum-div col-lg-2" style="padding: 0px;">
-										<img class="avatar-froum" src="image/avatar/<?php echo $item['AnhDaiDien'] ?>" alt="">
+										<img class="avatar-froum" src="image/avatarresize/<?php echo $item['AnhDaiDien'] ?>" alt="">
 									</div>
 									<div class="col-lg-10">
 										<a href="others.php?username=<?php echo $item['TenDangNhap'] ?>" style="font-weight: 500"><?php echo $item['TenDangNhap'] ?></a><br>
@@ -150,7 +150,7 @@
 					<div class="row" style="padding-left: 15px;">
 						<?php if (isset($_SESSION['UserName'])) {?>
 							<div class="avatar-froum-div col-lg-4" style="padding: 0px;">
-								<img class="avatar-froum" src="image/avatar/<?php echo $userinfo['AnhDaiDien'] ?>" alt="">
+								<img class="avatar-froum" src="image/avatarresize/<?php echo $userinfo['AnhDaiDien'] ?>" alt="">
 							</div>
 							<div class="col-lg-8">
 								<span style="font-weight: 500"><?php echo $userinfo['TenDangNhap'] ?></span><br>

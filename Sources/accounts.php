@@ -11,7 +11,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Thông tin về chúng tôi</title>
+	<title>Thông tin cá nhân</title>
 	<link rel="shortcut icon" type="image/x-icon" href="image/icon/photo-camera.png">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
@@ -110,6 +110,16 @@
                     <p style="margin-left: 10%;">Ảnh đại diện</p>
                     <div class="avatar-image">
                     	<img class="image-avatar" src="image/avatar/<?php echo $row['AnhDaiDien'] ?>"/>
+                    </div>
+                    <div style="padding-left: 150px;">
+                    	<div class="form-upload">
+	                        <span >Chọn tệp tin</span><br>
+	                        <input id="file-avatar" type="file" name="file-avatar" required=""/>
+	                    </div>
+	                    <button id="upload-avatar" class="btn btn-primary">Cập nhật ảnh đại diện</button>
+                    </div>
+                    <div id="message-upload-avatar">
+                    	
                     </div>
                 </div>
             </div>

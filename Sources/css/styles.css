@@ -835,6 +835,9 @@ figure.effect-marley:hover p {
     max-width: 386px;
     border-radius: 100%;
 }
+#upload-avatar{
+	cursor: pointer;
+}
 /*end css account.php*/
 /*css verify.php*/
 #content-verify{

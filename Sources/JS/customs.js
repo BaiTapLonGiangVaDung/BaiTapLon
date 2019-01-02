@@ -40,8 +40,8 @@ $(document).ready(function(){
         var name = document.getElementById("file").files[0].name;
         var form_data = new FormData();
         var ext = name.split('.').pop().toLowerCase();
-        var oFReader = new FileReader();
-        oFReader.readAsDataURL(document.getElementById("file").files[0]);
+        /*var oFReader = new FileReader();
+        oFReader.readAsDataURL(document.getElementById("file").files[0]);*/
         var f = document.getElementById("file").files[0];
         var fsize = f.size;
         var error= $('#upload_image');
@@ -185,6 +185,44 @@ $(document).ready(function(){
     $('#btn-search').click(function(){
         var search=$('#txtSearch').val();
         window.location.href='collection.php?search='+search;
+    });
+    $('#upload-avatar').click(function(){
+        var name = document.getElementById("file-avatar").files[0].name;
+        var form_data = new FormData();
+        var ext = name.split('.').pop().toLowerCase();
+        var f = document.getElementById("file-avatar").files[0];
+        var fsize = f.size;
+        var error= $('#message-upload-avatar');
+        var sizefile=parseInt(fsize/1024);
+        var accountName=$('#account-name').text();
+        error.html("");
+        if(jQuery.inArray(ext, ['gif','png','jpg','jpeg']) == -1){
+            $('#message-upload-avatar').html("<p>File không hợp lệ</p>");
+        }else{
+            if(fsize < 20000000){
+                form_data.append("file-avatar", document.getElementById('file-avatar').files[0]);
+                form_data.append('accountName', accountName);
+                $.ajax({
+                    url:"resolveupdateavatar.php",
+                    method:"POST",
+                    data: form_data,
+                    contentType: false,
+                    cache: false,
+                    processData: false,
+                    success:function(response){
+                        if(response == "success"){
+                        window.location.reload();
+                    }
+                    else{
+                        error.html("<p>"+response+"</p>");
+                    }
+                    }
+                });
+            }
+            else{
+               $('#upload_image').html("<p>Ảnh phải có kích cỡ dưới 20MB</p>");
+            }
+        }
     });
 
 });
