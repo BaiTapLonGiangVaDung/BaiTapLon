@@ -32,7 +32,7 @@ CREATE TABLE `binhluan` (
   KEY `FK_HinhAnh_2` (`MaHinhAnh`),
   CONSTRAINT `FK_HinhAnh_2` FOREIGN KEY (`MaHinhAnh`) REFERENCES `hinhanh` (`mahinhanh`),
   CONSTRAINT `FK_TaiKhoan_2` FOREIGN KEY (`MaTaiKhoan`) REFERENCES `taikhoan` (`mataikhoan`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 ;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -58,7 +58,7 @@ CREATE TABLE `bosuutap` (
   `AnhBoSuuTap` varchar(50) DEFAULT NULL,
   `MoTa` varchar(150) DEFAULT NULL,
   PRIMARY KEY (`MaBoSuuTap`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 ;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -82,7 +82,7 @@ CREATE TABLE `chucvu` (
   `MaChucVu` int(11) NOT NULL AUTO_INCREMENT,
   `TenChucVu` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`MaChucVu`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 ;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -119,7 +119,7 @@ CREATE TABLE `hinhanh` (
   KEY `FK_TaiKhoan` (`MaTaiKhoan`),
   CONSTRAINT `FK_BoSuuTap` FOREIGN KEY (`MaBoSuuTap`) REFERENCES `bosuutap` (`mabosuutap`),
   CONSTRAINT `FK_TaiKhoan` FOREIGN KEY (`MaTaiKhoan`) REFERENCES `taikhoan` (`mataikhoan`)
-) ENGINE=InnoDB AUTO_INCREMENT=204 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=204 DEFAULT CHARSET=utf8mb4 ;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -157,7 +157,7 @@ CREATE TABLE `taikhoan` (
   UNIQUE KEY `TenDangNhap_UNIQUE` (`TenDangNhap`),
   KEY `FK_ChucVu` (`MaChucVu`),
   CONSTRAINT `FK_ChucVu` FOREIGN KEY (`MaChucVu`) REFERENCES `chucvu` (`machucvu`)
-) ENGINE=InnoDB AUTO_INCREMENT=66 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=66 DEFAULT CHARSET=utf8mb4 ;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -187,7 +187,7 @@ CREATE TABLE `thich` (
   KEY `FK_HinhAnh_3` (`MaHinhAnh`),
   CONSTRAINT `FK_HinhAnh_3` FOREIGN KEY (`MaHinhAnh`) REFERENCES `hinhanh` (`mahinhanh`),
   CONSTRAINT `FK_TaiKhoan_3` FOREIGN KEY (`MaTaiKhoan`) REFERENCES `taikhoan` (`mataikhoan`)
-) ENGINE=InnoDB AUTO_INCREMENT=60 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=60 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
